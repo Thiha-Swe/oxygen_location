@@ -611,214 +611,217 @@
 
     </div>
     <script>
-        //dropdown section
-        $('#yangonRegionSection').hide();
+        $(document).ready(function(){
+            //dropdown section
+            $('#yangonRegionSection').hide();
+            
+            //yangon oxygen group
+            $('.yangon1').hide();
+            $('.yangon2').hide();
+            $('.yangon3').hide();
+            $('.yangon4').hide();
+            $('.yangon5').hide();
+            $('.yangon6').hide();
+            $('.yangon7').hide();
+            $('.yangon8').hide();
+            $('.yangon9').hide();
+            $('.yangon10').hide();
+            $('.yangon11').hide();
+            
+
+            $("#regionChoice").change(function() {
+                var str = "";
+                $("#regionChoice option:selected" ).each(function() {
+                    str = $(this).val();
+
+                    if(str == "regionChoiceSelectLable")
+                    {
+                        $('#yangonRegionSection').hide();
+                        $('.yangonGroup').hide();
+                    }
+                    else if(str == "yangon")
+                    {
+                        $('#yangonRegionSection').show();
+                        $('.yangonGroup').hide();
+                    }
+                    else if(str == "mandalay")
+                    {
+                        $('#yangonRegionSection').hide();
+                        $('.yangonGroup').hide();
+                    }
+
+                });
+            }).trigger("change");
+
+            
+            //For yangon region 
+            $("#yangonRegion").change(function() {
+                var str = "";
+                $("#yangonRegion option:selected" ).each(function() {
+                    str = $(this).val();
+
+                    if(str == "townshipChoiceSelectLable")
+                    {   
+                        $('.yangonGroup').hide();
+                    }
+                    else if(str == "1")
+                    {
+                        $('.yangon1').show();
+                        $('.yangon2').hide();
+                        $('.yangon3').hide();
+                        $('.yangon4').hide();
+                        $('.yangon5').hide();
+                        $('.yangon6').hide();
+                        $('.yangon7').hide();
+                        $('.yangon8').hide();
+                        $('.yangon9').hide();
+                        $('.yangon10').hide();
+                        $('.yangon11').hide();
+                    }
+                    else if(str == "2")
+                    {
+                        $('.yangon1').hide();
+                        $('.yangon2').show();
+                        $('.yangon3').hide();
+                        $('.yangon4').hide();
+                        $('.yangon5').hide();
+                        $('.yangon6').hide();
+                        $('.yangon7').hide();
+                        $('.yangon8').hide();
+                        $('.yangon9').hide();
+                        $('.yangon10').hide();
+                        $('.yangon11').hide();
+                    }
+                    else if(str == "3")
+                    {
+                        $('.yangon1').hide();
+                        $('.yangon2').hide();
+                        $('.yangon3').show();
+                        $('.yangon4').hide();
+                        $('.yangon5').hide();
+                        $('.yangon6').hide();
+                        $('.yangon7').hide();
+                        $('.yangon8').hide();
+                        $('.yangon9').hide();
+                        $('.yangon10').hide();
+                        $('.yangon11').hide();
+                    }
+                    else if(str == "4")
+                    {
+                        $('.yangon1').hide();
+                        $('.yangon2').hide();
+                        $('.yangon3').hide();
+                        $('.yangon4').show();
+                        $('.yangon5').hide();
+                        $('.yangon6').hide();
+                        $('.yangon7').hide();
+                        $('.yangon8').hide();
+                        $('.yangon9').hide();
+                        $('.yangon10').hide();
+                        $('.yangon11').hide();
+                    }
+                    else if(str == "5")
+                    {
+                        $('.yangon1').hide();
+                        $('.yangon2').hide();
+                        $('.yangon3').hide();
+                        $('.yangon4').hide();
+                        $('.yangon5').show();
+                        $('.yangon6').hide();
+                        $('.yangon7').hide();
+                        $('.yangon8').hide();
+                        $('.yangon9').hide();
+                        $('.yangon10').hide();
+                        $('.yangon11').hide();
+                    }
+                    else if(str == "6")
+                    {
+                        $('.yangon1').hide();
+                        $('.yangon2').hide();
+                        $('.yangon3').hide();
+                        $('.yangon4').hide();
+                        $('.yangon5').hide();
+                        $('.yangon6').show();
+                        $('.yangon7').hide();
+                        $('.yangon8').hide();
+                        $('.yangon9').hide();
+                        $('.yangon10').hide();
+                        $('.yangon11').hide();
+                    }
+                    else if(str == "7")
+                    {
+                        $('.yangon1').hide();
+                        $('.yangon2').hide();
+                        $('.yangon3').hide();
+                        $('.yangon4').hide();
+                        $('.yangon5').hide();
+                        $('.yangon6').hide();
+                        $('.yangon7').show();
+                        $('.yangon8').hide();
+                        $('.yangon9').hide();
+                        $('.yangon10').hide();
+                        $('.yangon11').hide();
+                    }
+                    else if(str == "8")
+                    {
+                        $('.yangon1').hide();
+                        $('.yangon2').hide();
+                        $('.yangon3').hide();
+                        $('.yangon4').hide();
+                        $('.yangon5').hide();
+                        $('.yangon6').hide();
+                        $('.yangon7').hide();
+                        $('.yangon8').show();
+                        $('.yangon9').hide();
+                        $('.yangon10').hide();
+                        $('.yangon11').hide();
+                    }
+                    else if(str == "9")
+                    {
+                        $('.yangon1').hide();
+                        $('.yangon2').hide();
+                        $('.yangon3').hide();
+                        $('.yangon4').hide();
+                        $('.yangon5').hide();
+                        $('.yangon6').hide();
+                        $('.yangon7').hide();
+                        $('.yangon8').hide();
+                        $('.yangon9').show();
+                        $('.yangon10').hide();
+                        $('.yangon11').hide();
+                    }
+                    else if(str == "10")
+                    {
+                        $('.yangon1').hide();
+                        $('.yangon2').hide();
+                        $('.yangon3').hide();
+                        $('.yangon4').hide();
+                        $('.yangon5').hide();
+                        $('.yangon6').hide();
+                        $('.yangon7').hide();
+                        $('.yangon8').hide();
+                        $('.yangon9').hide();
+                        $('.yangon10').show();
+                        $('.yangon11').hide();
+                    }
+                    else if(str == "11")
+                    {
+                        $('.yangon1').hide();
+                        $('.yangon2').hide();
+                        $('.yangon3').hide();
+                        $('.yangon4').hide();
+                        $('.yangon5').hide();
+                        $('.yangon6').hide();
+                        $('.yangon7').hide();
+                        $('.yangon8').hide();
+                        $('.yangon9').hide();
+                        $('.yangon10').hide();
+                        $('.yangon11').show();
+                    }
+                });
+            }).trigger("change");
+        });
         
-        //yangon oxygen group
-        $('.yangon1').hide();
-        $('.yangon2').hide();
-        $('.yangon3').hide();
-        $('.yangon4').hide();
-        $('.yangon5').hide();
-        $('.yangon6').hide();
-        $('.yangon7').hide();
-        $('.yangon8').hide();
-        $('.yangon9').hide();
-        $('.yangon10').hide();
-        $('.yangon11').hide();
-        
-
-        $("#regionChoice").change(function() {
-            var str = "";
-            $("#regionChoice option:selected" ).each(function() {
-                str = $(this).val();
-
-                if(str == "regionChoiceSelectLable")
-                {
-                    $('#yangonRegionSection').hide();
-                    $('.yangonGroup').hide();
-                }
-                else if(str == "yangon")
-                {
-                    $('#yangonRegionSection').show();
-                    $('.yangonGroup').hide();
-                }
-                else if(str == "mandalay")
-                {
-                    $('#yangonRegionSection').hide();
-                    $('.yangonGroup').hide();
-                }
-
-            });
-        }).trigger("change");
-
-        
-        //For yangon region 
-        $("#yangonRegion").change(function() {
-            var str = "";
-            $("#yangonRegion option:selected" ).each(function() {
-                str = $(this).val();
-
-                if(str == "townshipChoiceSelectLable")
-                {   
-                    $('.yangonGroup').hide();
-                }
-                else if(str == "1")
-                {
-                    $('.yangon1').show();
-                    $('.yangon2').hide();
-                    $('.yangon3').hide();
-                    $('.yangon4').hide();
-                    $('.yangon5').hide();
-                    $('.yangon6').hide();
-                    $('.yangon7').hide();
-                    $('.yangon8').hide();
-                    $('.yangon9').hide();
-                    $('.yangon10').hide();
-                    $('.yangon11').hide();
-                }
-                else if(str == "2")
-                {
-                    $('.yangon1').hide();
-                    $('.yangon2').show();
-                    $('.yangon3').hide();
-                    $('.yangon4').hide();
-                    $('.yangon5').hide();
-                    $('.yangon6').hide();
-                    $('.yangon7').hide();
-                    $('.yangon8').hide();
-                    $('.yangon9').hide();
-                    $('.yangon10').hide();
-                    $('.yangon11').hide();
-                }
-                else if(str == "3")
-                {
-                    $('.yangon1').hide();
-                    $('.yangon2').hide();
-                    $('.yangon3').show();
-                    $('.yangon4').hide();
-                    $('.yangon5').hide();
-                    $('.yangon6').hide();
-                    $('.yangon7').hide();
-                    $('.yangon8').hide();
-                    $('.yangon9').hide();
-                    $('.yangon10').hide();
-                    $('.yangon11').hide();
-                }
-                else if(str == "4")
-                {
-                    $('.yangon1').hide();
-                    $('.yangon2').hide();
-                    $('.yangon3').hide();
-                    $('.yangon4').show();
-                    $('.yangon5').hide();
-                    $('.yangon6').hide();
-                    $('.yangon7').hide();
-                    $('.yangon8').hide();
-                    $('.yangon9').hide();
-                    $('.yangon10').hide();
-                    $('.yangon11').hide();
-                }
-                else if(str == "5")
-                {
-                    $('.yangon1').hide();
-                    $('.yangon2').hide();
-                    $('.yangon3').hide();
-                    $('.yangon4').hide();
-                    $('.yangon5').show();
-                    $('.yangon6').hide();
-                    $('.yangon7').hide();
-                    $('.yangon8').hide();
-                    $('.yangon9').hide();
-                    $('.yangon10').hide();
-                    $('.yangon11').hide();
-                }
-                else if(str == "6")
-                {
-                    $('.yangon1').hide();
-                    $('.yangon2').hide();
-                    $('.yangon3').hide();
-                    $('.yangon4').hide();
-                    $('.yangon5').hide();
-                    $('.yangon6').show();
-                    $('.yangon7').hide();
-                    $('.yangon8').hide();
-                    $('.yangon9').hide();
-                    $('.yangon10').hide();
-                    $('.yangon11').hide();
-                }
-                else if(str == "7")
-                {
-                    $('.yangon1').hide();
-                    $('.yangon2').hide();
-                    $('.yangon3').hide();
-                    $('.yangon4').hide();
-                    $('.yangon5').hide();
-                    $('.yangon6').hide();
-                    $('.yangon7').show();
-                    $('.yangon8').hide();
-                    $('.yangon9').hide();
-                    $('.yangon10').hide();
-                    $('.yangon11').hide();
-                }
-                else if(str == "8")
-                {
-                    $('.yangon1').hide();
-                    $('.yangon2').hide();
-                    $('.yangon3').hide();
-                    $('.yangon4').hide();
-                    $('.yangon5').hide();
-                    $('.yangon6').hide();
-                    $('.yangon7').hide();
-                    $('.yangon8').show();
-                    $('.yangon9').hide();
-                    $('.yangon10').hide();
-                    $('.yangon11').hide();
-                }
-                else if(str == "9")
-                {
-                    $('.yangon1').hide();
-                    $('.yangon2').hide();
-                    $('.yangon3').hide();
-                    $('.yangon4').hide();
-                    $('.yangon5').hide();
-                    $('.yangon6').hide();
-                    $('.yangon7').hide();
-                    $('.yangon8').hide();
-                    $('.yangon9').show();
-                    $('.yangon10').hide();
-                    $('.yangon11').hide();
-                }
-                else if(str == "10")
-                {
-                    $('.yangon1').hide();
-                    $('.yangon2').hide();
-                    $('.yangon3').hide();
-                    $('.yangon4').hide();
-                    $('.yangon5').hide();
-                    $('.yangon6').hide();
-                    $('.yangon7').hide();
-                    $('.yangon8').hide();
-                    $('.yangon9').hide();
-                    $('.yangon10').show();
-                    $('.yangon11').hide();
-                }
-                else if(str == "11")
-                {
-                    $('.yangon1').hide();
-                    $('.yangon2').hide();
-                    $('.yangon3').hide();
-                    $('.yangon4').hide();
-                    $('.yangon5').hide();
-                    $('.yangon6').hide();
-                    $('.yangon7').hide();
-                    $('.yangon8').hide();
-                    $('.yangon9').hide();
-                    $('.yangon10').hide();
-                    $('.yangon11').show();
-                }
-            });
-        }).trigger("change");
  
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
