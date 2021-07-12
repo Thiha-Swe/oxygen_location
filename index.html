@@ -4,27 +4,188 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
     <title>Hello, world!</title>
   </head>
   <body>
     <div class="container">
+
         <div class="row">
             <h1>Oxygen Location</h1>
         </div>
+
+        <br>
+
         <div class="row">
-            <div class="col-6 col-sm-11 col-md-8">
-                <select class="form-select" aria-label="Default select example">
-                    <option selected>တိုင်းဒေသကြီး/ပြည်နယ် ‌ရွေးချယ်ရန်</option>
-                    <option value="1">ရန်ကုန်တိုင်းဒေသကြီး</option>
-                    <option value="2">မန္တလေးတိုင်းဒေသကြီး</option>
+            <div class="col">
+                <select class="form-select" id="regionChoice" aria-label="Default select example">
+                    <option value="regionChoiceSelectLable" selected>တိုင်း‌‌‌‌ဒေသကြီး/ပြည်နယ် ‌ရွေးချယ်ရန်</option>
+                    <option value="yangon">ရန်ကုန်တိုင်းဒေသကြီး</option>
+                    <option value="mandalay">မန္တလေးတိုင်း‌‌ဒေသကြီး</option>
                   </select>
             </div>
-            <div class="col-6 col-sm-1 col-md-4">
+
+        </div>
+
+        <br>
+
+        <div class="row" id="yangonRegionSection"> 
+            <div class="col">
+                <select class="form-select" id="yangonRegion" aria-label="Default select example">
+                    <option value="townshipChoiceLable" selected>မြို့နယ်ရွေးချယ်ရန်</option>
+                    <option value="1">ကျောက်တံတားမြို့နယ်</option>
+                    <option value="2">မင်္ဂလာတောင်ညွန့်မြို့နယ်</option>
+                    <option value="3">ပုဇွန်တောင်မြို့နယ်</option>
+                    <option value="4">ဒေါပုံမြို့နယ်</option>
+                    <option value="5">သာကေတမြို့နယ်   </option>
+                    <option value="6">တောင်ဒဂုံမြို့နယ်</option>
+                    <option value="7">ရန်ကင်းမြို့နယ်</option>
+                    <option value="8">မြောက်ဥက္ကလာပမြို့နယ်</option>
+                    <option value="9">သင်္ဃန်းကျွန်းမြို့နယ်</option>
+                    <option value="10">တောင်ဥက္ကလာပမြို့နယ်</option>
+                    <option value="11">ဗိုလ်တထောင်မြို့နယ်</option>
+                  </select>
             </div>
         </div>
-    </div>
 
+
+        <br>
+
+ 
+
+        <!-- location one -->
+        <div class="row yangon10 yangonGroup">
+
+                <div class="col">
+                    <div class="card" style=" box-shadow: 10px 10px 5px grey;">
+                        <div class="card-body">
+                            <p class="fs-6">လေသွေးသစ္စာပရဟိတအသင်း</p>
+                            <p class="fs-6">တည်နေရာ -- သီရိဇေယျာ၊ (၉၇၉) - (၁၈) လမ်း (က)/၇ ရပ်ကွက်</p>
+                            <p class="fs-6">ဖုန်းနံပါတ် -- 09450543929, 09799970397, 0973085976, 09421161230</p>
+                        </div>
+                    </div>
+                </div>      
+
+        </div>
+
+        <br>
+         <!-- location two -->
+        <div class="row yangon10 yangonGroup" >
+
+            <div class="col">
+                <div class="card" style=" box-shadow: 10px 10px 5px grey;">
+                    <div class="card-body">
+                        <p class="fs-6">“လေ" အလှူတော်အဖွဲ့</p>
+                        <p class="fs-6">တည်နေရာ -- ၈/၁၊ ဓမ္မရာဇာ လမ်း၊ (၁၀) ရပ်ကွက်</p>
+                        <p class="fs-6">ဖုန်းနံပါတ် -- 09420000564, 095072781, 09254120751, 09979613961</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <h1 id=exampleDispaly></h1>
+        </div>
+
+
+
+    </div>
+    <script>
+        //dropdown section
+        $('#yangonRegionSection').hide();
+        
+        //yangon oxygen group
+        $('.yangon10').hide();
+
+        $("#regionChoice").change(function() {
+            var str = "";
+            $("#regionChoice option:selected" ).each(function() {
+                str = $(this).val();
+                $('#exampleDispaly').text(str);
+
+                if(str == "regionChoiceSelectLable")
+                {
+                    $('#yangonRegionSection').hide();
+                    $('.yangonGroup').hide();
+                }
+                else if(str == "yangon")
+                {
+                    $('#yangonRegionSection').show();
+                    $('.yangonGroup').hide();
+                }
+                else if(str == "mandalay")
+                {
+                    $('#yangonRegionSection').hide();
+                    $('.yangonGroup').hide();
+                }
+
+            });
+        }).trigger("change");
+
+        //For yangon region 
+        $("#yangonRegion").change(function() {
+            var str = "";
+            $("#yangonRegion option:selected" ).each(function() {
+                str = $(this).val();
+                $('#exampleDispaly').text(str);
+
+                if(str == "townshipChoiceSelectLable")
+                {
+                    $('.yangon10').hide();
+                }
+                else if(str == "1")
+                {
+                    $('.yangon10').hide();
+                }
+                else if(str == "2")
+                {
+                    $('.yangon10').hide();
+                }
+                else if(str == "3")
+                {
+                    $('.yangon10').hide();
+                }
+                else if(str == "4")
+                {
+                    $('.yangon10').hide();
+                }
+                else if(str == "5")
+                {
+                    $('.yangon10').hide();
+                }
+                else if(str == "6")
+                {
+                    $('.yangon10').hide();
+                }
+                else if(str == "7")
+                {
+                    $('.yangon10').hide();
+                }
+                else if(str == "8")
+                {
+                    $('.yangon10').hide();
+                }
+                else if(str == "9")
+                {
+                    $('.yangon10').hide();
+                }
+                else if(str == "10")
+                {
+                   $('.yangon10').show();
+                }
+                else if(str == "11")
+                {
+                    $('.yangon10').hide();
+                }
+                else if(str == "12")
+                {
+                    $('.yangon10').hide();
+                }
+            });
+        }).trigger("change");
+ 
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   </body>
 </html>
