@@ -1,39 +1,184 @@
 <!doctype html>
 <html lang="en">
   <head>
+    
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+   
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
     <title>Oxy2</title>
   </head>
   <body style="background-color: #e6e6e6;">
+    
     <div class="container">
 
         <div class="row">
             <h1>Oxygen Location</h1>
         </div>
-
+        
         <br>
 
         <div class="row">
             <div class="col">
-                <select class="form-select" id="regionChoice" aria-label="Default select example">
-                    <option value="regionChoiceSelectLable" selected>တိုင်း‌‌‌‌ဒေသကြီး/ပြည်နယ် ‌ရွေးချယ်ရန်</option>
+                <select class="form-select" id="regionChoice">
+                    <option value="regionChoiceSelectedLable" selected>တိုင်း‌‌‌‌ဒေသကြီး/ပြည်နယ် ‌ရွေးချယ်ရန်</option>
+                    <option value="shan">ရှမ်းပြည်နယ်</option>
                     <option value="yangon">ရန်ကုန်တိုင်းဒေသကြီး</option>
-                    <option value="mandalay">မန္တလေးတိုင်း‌‌ဒေသကြီး</option>
-                  </select>
+                    <option value="mandalay">မန္တလေးတိုင်းဒေသကြီး</option>
+                </select>
             </div>
-
         </div>
-
+    
         <br>
 
-        <!-- For Yangon Region and Oxygen Location start-->
+         <!--For Shan State Oxygen Location Start-->
 
-        <div class="row" id="yangonRegionSection"> 
+      <!--Shan's State Dropdown Menu Start-->
+        
+      <div class="row shanStateSection">
+        <div class="col">
+          <select class="form-select" id="shanState">
+            <option value="townshipChoiceSelectLable" selected>မြို့နယ်ရွေးချယ်ရန်</option>
+            <option value="1">လားရှိုးမြို့နယ်</option>
+            <option value="2">မူဆယ်မြို့နယ်</option>
+          </select>
+        </div>
+      </div>
+      <br class="shanStateSection">
+      <!--Shan's State Dropdown Menu End-->
+
+      <!--Shan State Oxygen Location Start-->
+
+      <!--1 လားရှိုးမြို့နယ် start-->
+
+      <!--location 1-->
+      <div class="row shan1 shanGroup">
+
+        <div class="col">
+            <div class="card" style=" box-shadow: 10px 10px 5px grey;">
+                <div class="card-body">
+                    <p class="fs-6">ကိုကျော်ဇေယျာ</p>
+                    <p class="fs-6">တည်နေရာ -- ရက ၁၂ တရုတ်ခိုလောင်းလမ်း (သံလွင်လမ်း)၊ ဘော်လုံးကွင်း တိုက်တန်း အဆုံး ဒေါင့်နား</p>   
+                    <p class="fs-6">ဖုန်းနံပါတ် -- 09797124636, 095260868, 09964371373</p>                     
+                </div>
+            </div>
+        </div>      
+
+      </div>
+      <br class="shan1 shanGroup">
+
+      <!--location 2-->
+      <div class="row shan1 shanGroup">
+
+        <div class="col">
+            <div class="card" style=" box-shadow: 10px 10px 5px grey;">
+                <div class="card-body">
+                    <p class="fs-6">စွမ်းလူအောင် O2 ဖြည့်ဝန်ဆောင်မှု</p>
+                    <p class="fs-6">တည်နေရာ -- မန်ဆူဘုရား၊ အခန်း (၄)၊ သိန္ဒီလမ်း၊ ရပ်ကွက် (၈</p>   
+                    <p class="fs-6">ဖုန်းနံပါတ် -- 0947302091, 095263488, 09446446933</p>                     
+                </div>
+            </div>
+        </div>      
+
+      </div>
+      <br class="shan1 shanGroup">
+
+      <!--location 3-->
+      <div class="row shan1 shanGroup">
+
+        <div class="col">
+            <div class="card" style=" box-shadow: 10px 10px 5px grey;">
+                <div class="card-body">
+                    <p class="fs-6">အောင်ချမ်းသာ</p>
+                    <p class="fs-6">တည်နေရာ -- ရပ်ကွက်(၄) ရေကန်လမ်းပေါ်</p>   
+                    <p class="fs-6">ဖုန်းနံပါတ် -- 09964371373</p>                     
+                </div>
+            </div>
+        </div>      
+
+      </div>
+      <br class="shan1 shanGroup">
+
+      <!--location 4-->
+      <div class="row shan1 shanGroup">
+
+        <div class="col">
+            <div class="card" style=" box-shadow: 10px 10px 5px grey;">
+                <div class="card-body">
+                    <p class="fs-6">Aung Hospital</p>
+                    <p class="fs-6">တည်နေရာ -- အမှတ်(၂၁) ကြာညိုလမ်း၊ ရပ်ကွက်(၃)</p>   
+                    <p class="fs-6">ဖုန်းနံပါတ် -- 0822925799</p>                     
+                </div>
+            </div>
+        </div>      
+
+      </div>
+      <br class="shan1 shanGroup">
+
+      <!--location 5-->
+      <div class="row shan1 shanGroup">
+
+        <div class="col">
+            <div class="card" style=" box-shadow: 10px 10px 5px grey;">
+                <div class="card-body">
+                    <p class="fs-6">ချယ်ရီနှလုံးသားသွေးလှူရှင်အသင်း</p>
+                    <p class="fs-6">တည်နေရာ -- ရပ်ကွက်(၁၂) ပြည်ထောင်စုအားကစားကွင်း</p>   
+                    <p class="fs-6">ဖုန်းနံပါတ်  -- 09964371373</p>                     
+                </div>
+            </div>
+        </div>      
+
+      </div>
+      <br class="shan1 shanGroup">
+
+      <!--location 5-->
+      <div class="row shan1 shanGroup">
+
+        <div class="col">
+            <div class="card" style=" box-shadow: 10px 10px 5px grey;">
+                <div class="card-body">
+                    <p class="fs-6">Covid-19 Operation Team</p> 
+                    <p class="fs-6">ဖုန်းနံပါတ် -- 09259441828, 09423898891, 09445107887</p>                     
+                </div>
+            </div>
+        </div>      
+
+      </div>
+      <br class="shan1 shanGroup">
+      <!--1 လားရှိုးမြို့နယ် end-->
+
+
+      <!--2 မူဆယ်မြို့နယ် start-->
+      <!--location 1-->
+      <div class="row shan2 shanGroup">
+
+        <div class="col">
+            <div class="card" style=" box-shadow: 10px 10px 5px grey;">
+                <div class="card-body">
+                    <p class="fs-6">ချယ်ရီမြေ ပရဟိတ</p>
+                    <p class="fs-6">တည်နေရာ -- တောင်ရပ်ကွက် </p>    
+                    <p class="fs-6">ဖုန်းနံပါတ် -- 09403712380</p>                    
+                </div>
+            </div>
+        </div>      
+
+      </div>
+      <br class="shan2 shanGroup">
+      <!--2 မူဆယ်မြို့နယ် end-->
+
+
+      <!--Shan State Location End-->
+
+      <!--For Shan State Oxygen Location End-->
+        
+        <!--For Yangon Region Oxygen Location Start-->
+
+        <!--Yangon's Twonship Dropdown Menu Start-->
+        <div class="row yangonRegionSection">
             <div class="col">
-                <select class="form-select" id="yangonRegion" aria-label="Default select example">
+                <select class="form-select" id="yangonRegion">
                     <option value="townshipChoiceSelectLable" selected>မြို့နယ်ရွေးချယ်ရန်</option>
                     <option value="1">ကျောက်တံတားမြို့နယ်</option>
                     <option value="2">မင်္ဂလာတောင်ညွန့်မြို့နယ်</option>
@@ -46,11 +191,16 @@
                     <option value="9">သင်္ဃန်းကျွန်းမြို့နယ်</option>
                     <option value="10">တောင်ဥက္ကလာပမြို့နယ်</option>
                     <option value="11">ဗိုလ်တထောင်မြို့နယ်</option>
-                  </select>
+                    <option value="12">တွံတေးမြို့နယ်</option>
+                    <option value="13">လှိုင်မြို့နယ်</option>
+                </select>
             </div>
         </div>
 
-        <br>
+        <br class="yangonRegionSection">
+        <!--Yangon's Township Dropdown Menu End--> 
+
+        <!--Yangon Oxygen Location Start-->
 
         <!--1 ကျောက်တံတားမြို့နယ် start-->
         <!-- location 1-->
@@ -66,9 +216,9 @@
             </div>      
 
         </div>
-        <!--ကျောက်တံတားမြို့နယ် end-->
-        <br class="yangon1">
-
+        <br class="yangon1 yangonGroup">
+        <!--1 ကျောက်တံတားမြို့နယ် end-->
+        
 
         <!--2 မင်္ဂလာတောင်ညွန့်မြို့နယ် start-->
         <!--location 1-->
@@ -84,7 +234,7 @@
             </div>      
 
         </div>
-        <br class="yangon2">
+        <br class="yangon2 yangonGroup">
 
 
         <!--location 2-->
@@ -100,10 +250,11 @@
             </div>      
 
         </div>
-        <!--မင်္ဂလာတောင်ညွန့်မြို့နယ် end-->
-        <br class="yangon2">
+        <br class="yangon2 yangonGroup">
+        <!--2 မင်္ဂလာတောင်ညွန့်မြို့နယ် end-->
+       
 
-        
+
         <!--3 ပုဇွန်တောင်မြို့နယ် start-->
         <!--location 1-->
         <div class="row yangon3 yangonGroup">
@@ -118,7 +269,7 @@
             </div>      
 
         </div>
-        <br class="yangon3">
+        <br class="yangon3 yangonGroup">
 
         <!--location 2-->
         <div class="row yangon3 yangonGroup">
@@ -133,7 +284,7 @@
             </div>      
 
         </div>
-        <br class="yangon3">
+        <br class="yangon3 yangonGroup">
 
         <!--location 3-->
         <div class="row yangon3 yangonGroup">
@@ -149,9 +300,9 @@
             </div>      
 
         </div>
-        <!--ပုဇွန်တောင်မြို့နယ် end-->
-        <br class="yangon3">
-
+        <br class="yangon3 yangonGroup">
+        <!--3 ပုဇွန်တောင်မြို့နယ် end-->
+        
 
         <!--4 ဒေါပုံမြို့နယ် start-->
         <!--location 1-->
@@ -167,7 +318,7 @@
             </div>      
 
         </div>
-        <br class="yangon4">
+        <br class="yangon4 yangonGroup">
 
         <!--location 2-->
         <div class="row yangon4 yangonGroup">
@@ -182,10 +333,9 @@
             </div>      
 
         </div>
-        <!--ဒေါပုံမြို့နယ် end-->
-        <br class="yangon4">
-
-
+        <br class="yangon4 yangonGroup">
+        <!--4 ဒေါပုံမြို့နယ် end-->
+        
         <!--5 သာကေတမြို့နယ် start-->
         <!--location 1-->
         <div class="row yangon5 yangonGroup">
@@ -200,7 +350,7 @@
             </div>      
 
         </div>
-        <br class="yangon5">
+        <br class="yangon5 yangonGroup">
 
         <!--location 2-->
         <div class="row yangon5 yangonGroup">
@@ -215,7 +365,7 @@
             </div>      
 
         </div>
-        <br class="yangon5">
+        <br class="yangon5 yangonGroup">
 
         <!--location 3-->
         <div class="row yangon5 yangonGroup">
@@ -230,7 +380,7 @@
             </div>      
 
         </div>
-        <br class="yangon5">
+        <br class="yangon5 yangonGroup">
 
         <!--location 4-->
         <div class="row yangon5 yangonGroup">
@@ -245,7 +395,7 @@
             </div>      
 
         </div>
-        <br class="yangon5">
+        <br class="yangon5 yangonGroup">
 
         <!--location 5-->
         <div class="row yangon5 yangonGroup">
@@ -260,7 +410,7 @@
             </div>      
 
         </div>
-        <br class="yangon5">
+        <br class="yangon5 yangonGroup">
 
         <!--location 6-->
         <div class="row yangon5 yangonGroup">
@@ -275,7 +425,7 @@
             </div>      
 
         </div>
-        <br class="yangon5">
+        <br class="yangon5 yangonGroup">
 
         <!--location 7-->
         <div class="row yangon5 yangonGroup">
@@ -290,7 +440,7 @@
             </div>      
 
         </div>
-        <br class="yangon5">
+        <br class="yangon5 yangonGroup">
 
         <!--location 8-->
         <div class="row yangon5 yangonGroup">
@@ -305,7 +455,7 @@
             </div>      
 
         </div>
-        <br class="yangon5"> 
+        <br class="yangon5 yangonGroup"> 
 
         <!--location 9-->
         <div class="row yangon5 yangonGroup">
@@ -320,9 +470,9 @@
             </div>      
 
         </div>
-        <!--သာကေတမြို့နယ် end-->
-        <br class="yangon5">
-
+        <br class="yangon5 yangonGroup">
+        <!--5 သာကေတမြို့နယ် end-->
+        
 
         <!--6 တောင်ဒဂုံမြို့နယ် start-->
         <!--location 1-->
@@ -338,9 +488,9 @@
             </div>      
 
         </div>
-        <!--တောင်ဒဂုံမြို့နယ် end-->
-        <br class="yangon6">
-
+        <br class="yangon6 yangonGroup">
+        <!--6 တောင်ဒဂုံမြို့နယ် end-->
+        
 
         <!--7 ရန်ကင်းမြို့နယ် start-->
         <!--location 1-->
@@ -357,7 +507,7 @@
             </div>      
 
         </div>
-        <br class="yangon7">
+        <br class="yangon7 yangonGroup">
 
         <!--location 2-->
         <div class="row yangon7 yangonGroup">
@@ -373,7 +523,7 @@
             </div>      
 
         </div>
-        <br class="yangon7">
+        <br class="yangon7 yangonGroup">
 
         <!--location 3-->
         <div class="row yangon7 yangonGroup">
@@ -389,7 +539,7 @@
             </div>      
 
         </div>
-        <br class="yangon7">
+        <br class="yangon7 yangonGroup">
 
         <!--location 4-->
         <div class="row yangon7 yangonGroup">
@@ -405,8 +555,9 @@
             </div>      
 
         </div>
-        <!--ရန်ကင်းမြို့နယ် end-->
-        <br class="yangon7">
+        <br class="yangon7 yangonGroup">
+        <!--7 ရန်ကင်းမြို့နယ် end-->
+        
 
         <!--8 မြောက်ဥက္ကလာပမြို့နယ် start-->
         <!--location 1-->
@@ -423,7 +574,7 @@
             </div>      
 
         </div>
-        <br class="yangon8">
+        <br class="yangon8 yangonGroup">
 
         <!--location 2-->
         <div class="row yangon8 yangonGroup">
@@ -439,7 +590,7 @@
             </div>      
 
         </div>
-        <br class="yangon8">
+        <br class="yangon8 yangonGroup">
 
         <!--location 3-->
         <div class="row yangon8 yangonGroup">
@@ -455,9 +606,9 @@
             </div>      
 
         </div>
-        <!--မြောက်ဥက္ကလာပမြို့နယ် end-->
-        <br class="yangon8">
-
+        <br class="yangon8 yangonGroup">
+        <!--8 မြောက်ဥက္ကလာပမြို့နယ် end-->
+        
 
         <!--9 သင်္ဃန်းကျွန်းမြို့နယ် start-->
         <!--location 1-->
@@ -473,7 +624,7 @@
             </div>      
 
         </div>
-        <br class="yangon9">
+        <br class="yangon9 yangonGroup">
 
         <!--location 2-->
         <div class="row yangon9 yangonGroup">
@@ -488,7 +639,7 @@
             </div>      
 
         </div>
-        <br class="yangon9">
+        <br class="yangon9 yangonGroup">
 
         <!--location 3-->
         <div class="row yangon9 yangonGroup">
@@ -503,12 +654,12 @@
             </div>      
 
         </div>
-        <!--သင်္ဃန်းကျွန်းမြို့နယ် end-->
-        <br class="yangon9">
-
+        <br class="yangon9 yangonGroup">
+        <!--9 သင်္ဃန်းကျွန်းမြို့နယ် end-->
+        
 
         <!--10 တောင်ဥက္ကလာပမြို့နယ် start-->
-        <!-- location one -->
+        <!-- location 1 -->
         <div class="row yangon10 yangonGroup">
 
                 <div class="col">
@@ -522,9 +673,9 @@
                 </div>      
 
         </div>
-        <br class="yangon10">
+        <br class="yangon10 yangonGroup">
 
-         <!-- location two -->
+         <!-- location 2 -->
         <div class="row yangon10 yangonGroup" >
 
             <div class="col">
@@ -538,9 +689,9 @@
             </div>
 
         </div>
-        <br class="yangon10">
+        <br class="yangon10 yangonGroup">
 
-        <!-- location three -->
+        <!-- location 3 -->
         <div class="row yangon10 yangonGroup" >
 
             <div class="col">
@@ -554,9 +705,9 @@
             </div>
 
         </div>
-        <br class="yangon10">
+        <br class="yangon10 yangonGroup">
 
-        <!-- location four -->
+        <!-- location 4 -->
         <div class="row yangon10 yangonGroup" >
 
             <div class="col">
@@ -570,9 +721,9 @@
             </div>
 
         </div>
-        <br class="yangon10">
+        <br class="yangon10 yangonGroup">
 
-        <!-- location five-->
+        <!-- location 5-->
         <div class="row yangon10 yangonGroup" >
 
             <div class="col">
@@ -586,8 +737,9 @@
             </div>
 
         </div>
-        <!--တောင်ဥက္ကလာပမြို့နယ် end-->
-        <br class="yangon10">
+        <br class="yangon10 yangonGroup">
+        <!--10 တောင်ဥက္ကလာပမြို့နယ် end-->
+        
 
         <!--11 ဗိုလ်တထောင်မြို့နယ် start-->
         <!--location 1-->
@@ -603,65 +755,385 @@
                 </div>
             </div>
 
-        </div class="yangon11">
-        <!--ဗိုလ်တထောင်မြို့နယ် end-->
+        </div>
+        <br class="yangon11 yangonGroup">
+        <!--11 ဗိုလ်တထောင်မြို့နယ် end-->
 
-        <!-- For Yangon Region and Oxygen Location start-->
+
+        <!--12 တွံတေးမြို့နယ် start-->
+        <div class="row yangon12 yangonGroup" >
+
+            <div class="col">
+                <div class="card" style=" box-shadow: 10px 10px 5px grey;">
+                    <div class="card-body">
+                        <p class="fs-6">စိတ္တသုခ လူမှုကယ်ဆယ်‌ရေးအဖွဲ့</p>
+                        <p class="fs-6">တည်နေရာ -- တွံတေးဆေးရုံဘေး၊ ပုံပြစေတီအနီး၊ ရွေဆံတော်ဘုရားလမ်း၊ ‌‌ရွေဆံတော်ရပ်ကွက်</p>
+                        <p class="fs-6">ဖုန်းနံပါတ် -- 0931119537, 09448023533, 095056976, 0943024027, 09420194508, 09427438889, 09799313779, 09799285107</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <br class="yangon12 yangonGroup"> 
+        <!--12 တွံတေးမြို့နယ် end-->
+        
+        
+
+        <!--13 လှိုင်မြို့နယ် start-->
+        <!--location 1-->
+        <div class="row yangon13 yangonGroup" >
+
+            <div class="col">
+                <div class="card" style=" box-shadow: 10px 10px 5px grey;">
+                    <div class="card-body">
+                        <p class="fs-6">မယ်ဇလီ ပရဟိအသင်း</p>
+                        <p class="fs-6">တည်နေရာ -- အမှတ်(၈)ရပ်ကွက်၊ ဦးချိူလမ်း</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <br class="yangon13 yangonGroup">
+
+        <!--location 2-->
+        <div class="row yangon13 yangonGroup" >
+
+            <div class="col">
+                <div class="card" style=" box-shadow: 10px 10px 5px grey;">
+                    <div class="card-body">
+                        <p class="fs-6">အောက်ဆီဂျင်အရောင်းဆိုင်</p>
+                        <p class="fs-6">တည်နေရာ -- Silver Moon Hotel ရှေ့၊ လှိုင်ရွာမကွေ့</p>
+                        <p class="fs-6">ဖုန်းနံပါတ် -- 095069391, 0943112304</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <br class="yangon13 yangonGroup">
+
+        <!--location 3-->
+        <div class="row yangon13 yangonGroup" >
+
+            <div class="col">
+                <div class="card" style=" box-shadow: 10px 10px 5px grey;">
+                    <div class="card-body">
+                        <p class="fs-6">June Group(I)</p>
+                        <p class="fs-6">တည်နေရာ -- ၂၅၂၊ အင်းစိန်လမ်းနှင့် ပါရမီလမ်းထောင့်၊ ၁၆ ရပ်ကွက်</p>
+                        <p class="fs-6">ဖုန်းနံပါတ် -- 01098619957</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <br class="yangon13 yangonGroup">
+        <!--13 လှိုင်မြို့နယ် end-->
+
+        <!--Yangon Oxygen Location End-->
+
+        <!--For Yangon Region Oxygen Location End-->
 
 
+        <!--For Mandalay Region Oxygen Location Start-->
+
+        <!--Mandaly Dropdown Menu Start-->
+            
+        <div class="row mandalayRegionSection">
+            <div class="col">
+            <select class="form-select" id="mandalayRegion">
+                <option value="townshipChoiceSelectLable" selected>မြို့နယ်ရွေးချယ်ရန်</option>
+                <option value="1">ပြည်ကြီးတံခွန့်မြို့နယ်</option>
+                <option value="2">ချမ်းအေးသာဇံမြို့နယ်</option>
+                <option value="3">မဟာအောင်မြေမြို့နယ်</option>
+                <option value="4">ပြင်ဦးလွင်မြို့နယ်</option>
+            </select>
+            </div>
+        </div>
+        <br class="mandalayRegionSection">
+        <!--Mandalay Dropdown Menu End-->
+
+        <!--Mandalay Region Oxygen Location Start-->
+
+        <!--1 ပြည်ကြီးတံခွန့်မြို့နယ် start-->
+
+        <!--location 1-->
+        <div class="row mandalay1 mandalayGroup">
+
+            <div class="col">
+                <div class="card" style=" box-shadow: 10px 10px 5px grey;">
+                    <div class="card-body">
+                        <p class="fs-6">စိန်စိန်ညို</p>
+                        <p class="fs-6">တည်နေရာ -- အမှတ်(H)၊ ၂၁၁/၆၊ (၁၃၈)လမ်း(ဧဝရက်လမ်း)၊ ၅၃လမ်းနှင့် ၅၄လမ်းကြား၊စက်မှုဇုန်(၁)၊ စျ ရပ်ကွက်</p>                                
+                    </div>
+                </div>
+            </div>      
+
+        </div>
+        <br class="mandalay1 mandalayGroup">
+
+        <!--location 2-->
+        <div class="row mandalay1 mandalayGroup">
+
+            <div class="col">
+                <div class="card" style=" box-shadow: 10px 10px 5px grey;">
+                    <div class="card-body">
+                        <p class="fs-6">ဟိန်းသစ်</p>
+                        <p class="fs-6">တည်နေရာ -- အမှတ် (၀၀-၄၈/၅၂)၊ ၁၃၁လမ်း (ရတနာလမ်း)၊ ၅၄x၅၅ လမ်းကြား</p>   
+                        <p class="fs-6">ဖုန်းနံပါတ် -- 09426977794, 09797365938, 09444331946, 09666100325</p>                     
+                    </div>
+                </div>
+            </div>      
+
+        </div>
+        <br class="mandalay1 mandalayGroup">
+
+        <!--location 3-->
+        <div class="row mandalay1 mandalayGroup">
+
+            <div class="col">
+                <div class="card" style=" box-shadow: 10px 10px 5px grey;">
+                    <div class="card-body">
+                        <p class="fs-6">ရတနာပုံ - အောက်စီဂျင်စက်ရုံ</p>
+                        <p class="fs-6">တည်နေရာ -- တံခွန်တိုင်ရပ်ကွက်၊ ကမ္ပဝါတန်</p>   
+                        <p class="fs-6">ဖုန်းနံပါတ် -- 09782013118, 092013118, 09426808796, 09402714079, 09977186034</p>                     
+                    </div>
+                </div>
+            </div>      
+
+        </div>
+        <br class="mandalay1 mandalayGroup">
+        <!--1 ပြည်ကြီးတံခွန့်မြို့နယ် end-->
+
+
+        <!--2 ချမ်းအေးသာဇံမြို့နယ် start-->
+        <!--location 1-->
+        <div class="row mandalay2 mandalayGroup">
+
+            <div class="col">
+                <div class="card" style=" box-shadow: 10px 10px 5px grey;">
+                    <div class="card-body">
+                        <p class="fs-6">မြတ်သဒ္ဒါ လူမှုနာမူ ကူညီ​ရေးအသင်း</p>
+                        <p class="fs-6">တည်နေရာ -- ၆၂ x၂၇လမ်း​ထောင့်</p>    
+                        <p class="fs-6">ဖုန်းနံပါတ် -- 09252599299, 09777199299</p>                    
+                    </div>
+                </div>
+            </div>      
+
+        </div>
+        <br class="mandalay2 mandalayGroup">
+
+
+        <!--location 2-->
+        <div class="row mandalay2 mandalayGroup">
+
+            <div class="col">
+                <div class="card" style=" box-shadow: 10px 10px 5px grey;">
+                    <div class="card-body">
+                        <p class="fs-6">Five Oceans Co.,LTD</p>
+                        <p class="fs-6">တည်နေရာ -- ၂၆၊ ၈၅လမ်းထောင့်၊ စျေးချိုပလာဇာ (ပထမထပ်)</p>                    
+                    </div>
+                </div>
+            </div>      
+
+        </div>
+        <br class="mandalay2 mandalayGroup">
+
+
+        <!--location 3-->
+        <div class="row mandalay2 mandalayGroup">
+
+            <div class="col">
+                <div class="card" style=" box-shadow: 10px 10px 5px grey;">
+                    <div class="card-body">
+                        <p class="fs-6">ကိုဇာနည် - အ​ရောင်း/အငှား</p>
+                        <p class="fs-6">တည်နေရာ -- ၈၇လမ်း၊ ၃၄×၃၅လမ်းကြား၊ စမွန်းရပ်</p>    
+                        <p class="fs-6">ဖုန်းနံပါတ် -- 09797776721</p>                    
+                    </div>
+                </div>
+            </div>      
+
+        </div>
+        <br class="mandalay2 mandalayGroup">
+        <!--2 ချမ်းအေးသာဇံမြို့နယ် end-->
+
+
+        <!--3 မဟာအောင်မြေမြို့နယ် start-->
+        <!--location 1-->
+        <div class="row mandalay3 mandalayGroup">
+
+            <div class="col">
+                <div class="card" style=" box-shadow: 10px 10px 5px grey;">
+                    <div class="card-body">
+                        <p class="fs-6">ဦး​ကျော်လှနှင့်သားများ - အ​ရောင်း/အငှား</p>
+                        <p class="fs-6">တည်နေရာ -- ၇၇လမ်းနှင့် ၃၈လမ်း​ထောင့်</p>         
+                        <p class="fs-6">ဖုန်းနံပါတ် -- 092056298, 09962056298 </p>           
+                    </div>
+                </div>
+            </div>      
+
+        </div>
+        <br class="mandalay3 mandalayGroup">
+
+        <!--location 2-->
+        <div class="row mandalay3 mandalayGroup">
+
+            <div class="col">
+                <div class="card" style=" box-shadow: 10px 10px 5px grey;">
+                    <div class="card-body">
+                        <p class="fs-6">မင်းသိန်း လေအိုးရောင်းဝယ်ရေး</p>
+                        <p class="fs-6">တည်နေရာ -- ၄၁လမ်း၊ ၉၀×၉၁ကြား၊ စိန်ပန်း</p>                  
+                    </div>
+                </div>
+            </div>      
+
+        </div>
+        <br class="mandalay3 mandalayGroup">
+
+        <!--location 3-->
+        <div class="row mandalay3 mandalayGroup">
+
+            <div class="col">
+                <div class="card" style=" box-shadow: 10px 10px 5px grey;">
+                    <div class="card-body">
+                        <p class="fs-6">ပုလဲ​ ပရဟိတဖောင်​ဒေးရှင်း</p>
+                        <p class="fs-6">တည်နေရာ -- ၇၈လမ်း နှင့် သိပ္ပံလမ်း​ထောင့်၊ သီတာ​အေး ၉၀၁ ရပ်၊ ချမ်း/​မြောက်</p>        
+                        <p class="fs-6">ဖုန်းနံပါတ် -- 09889900345</p>          
+                    </div>
+                </div>
+            </div>      
+
+        </div>
+        <br class="mandalay3 mandalayGroup">
+        <!--3 မဟာအောင်မြေမြို့နယ် end-->
+
+        <!--4 ပြင်ဦးလွင်မြို့နယ် start-->
+        <!--location 1-->
+        <div class="row mandalay4 mandalayGroup">
+
+            <div class="col">
+                <div class="card" style=" box-shadow: 10px 10px 5px grey;">
+                    <div class="card-body">
+                        <p class="fs-6">ပြင်ဦးလွင် (အခမဲ့) နာရေးကူညီမှုအသင်</p>
+                        <p class="fs-6">တည်နေရာ -- မဟာသောဘိတာရာမကျောင်းတိုက်၊ စျေးတောင်ကျောင်းကြီး၊ ရွေဘိုလမ်း ၁-ရပ်ကွက်၊ ရပ်ကွက်ကြီး(၅)</p>        
+                        <p class="fs-6">ဖုန်း -- 0852028046, 085202844609256268474</p>          
+                    </div>
+                </div>
+            </div>      
+
+        </div>
+        <br class="mandalay4 mandalayGroup">
+        <!--4 ပြင်ဦးလွင်မြို့နယ် end-->
+
+        <!--Mandalay Region Location End-->
+
+        <!--For Mandalay Region Oxygen Location End-->
+    <!-- container end-->
     </div>
+
     <script>
         $(document).ready(function(){
-            //dropdown section
-            $('#yangonRegionSection').hide();
-            
-            //yangon oxygen group
-            $('.yangon1').hide();
-            $('.yangon2').hide();
-            $('.yangon3').hide();
-            $('.yangon4').hide();
-            $('.yangon5').hide();
-            $('.yangon6').hide();
-            $('.yangon7').hide();
-            $('.yangon8').hide();
-            $('.yangon9').hide();
-            $('.yangon10').hide();
-            $('.yangon11').hide();
-            
 
-            $("#regionChoice").change(function() {
+            $('.yangonRegionSection').hide();
+            $('.yangonGroup').hide();
+            $('.shanStateSection').hide();
+            $('.shanGroup').hide();
+            $('.mandalayRegionSection').hide();
+            $('.mandalayGroup').hide();
+
+            $('#regionChoice').change(function(){
                 var str = "";
-                $("#regionChoice option:selected" ).each(function() {
+                $('#regionChoice option:selected').each(function(){
                     str = $(this).val();
+                    if(str == 'regionChoiceSelectedLable')
+                    {
+                        
+                        //shan
+                        $('.shanStateSection').hide();
+                        $('.shanGroup').hide();
 
-                    if(str == "regionChoiceSelectLable")
-                    {
-                        $('#yangonRegionSection').hide();
+                        //yangon
+                        $('.yangonRegionSection').hide();
                         $('.yangonGroup').hide();
-                    }
-                    else if(str == "yangon")
-                    {
-                        $('#yangonRegionSection').show();
-                        $('.yangonGroup').hide();
-                    }
-                    else if(str == "mandalay")
-                    {
-                        $('#yangonRegionSection').hide();
-                        $('.yangonGroup').hide();
-                    }
 
+                        //mandalay
+                        $('.mandalayRegionSection').hide();
+                        $('.mandalayGroup').hide();
+                    }
+                    else if(str == 'yangon')
+                    {
+                        //shan
+                        $('.shanStateSection').hide();
+                        $('.shanGroup').hide();
+
+                        //yangon
+                        $('.yangonRegionSection').show();
+                        $('.yangonGroup').hide();
+
+                        //mandalay
+                        $('.mandalayRegionSection').hide();
+                        $('.mandalayGroup').hide();
+
+                    }
+                    else if(str == 'shan')
+                    {
+                        //shan
+                        $('.shanStateSection').show();
+                        $('.shanGroup').hide();
+
+                        //yangon
+                        $('.yangonRegionSection').hide();
+                        $('.yangonGroup').hide();
+
+                        //mandalay
+                        $('.mandalayRegionSection').hide();
+                        $('.mandalayGroup').hide();
+                    }
+                    else if(str == 'mandalay')
+                    {
+                        //shan
+                        $('.shanStateSection').hide();
+                        $('.shanGroup').hide();
+
+                        //yangon
+                        $('.yangonRegionSection').hide();
+                        $('.yangonGroup').hide();
+
+                        //mandalay
+                        $('.mandalayRegionSection').show();
+                        $('.mandalayGroup').hide();
+                    }
                 });
-            }).trigger("change");
+            }).trigger('change');
 
-            
-            //For yangon region 
-            $("#yangonRegion").change(function() {
-                var str = "";
-                $("#yangonRegion option:selected" ).each(function() {
+            //shan dropdown menu
+            $('#shanState').change(function(){
+                var str = '';
+                $('#shanState option:selected').each(function(){
                     str = $(this).val();
+                    if(str == 'townshipChoiceSelectLable')
+                    {
+                        $('.shanGroup').hide();
+                    }
+                    else if(str == "1")
+                    {
+                      $('.shan1').show();
+                      $('.shan2').hide();
+                    }
+                    else if(str == "2")
+                    {
+                      $('.shan1').hide();
+                      $('.shan2').show();
+                    }
+                });
+            }).trigger('change');
 
-                    if(str == "townshipChoiceSelectLable")
-                    {   
+
+            //yagon dropdown menu
+            $('#yangonRegion').change(function(){
+                var str = '';
+                $('#yangonRegion option:selected').each(function(){
+                    str = $(this).val();
+                    if(str == 'townshipChoiceSelectLable')
+                    {
                         $('.yangonGroup').hide();
                     }
                     else if(str == "1")
@@ -677,6 +1149,8 @@
                         $('.yangon9').hide();
                         $('.yangon10').hide();
                         $('.yangon11').hide();
+                        $('.yangon12').hide();
+                        $('.yangon13').hide();
                     }
                     else if(str == "2")
                     {
@@ -691,6 +1165,8 @@
                         $('.yangon9').hide();
                         $('.yangon10').hide();
                         $('.yangon11').hide();
+                        $('.yangon12').hide();
+                        $('.yangon13').hide();
                     }
                     else if(str == "3")
                     {
@@ -705,6 +1181,8 @@
                         $('.yangon9').hide();
                         $('.yangon10').hide();
                         $('.yangon11').hide();
+                        $('.yangon12').hide();
+                        $('.yangon13').hide();
                     }
                     else if(str == "4")
                     {
@@ -719,6 +1197,8 @@
                         $('.yangon9').hide();
                         $('.yangon10').hide();
                         $('.yangon11').hide();
+                        $('.yangon12').hide();
+                        $('.yangon13').hide();
                     }
                     else if(str == "5")
                     {
@@ -733,6 +1213,8 @@
                         $('.yangon9').hide();
                         $('.yangon10').hide();
                         $('.yangon11').hide();
+                        $('.yangon12').hide();
+                        $('.yangon13').hide();
                     }
                     else if(str == "6")
                     {
@@ -747,6 +1229,8 @@
                         $('.yangon9').hide();
                         $('.yangon10').hide();
                         $('.yangon11').hide();
+                        $('.yangon12').hide();
+                        $('.yangon13').hide();
                     }
                     else if(str == "7")
                     {
@@ -761,6 +1245,8 @@
                         $('.yangon9').hide();
                         $('.yangon10').hide();
                         $('.yangon11').hide();
+                        $('.yangon12').hide();
+                        $('.yangon13').hide();
                     }
                     else if(str == "8")
                     {
@@ -775,6 +1261,8 @@
                         $('.yangon9').hide();
                         $('.yangon10').hide();
                         $('.yangon11').hide();
+                        $('.yangon12').hide();
+                        $('.yangon13').hide();
                     }
                     else if(str == "9")
                     {
@@ -789,6 +1277,8 @@
                         $('.yangon9').show();
                         $('.yangon10').hide();
                         $('.yangon11').hide();
+                        $('.yangon12').hide();
+                        $('.yangon13').hide();
                     }
                     else if(str == "10")
                     {
@@ -803,6 +1293,8 @@
                         $('.yangon9').hide();
                         $('.yangon10').show();
                         $('.yangon11').hide();
+                        $('.yangon12').hide();
+                        $('.yangon13').hide();
                     }
                     else if(str == "11")
                     {
@@ -817,13 +1309,88 @@
                         $('.yangon9').hide();
                         $('.yangon10').hide();
                         $('.yangon11').show();
+                        $('.yangon12').hide();
+                        $('.yangon13').hide();
+                    }
+                    else if(str == "12")
+                    {
+                        $('.yangon1').hide();
+                        $('.yangon2').hide();
+                        $('.yangon3').hide();
+                        $('.yangon4').hide();
+                        $('.yangon5').hide();
+                        $('.yangon6').hide();
+                        $('.yangon7').hide();
+                        $('.yangon8').hide();
+                        $('.yangon9').hide();
+                        $('.yangon10').hide();
+                        $('.yangon11').hide();
+                        $('.yangon12').show();
+                        $('.yangon13').hide();
+                    }
+                    else if(str == "13")
+                    {
+                        $('.yangon1').hide();
+                        $('.yangon2').hide();
+                        $('.yangon3').hide();
+                        $('.yangon4').hide();
+                        $('.yangon5').hide();
+                        $('.yangon6').hide();
+                        $('.yangon7').hide();
+                        $('.yangon8').hide();
+                        $('.yangon9').hide();
+                        $('.yangon10').hide();
+                        $('.yangon11').hide();
+                        $('.yangon12').hide();
+                        $('.yangon13').show();
                     }
                 });
-            }).trigger("change");
+            }).trigger('change');
+
+            //mandalay dropdown menu
+            $('#mandalayRegion').change(function(){
+                var str = '';
+                $('#mandalayRegion option:selected').each(function(){
+                    str = $(this).val();
+                    if(str == 'townshipChoiceSelectLable')
+                    {
+                        $('.mandalayGroup').hide();
+                    }
+                    else if(str == "1")
+                    {
+                      $('.mandalay1').show();
+                      $('.mandalay2').hide();
+                      $('.mandalay3').hide();
+                      $('.mandalay4').hide();
+                    }
+                    else if(str == "2")
+                    {
+                      $('.mandalay1').hide();
+                      $('.mandalay2').show();
+                      $('.mandalay3').hide();
+                      $('.mandalay4').hide();
+                    }
+                    else if(str == "3")
+                    {
+                        $('.mandalay1').hide();
+                        $('.mandalay2').hide();
+                        $('.mandalay3').show();
+                        $('.mandalay4').hide();
+                    }
+                    else if(str == "4")
+                    {
+                        $('.mandalay1').hide();
+                        $('.mandalay2').hide();
+                        $('.mandalay3').hide();
+                        $('.mandalay4').show();
+                    }
+                });
+            }).trigger('change');
+
         });
-        
- 
     </script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   </body>
 </html>
+
