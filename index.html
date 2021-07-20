@@ -1,42 +1,53 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
-  <title>Oxy2</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script><style></style>
+    <title>Oxy2</title>
 </head>
 
 <body style="background-color: #e6e6e6">
-  <div class="container">
+    <div class="container">
+        <div class="row">
+            <h1>Oxygen Location</h1>
+        </div>
 
-    <div class="row">
-      <h1>Oxygen Location</h1>
-    </div>
+        <br>
 
-    <br>
+        <div class="row">
+            <div class="col">
+                <select class="form-select" id="unicodeZawgyiChoice">
+                    <option value="unicodeZawgyi" selected="">Unicode/Zawgyi</option>
+                    <option value="unicode">Unicode</option>
+                    <option value="zawgyi">Zawgyi</option>
+                </select>
+            </div>
+        </div>
 
-    <!-- Region/State Choice -->
+        <br>
 
-    <div class="row">
-      <div class="col">
-        <select class="form-select" id="regionChoice">
-          <option value="regionChoiceSelectedLable" selected="">တိုင်း&zwnj;&zwnj;&zwnj;&zwnj;ဒေသကြီး/ပြည်နယ် &zwnj;ရွေးချယ်ရန်</option>
+        <div class="unicode" style="display: none;">
 
-          
+        <div class="row">
+        <div class="col">
+          <select class="form-select" id="unicodeRegionChoice">
+            <option value="regionChoiceSelectedLable" selected="">တိုင်း&zwnj;&zwnj;&zwnj;&zwnj;ဒေသကြီး/ပြည်နယ် &zwnj;ရွေးချယ်ရန်</option>
+
+            
 <option value="shan">ရှမ်းပြည်နယ်</option><option value="kayin">ကရင်ပြည်နယ်</option><option value="mon">မွန်ပြည်နယ်</option><option value="yangon">ရန်ကုန်တိုင်းဒေသကြီး</option><option value="mandalay">မန္တလေးတိုင်းဒေသကြီး</option><option value="sagaing">စစ်ကိုင်းတိုင်းဒေသကြီး</option><option value="magway">မကွေးတိုင်းဒေသကြီး</option><option value="ayeyarwady">ဧရာဝတီတိုင်းဒေသကြီး</option><option value="bago">ပဲခူးတိုင်းဒေသကြီး</option>
-        </select>
+          </select>
+        </div>
       </div>
-    </div>
 
-    <br>
+      <br>
+          
+            
+<!-- shan state location start --><!-- unicodeShan state dropdown-->
 
-    
-<!-- shan state location start --><!-- shan state dropdown-->
-
-<div class="row shanStateSection" style="display: none;">
+<div class="row unicodeShanStateSection" style="display: none;">
     <div class="col">
-        <select class="form-select" id="shanState">
+        <select class="form-select" id="unicodeShanState">
             <option value="townshipChoiceSelectLable" selected="">မြို့နယ်ရွေးချယ်ရန်</option>
             <option value="1">လားရှိုးမြို့နယ်</option>
             <option value="2">မူဆယ်မြို့နယ်</option>
@@ -44,10 +55,10 @@
     </div>
 </div>
 
-<br class="shanStateSection" style="display: none;">        <!-- 1 လားရှိုးမြို့နယ် start -->
+<br class="unicodeShanStateSection" style="display: none;">        <!-- 1 လားရှိုးမြို့နယ် start -->
 
         <!-- location 1 -->
-        <div class="row shan1 shanGroup" style="display: none;">
+        <div class="row unicodeShan1 unicodeShanGroup" style="display: none;">
 
             <div class="col">
                 <div class="card" style=" box-shadow: 10px 10px 5px grey;">
@@ -61,10 +72,10 @@
             </div>
 
         </div>
-        <br class="shan1 shanGroup" style="display: none;">
+        <br class="unicodeShan1 unicodeShanGroup" style="display: none;">
 
         <!-- location 2 -->
-        <div class="row shan1 shanGroup" style="display: none;">
+        <div class="row unicodeShan1 unicodeShanGroup" style="display: none;">
 
             <div class="col">
                 <div class="card" style=" box-shadow: 10px 10px 5px grey;">
@@ -77,10 +88,10 @@
             </div>
 
         </div>
-        <br class="shan1 shanGroup" style="display: none;">
+        <br class="unicodeShan1 unicodeShanGroup" style="display: none;">
 
         <!-- location 3 -->
-        <div class="row shan1 shanGroup" style="display: none;">
+        <div class="row unicodeShan1 unicodeShanGroup" style="display: none;">
 
             <div class="col">
                 <div class="card" style=" box-shadow: 10px 10px 5px grey;">
@@ -93,10 +104,10 @@
             </div>
 
         </div>
-        <br class="shan1 shanGroup" style="display: none;">
+        <br class="unicodeShan1 unicodeShanGroup" style="display: none;">
 
         <!-- location 4 -->
-        <div class="row shan1 shanGroup" style="display: none;">
+        <div class="row unicodeShan1 unicodeShanGroup" style="display: none;">
 
             <div class="col">
                 <div class="card" style=" box-shadow: 10px 10px 5px grey;">
@@ -109,10 +120,10 @@
             </div>
 
         </div>
-        <br class="shan1 shanGroup" style="display: none;">
+        <br class="unicodeShan1 unicodeShanGroup" style="display: none;">
 
         <!-- location 5 -->
-        <div class="row shan1 shanGroup" style="display: none;">
+        <div class="row unicodeShan1 unicodeShanGroup" style="display: none;">
 
             <div class="col">
                 <div class="card" style=" box-shadow: 10px 10px 5px grey;">
@@ -125,10 +136,10 @@
             </div>
 
         </div>
-        <br class="shan1 shanGroup" style="display: none;">
+        <br class="unicodeShan1 unicodeShanGroup" style="display: none;">
 
         <!-- location 6 -->
-        <div class="row shan1 shanGroup" style="display: none;">
+        <div class="row unicodeShan1 unicodeShanGroup" style="display: none;">
 
             <div class="col">
                 <div class="card" style=" box-shadow: 10px 10px 5px grey;">
@@ -140,12 +151,12 @@
             </div>
 
         </div>
-        <br class="shan1 shanGroup" style="display: none;">
+        <br class="unicodeShan1 unicodeShanGroup" style="display: none;">
 
          <!-- 1 လားရှိုးမြို့နယ် end -->    <!-- 2 မူဆယ်မြို့နယ် start -->
 
     <!-- location 1 -->
-    <div class="row shan2 shanGroup" style="display: none;">
+    <div class="row unicodeShan2 unicodeShanGroup" style="display: none;">
 
       <div class="col">
         <div class="card" style=" box-shadow: 10px 10px 5px grey;">
@@ -158,23 +169,23 @@
       </div>
 
     </div>
-    <br class="shan2 shanGroup" style="display: none;">
+    <br class="unicodeShan2 unicodeShanGroup" style="display: none;">
 
     <!-- 2 မူဆယ်မြို့နယ် end -->
 <!-- shan state location end -->
-<!-- kayin state location start --><!-- kayin state dropdown-->
+<!-- kayin state location start --><!-- unicodeKayin state dropdown-->
 
-<div class="row kayinStateSection" style="display: none;">
+<div class="row unicodeKayinStateSection" style="">
     <div class="col">
-        <select class="form-select" id="kayinState">
+        <select class="form-select" id="unicodeKayinState">
             <option value="townshipChoiceSelectLable" selected="">မြို့နယ်ရွေးချယ်ရန်</option>
             <option value="1">ဘားအံမြို့နယ်</option>
         </select>
     </div>
 </div>
 
-<br class="kayinStateSection" style="display: none;"><!--1 ဘားအံမြို့နယ် start-->
-<div class="row kayin1 kayinGroup" style="display: none;">
+<br class="unicodeKayinStateSection" style=""><!--1 ဘားအံမြို့နယ် start-->
+<div class="row unicodeKayin1 unicodeKayinGroup" style="">
 
 <div class="col">
   <div class="card" style=" box-shadow: 10px 10px 5px grey;">
@@ -187,25 +198,25 @@
 </div>
 
 </div>
-<br class="kayin1 kayinGroup" style="display: none;">
+<br class="unicodeKayin1 unicodeKayinGroup" style="">
 <!-- kayin state location end -->
-<!-- mon state location start --><!-- mon state dropdown-->
+<!-- mon state location start --><!-- unicodeMon state dropdown-->
 
-<div class="row monStateSection" style="display: none;">
+<div class="row unicodeMonStateSection" style="display: none;">
     <div class="col">
-        <select class="form-select" id="monState">
+        <select class="form-select" id="unicodeMonState">
             <option value="townshipChoiceSelectLable" selected="">မြို့နယ်ရွေးချယ်ရန်</option>
             <option value="1">မော်လမြိုင်မြို့နယ်</option>
         </select>
     </div>
 </div>
 
-<br class="monStateSection" style="display: none;">
+<br class="unicodeMonStateSection" style="display: none;">
 
 <!-- 1 မော်လမြိုင်မြို့နယ် start -->
 
 <!-- location 1 -->
-<div class="row mon1 monGroup" style="display: none;">
+<div class="row unicodeMon1 unicodeMonGroup" style="display: none;">
 
 <div class="col">
 <div class="card" style=" box-shadow: 10px 10px 5px grey;">
@@ -218,10 +229,10 @@
 </div>
 
 </div>
-<br class="mon1 monGroup" style="display: none;">
+<br class="unicodeMon1 unicodeMonGroup" style="display: none;">
 
 <!-- location 2 -->
-<div class="row mon1 monGroup" style="display: none;">
+<div class="row unicodeMon1 unicodeMonGroup" style="display: none;">
 
 <div class="col">
 <div class="card" style=" box-shadow: 10px 10px 5px grey;">
@@ -234,16 +245,16 @@
 </div>
 
 </div>
-<br class="mon1 monGroup" style="display: none;">
+<br class="unicodeMon1 unicodeMonGroup" style="display: none;">
 
 
 <!-- 1 မော်လမြိုင်မြို့နယ် end -->
 <!-- mon state location end -->
-<!-- yangon region location start --><!-- yangon Region dropdown-->
+<!-- yangon region location start --><!-- unicodeYangon Region dropdown-->
 
-<div class="row yangonRegionSection" style="display: none;">
+<div class="row unicodeYangonRegionSection" style="display: none;">
     <div class="col">
-        <select class="form-select" id="yangonRegion">
+        <select class="form-select" id="unicodeYangonRegion">
             <option value="townshipChoiceSelectLable" selected="">မြို့နယ်ရွေးချယ်ရန်</option>
             <option value="1">ကျောက်တံတားမြို့နယ်</option>
             <option value="2">မင်္ဂလာတောင်ညွန့်မြို့နယ်</option>
@@ -263,9 +274,9 @@
     </div>
 </div>
 
-<br class="yangonRegionSection" style="display: none;"><!--1 ကျောက်တံတားမြို့နယ် start-->
+<br class="unicodeYangonRegionSection" style="display: none;"><!--1 ကျောက်တံတားမြို့နယ် start-->
 <!-- location 1-->
-<div class="row yangon1 yangonGroup" style="display: none;">
+<div class="row unicodeYangon1 unicodeYangonGroup" style="display: none;">
 
     <div class="col">
         <div class="card" style=" box-shadow: 10px 10px 5px grey;">
@@ -277,10 +288,10 @@
     </div>      
 
 </div>
-<br class="yangon1 yangonGroup" style="display: none;">
+<br class="unicodeYangon1 unicodeYangonGroup" style="display: none;">
 <!--1 ကျောက်တံတားမြို့နယ် end--><!--2 မင်္ဂလာတောင်ညွန့်မြို့နယ် start-->
 <!--location 1-->
-<div class="row yangon2 yangonGroup" style="display: none;">
+<div class="row unicodeYangon2 unicodeYangonGroup" style="display: none;">
 
     <div class="col">
         <div class="card" style=" box-shadow: 10px 10px 5px grey;">
@@ -292,11 +303,11 @@
     </div>      
 
 </div>
-<br class="yangon2 yangonGroup" style="display: none;">
+<br class="unicodeYangon2 unicodeYangonGroup" style="display: none;">
 
 
 <!--location 2-->
-<div class="row yangon2 yangonGroup" style="display: none;">
+<div class="row unicodeYangon2 unicodeYangonGroup" style="display: none;">
 
     <div class="col">
         <div class="card" style=" box-shadow: 10px 10px 5px grey;">
@@ -308,10 +319,10 @@
     </div>      
 
 </div>
-<br class="yangon2 yangonGroup" style="display: none;">
+<br class="unicodeYangon2 unicodeYangonGroup" style="display: none;">
 <!--2 မင်္ဂလာတောင်ညွန့်မြို့နယ် end--><!--3 ပုဇွန်တောင်မြို့နယ် start-->
         <!--location 1-->
-        <div class="row yangon3 yangonGroup" style="display: none;">
+        <div class="row unicodeYangon3 unicodeYangonGroup" style="display: none;">
 
             <div class="col">
                 <div class="card" style=" box-shadow: 10px 10px 5px grey;">
@@ -323,10 +334,10 @@
             </div>      
 
         </div>
-        <br class="yangon3 yangonGroup" style="display: none;">
+        <br class="unicodeYangon3 unicodeYangonGroup" style="display: none;">
 
         <!--location 2-->
-        <div class="row yangon3 yangonGroup" style="display: none;">
+        <div class="row unicodeYangon3 unicodeYangonGroup" style="display: none;">
 
             <div class="col">
                 <div class="card" style=" box-shadow: 10px 10px 5px grey;">
@@ -338,10 +349,10 @@
             </div>      
 
         </div>
-        <br class="yangon3 yangonGroup" style="display: none;">
+        <br class="unicodeYangon3 unicodeYangonGroup" style="display: none;">
 
         <!--location 3-->
-        <div class="row yangon3 yangonGroup" style="display: none;">
+        <div class="row unicodeYangon3 unicodeYangonGroup" style="display: none;">
 
             <div class="col">
                 <div class="card" style=" box-shadow: 10px 10px 5px grey;">
@@ -354,10 +365,10 @@
             </div>      
 
         </div>
-        <br class="yangon3 yangonGroup" style="display: none;">
+        <br class="unicodeYangon3 unicodeYangonGroup" style="display: none;">
         <!--3 ပုဇွန်တောင်မြို့နယ် end--><!--4 ဒေါပုံမြို့နယ် start-->
         <!--location 1-->
-        <div class="row yangon4 yangonGroup" style="display: none;">
+        <div class="row unicodeYangon4 unicodeYangonGroup" style="display: none;">
 
             <div class="col">
                 <div class="card" style=" box-shadow: 10px 10px 5px grey;">
@@ -369,10 +380,10 @@
             </div>      
 
         </div>
-        <br class="yangon4 yangonGroup" style="display: none;">
+        <br class="unicodeYangon4 unicodeYangonGroup" style="display: none;">
 
         <!--location 2-->
-        <div class="row yangon4 yangonGroup" style="display: none;">
+        <div class="row unicodeYangon4 unicodeYangonGroup" style="display: none;">
 
             <div class="col">
                 <div class="card" style=" box-shadow: 10px 10px 5px grey;">
@@ -384,10 +395,10 @@
             </div>      
 
         </div>
-        <br class="yangon4 yangonGroup" style="display: none;">
+        <br class="unicodeYangon4 unicodeYangonGroup" style="display: none;">
         <!--4 ဒေါပုံမြို့နယ် end--><!--5 သာကေတမြို့နယ် start-->
         <!--location 1-->
-        <div class="row yangon5 yangonGroup" style="display: none;">
+        <div class="row unicodeYangon5 unicodeYangonGroup" style="display: none;">
 
             <div class="col">
                 <div class="card" style=" box-shadow: 10px 10px 5px grey;">
@@ -399,10 +410,10 @@
             </div>      
 
         </div>
-        <br class="yangon5 yangonGroup" style="display: none;">
+        <br class="unicodeYangon5 unicodeYangonGroup" style="display: none;">
 
         <!--location 2-->
-        <div class="row yangon5 yangonGroup" style="display: none;">
+        <div class="row unicodeYangon5 unicodeYangonGroup" style="display: none;">
 
             <div class="col">
                 <div class="card" style=" box-shadow: 10px 10px 5px grey;">
@@ -414,10 +425,10 @@
             </div>      
 
         </div>
-        <br class="yangon5 yangonGroup" style="display: none;">
+        <br class="unicodeYangon5 unicodeYangonGroup" style="display: none;">
 
         <!--location 3-->
-        <div class="row yangon5 yangonGroup" style="display: none;">
+        <div class="row unicodeYangon5 unicodeYangonGroup" style="display: none;">
 
             <div class="col">
                 <div class="card" style=" box-shadow: 10px 10px 5px grey;">
@@ -429,10 +440,10 @@
             </div>      
 
         </div>
-        <br class="yangon5 yangonGroup" style="display: none;">
+        <br class="unicodeYangon5 unicodeYangonGroup" style="display: none;">
 
         <!--location 4-->
-        <div class="row yangon5 yangonGroup" style="display: none;">
+        <div class="row unicodeYangon5 unicodeYangonGroup" style="display: none;">
 
             <div class="col">
                 <div class="card" style=" box-shadow: 10px 10px 5px grey;">
@@ -444,10 +455,10 @@
             </div>      
 
         </div>
-        <br class="yangon5 yangonGroup" style="display: none;">
+        <br class="unicodeYangon5 unicodeYangonGroup" style="display: none;">
 
         <!--location 5-->
-        <div class="row yangon5 yangonGroup" style="display: none;">
+        <div class="row unicodeYangon5 unicodeYangonGroup" style="display: none;">
 
             <div class="col">
                 <div class="card" style=" box-shadow: 10px 10px 5px grey;">
@@ -459,10 +470,10 @@
             </div>      
 
         </div>
-        <br class="yangon5 yangonGroup" style="display: none;">
+        <br class="unicodeYangon5 unicodeYangonGroup" style="display: none;">
 
         <!--location 6-->
-        <div class="row yangon5 yangonGroup" style="display: none;">
+        <div class="row unicodeYangon5 unicodeYangonGroup" style="display: none;">
 
             <div class="col">
                 <div class="card" style=" box-shadow: 10px 10px 5px grey;">
@@ -474,10 +485,10 @@
             </div>      
 
         </div>
-        <br class="yangon5 yangonGroup" style="display: none;">
+        <br class="unicodeYangon5 unicodeYangonGroup" style="display: none;">
 
         <!--location 7-->
-        <div class="row yangon5 yangonGroup" style="display: none;">
+        <div class="row unicodeYangon5 unicodeYangonGroup" style="display: none;">
 
             <div class="col">
                 <div class="card" style=" box-shadow: 10px 10px 5px grey;">
@@ -489,10 +500,10 @@
             </div>      
 
         </div>
-        <br class="yangon5 yangonGroup" style="display: none;">
+        <br class="unicodeYangon5 unicodeYangonGroup" style="display: none;">
 
         <!--location 8-->
-        <div class="row yangon5 yangonGroup" style="display: none;">
+        <div class="row unicodeYangon5 unicodeYangonGroup" style="display: none;">
 
             <div class="col">
                 <div class="card" style=" box-shadow: 10px 10px 5px grey;">
@@ -504,10 +515,10 @@
             </div>      
 
         </div>
-        <br class="yangon5 yangonGroup" style="display: none;"> 
+        <br class="unicodeYangon5 unicodeYangonGroup" style="display: none;"> 
 
         <!--location 9-->
-        <div class="row yangon5 yangonGroup" style="display: none;">
+        <div class="row unicodeYangon5 unicodeYangonGroup" style="display: none;">
 
             <div class="col">
                 <div class="card" style=" box-shadow: 10px 10px 5px grey;">
@@ -519,10 +530,10 @@
             </div>      
 
         </div>
-        <br class="yangon5 yangonGroup" style="display: none;">
+        <br class="unicodeYangon5 unicodeYangonGroup" style="display: none;">
         <!--5 သာကေတမြို့နယ် end--><!--6 တောင်ဒဂုံမြို့နယ် start-->
 <!--location 1-->
-<div class="row yangon6 yangonGroup" style="display: none;">
+<div class="row unicodeYangon6 unicodeYangonGroup" style="display: none;">
 
     <div class="col">
         <div class="card" style=" box-shadow: 10px 10px 5px grey;">
@@ -534,10 +545,10 @@
     </div>      
 
 </div>
-<br class="yangon6 yangonGroup" style="display: none;">
+<br class="unicodeYangon6 unicodeYangonGroup" style="display: none;">
 <!--6 တောင်ဒဂုံမြို့နယ် end--><!--7 ရန်ကင်းမြို့နယ် start-->
         <!--location 1-->
-        <div class="row yangon7 yangonGroup" style="display: none;">
+        <div class="row unicodeYangon7 unicodeYangonGroup" style="display: none;">
 
             <div class="col">
                 <div class="card" style=" box-shadow: 10px 10px 5px grey;">
@@ -550,10 +561,10 @@
             </div>      
 
         </div>
-        <br class="yangon7 yangonGroup" style="display: none;">
+        <br class="unicodeYangon7 unicodeYangonGroup" style="display: none;">
 
         <!--location 2-->
-        <div class="row yangon7 yangonGroup" style="display: none;">
+        <div class="row unicodeYangon7 unicodeYangonGroup" style="display: none;">
 
             <div class="col">
                 <div class="card" style=" box-shadow: 10px 10px 5px grey;">
@@ -566,10 +577,10 @@
             </div>      
 
         </div>
-        <br class="yangon7 yangonGroup" style="display: none;">
+        <br class="unicodeYangon7 unicodeYangonGroup" style="display: none;">
 
         <!--location 3-->
-        <div class="row yangon7 yangonGroup" style="display: none;">
+        <div class="row unicodeYangon7 unicodeYangonGroup" style="display: none;">
 
             <div class="col">
                 <div class="card" style=" box-shadow: 10px 10px 5px grey;">
@@ -582,10 +593,10 @@
             </div>      
 
         </div>
-        <br class="yangon7 yangonGroup" style="display: none;">
+        <br class="unicodeYangon7 unicodeYangonGroup" style="display: none;">
 
         <!--location 4-->
-        <div class="row yangon7 yangonGroup" style="display: none;">
+        <div class="row unicodeYangon7 unicodeYangonGroup" style="display: none;">
 
             <div class="col">
                 <div class="card" style=" box-shadow: 10px 10px 5px grey;">
@@ -598,10 +609,10 @@
             </div>      
 
         </div>
-        <br class="yangon7 yangonGroup" style="display: none;">
+        <br class="unicodeYangon7 unicodeYangonGroup" style="display: none;">
         <!--7 ရန်ကင်းမြို့နယ် end--><!--8 မြောက်ဥက္ကလာပမြို့နယ် start-->
         <!--location 1-->
-        <div class="row yangon8 yangonGroup" style="display: none;">
+        <div class="row unicodeYangon8 unicodeYangonGroup" style="display: none;">
 
             <div class="col">
                 <div class="card" style=" box-shadow: 10px 10px 5px grey;">
@@ -614,10 +625,10 @@
             </div>      
 
         </div>
-        <br class="yangon8 yangonGroup" style="display: none;">
+        <br class="unicodeYangon8 unicodeYangonGroup" style="display: none;">
 
         <!--location 2-->
-        <div class="row yangon8 yangonGroup" style="display: none;">
+        <div class="row unicodeYangon8 unicodeYangonGroup" style="display: none;">
 
             <div class="col">
                 <div class="card" style=" box-shadow: 10px 10px 5px grey;">
@@ -630,10 +641,10 @@
             </div>      
 
         </div>
-        <br class="yangon8 yangonGroup" style="display: none;">
+        <br class="unicodeYangon8 unicodeYangonGroup" style="display: none;">
 
         <!--location 3-->
-        <div class="row yangon8 yangonGroup" style="display: none;">
+        <div class="row unicodeYangon8 unicodeYangonGroup" style="display: none;">
 
             <div class="col">
                 <div class="card" style=" box-shadow: 10px 10px 5px grey;">
@@ -646,10 +657,10 @@
             </div>      
 
         </div>
-        <br class="yangon8 yangonGroup" style="display: none;">
+        <br class="unicodeYangon8 unicodeYangonGroup" style="display: none;">
         <!--8 မြောက်ဥက္ကလာပမြို့နယ် end--><!--9 သင်္ဃန်းကျွန်းမြို့နယ် start-->
         <!--location 1-->
-        <div class="row yangon9 yangonGroup" style="display: none;">
+        <div class="row unicodeYangon9 unicodeYangonGroup" style="display: none;">
 
             <div class="col">
                 <div class="card" style=" box-shadow: 10px 10px 5px grey;">
@@ -661,10 +672,10 @@
             </div>      
 
         </div>
-        <br class="yangon9 yangonGroup" style="display: none;">
+        <br class="unicodeYangon9 unicodeYangonGroup" style="display: none;">
 
         <!--location 2-->
-        <div class="row yangon9 yangonGroup" style="display: none;">
+        <div class="row unicodeYangon9 unicodeYangonGroup" style="display: none;">
 
             <div class="col">
                 <div class="card" style=" box-shadow: 10px 10px 5px grey;">
@@ -676,10 +687,10 @@
             </div>      
 
         </div>
-        <br class="yangon9 yangonGroup" style="display: none;">
+        <br class="unicodeYangon9 unicodeYangonGroup" style="display: none;">
 
         <!--location 3-->
-        <div class="row yangon9 yangonGroup" style="display: none;">
+        <div class="row unicodeYangon9 unicodeYangonGroup" style="display: none;">
 
             <div class="col">
                 <div class="card" style=" box-shadow: 10px 10px 5px grey;">
@@ -691,10 +702,10 @@
             </div>      
 
         </div>
-        <br class="yangon9 yangonGroup" style="display: none;">
+        <br class="unicodeYangon9 unicodeYangonGroup" style="display: none;">
         <!--9 သင်္ဃန်းကျွန်းမြို့နယ် end--><!--10 တောင်ဥက္ကလာပမြို့နယ် start-->
         <!-- location 1 -->
-        <div class="row yangon10 yangonGroup" style="display: none;">
+        <div class="row unicodeYangon10 unicodeYangonGroup" style="display: none;">
 
                 <div class="col">
                     <div class="card" style=" box-shadow: 10px 10px 5px grey;">
@@ -707,10 +718,10 @@
                 </div>      
 
         </div>
-        <br class="yangon10 yangonGroup" style="display: none;">
+        <br class="unicodeYangon10 unicodeYangonGroup" style="display: none;">
 
          <!-- location 2 -->
-        <div class="row yangon10 yangonGroup" style="display: none;">
+        <div class="row unicodeYangon10 unicodeYangonGroup" style="display: none;">
 
             <div class="col">
                 <div class="card" style=" box-shadow: 10px 10px 5px grey;">
@@ -723,10 +734,10 @@
             </div>
 
         </div>
-        <br class="yangon10 yangonGroup" style="display: none;">
+        <br class="unicodeYangon10 unicodeYangonGroup" style="display: none;">
 
         <!-- location 3 -->
-        <div class="row yangon10 yangonGroup" style="display: none;">
+        <div class="row unicodeYangon10 unicodeYangonGroup" style="display: none;">
 
             <div class="col">
                 <div class="card" style=" box-shadow: 10px 10px 5px grey;">
@@ -739,10 +750,10 @@
             </div>
 
         </div>
-        <br class="yangon10 yangonGroup" style="display: none;">
+        <br class="unicodeYangon10 unicodeYangonGroup" style="display: none;">
 
         <!-- location 4 -->
-        <div class="row yangon10 yangonGroup" style="display: none;">
+        <div class="row unicodeYangon10 unicodeYangonGroup" style="display: none;">
 
             <div class="col">
                 <div class="card" style=" box-shadow: 10px 10px 5px grey;">
@@ -755,10 +766,10 @@
             </div>
 
         </div>
-        <br class="yangon10 yangonGroup" style="display: none;">
+        <br class="unicodeYangon10 unicodeYangonGroup" style="display: none;">
 
         <!-- location 5-->
-        <div class="row yangon10 yangonGroup" style="display: none;">
+        <div class="row unicodeYangon10 unicodeYangonGroup" style="display: none;">
 
             <div class="col">
                 <div class="card" style=" box-shadow: 10px 10px 5px grey;">
@@ -771,10 +782,10 @@
             </div>
 
         </div>
-        <br class="yangon10 yangonGroup" style="display: none;">
+        <br class="unicodeYangon10 unicodeYangonGroup" style="display: none;">
         <!--10 တောင်ဥက္ကလာပမြို့နယ် end--><!--11 ဗိုလ်တထောင်မြို့နယ် start-->
 <!--location 1-->
-<div class="row yangon11 yangonGroup" style="display: none;">
+<div class="row unicodeYangon11 unicodeYangonGroup" style="display: none;">
 
     <div class="col">
         <div class="card" style=" box-shadow: 10px 10px 5px grey;">
@@ -787,9 +798,9 @@
     </div>
 
 </div>
-<br class="yangon11 yangonGroup" style="display: none;">
+<br class="unicodeYangon11 unicodeYangonGroup" style="display: none;">
 <!--11 ဗိုလ်တထောင်မြို့နယ် end--><!--12 တွံတေးမြို့နယ် start-->
-<div class="row yangon12 yangonGroup" style="display: none;">
+<div class="row unicodeYangon12 unicodeYangonGroup" style="display: none;">
 
 <div class="col">
     <div class="card" style=" box-shadow: 10px 10px 5px grey;">
@@ -802,10 +813,10 @@
 </div>
 
 </div>
-<br class="yangon12 yangonGroup" style="display: none;"> 
+<br class="unicodeYangon12 unicodeYangonGroup" style="display: none;"> 
 <!--12 တွံတေးမြို့နယ် end--><!--13 လှိုင်မြို့နယ် start-->
         <!--location 1-->
-        <div class="row yangon13 yangonGroup" style="display: none;">
+        <div class="row unicodeYangon13 unicodeYangonGroup" style="display: none;">
 
             <div class="col">
                 <div class="card" style=" box-shadow: 10px 10px 5px grey;">
@@ -817,10 +828,10 @@
             </div>
 
         </div>
-        <br class="yangon13 yangonGroup" style="display: none;">
+        <br class="unicodeYangon13 unicodeYangonGroup" style="display: none;">
 
         <!--location 2-->
-        <div class="row yangon13 yangonGroup" style="display: none;">
+        <div class="row unicodeYangon13 unicodeYangonGroup" style="display: none;">
 
             <div class="col">
                 <div class="card" style=" box-shadow: 10px 10px 5px grey;">
@@ -833,10 +844,10 @@
             </div>
 
         </div>
-        <br class="yangon13 yangonGroup" style="display: none;">
+        <br class="unicodeYangon13 unicodeYangonGroup" style="display: none;">
 
         <!--location 3-->
-        <div class="row yangon13 yangonGroup" style="display: none;">
+        <div class="row unicodeYangon13 unicodeYangonGroup" style="display: none;">
 
             <div class="col">
                 <div class="card" style=" box-shadow: 10px 10px 5px grey;">
@@ -849,10 +860,10 @@
             </div>
 
         </div>
-        <br class="yangon13 yangonGroup" style="display: none;">
+        <br class="unicodeYangon13 unicodeYangonGroup" style="display: none;">
         <!--13 လှိုင်မြို့နယ် end--><!--14 ရွေပြည်သာမြို့နယ် start-->
         <!--location 1-->
-        <div class="row yangon14 yangonGroup" style="display: none;">
+        <div class="row unicodeYangon14 unicodeYangonGroup" style="display: none;">
 
             <div class="col">
                 <div class="card" style=" box-shadow: 10px 10px 5px grey;">
@@ -864,12 +875,12 @@
             </div>
 
         </div>
-        <br class="yangon14 yangonGroup" style="display: none;">
+        <br class="unicodeYangon14 unicodeYangonGroup" style="display: none;">
         <!--14 ရွေပြည်သာမြို့နယ် end-->
 <!-- yangon region location end -->
-<!-- mandalay region location start --><div class="row mandalayRegionSection" style="display: none;">
+<!-- mandalay region location start --><div class="row unicodeMandalayRegionSection" style="display: none;">
         <div class="col">
-          <select class="form-select" id="mandalayRegion">
+          <select class="form-select" id="unicodeMandalayRegion">
             <option value="townshipChoiceSelectLable" selected="">မြို့နယ်ရွေးချယ်ရန်</option>
             <option value="1">ပြည်ကြီးတံခွန့်မြို့နယ်</option>
             <option value="2">ချမ်းအေးသာဇံမြို့နယ်</option>
@@ -878,10 +889,10 @@
           </select>
         </div>
       </div>
-      <br class="mandalayRegionSection" style="display: none;"><!--1 ပြည်ကြီးတံခွန့်မြို့နယ် start-->
+      <br class="unicodeMandalayRegionSection" style="display: none;"><!--1 ပြည်ကြီးတံခွန့်မြို့နယ် start-->
 
       <!--location 1-->
-      <div class="row mandalay1 mandalayGroup" style="display: none;">
+      <div class="row unicodeMandalay1 unicodeMandalayGroup" style="display: none;">
 
         <div class="col">
             <div class="card" style=" box-shadow: 10px 10px 5px grey;">
@@ -893,10 +904,10 @@
         </div>      
 
       </div>
-      <br class="mandalay1 mandalayGroup" style="display: none;">
+      <br class="unicodeMandalay1 unicodeMandalayGroup" style="display: none;">
 
       <!--location 2-->
-      <div class="row mandalay1 mandalayGroup" style="display: none;">
+      <div class="row unicodeMandalay1 unicodeMandalayGroup" style="display: none;">
 
         <div class="col">
             <div class="card" style=" box-shadow: 10px 10px 5px grey;">
@@ -909,10 +920,10 @@
         </div>      
 
       </div>
-      <br class="mandalay1 mandalayGroup" style="display: none;">
+      <br class="unicodeMandalay1 unicodeMandalayGroup" style="display: none;">
 
       <!--location 3-->
-      <div class="row mandalay1 mandalayGroup" style="display: none;">
+      <div class="row unicodeMandalay1 unicodeMandalayGroup" style="display: none;">
 
         <div class="col">
             <div class="card" style=" box-shadow: 10px 10px 5px grey;">
@@ -925,10 +936,10 @@
         </div>      
 
       </div>
-      <br class="mandalay1 mandalayGroup" style="display: none;">
+      <br class="unicodeMandalay1 unicodeMandalayGroup" style="display: none;">
       <!--1 ပြည်ကြီးတံခွန့်မြို့နယ် end--><!--2 ချမ်းအေးသာဇံမြို့နယ် start-->
       <!--location 1-->
-      <div class="row mandalay2 mandalayGroup" style="display: none;">
+      <div class="row unicodeMandalay2 unicodeMandalayGroup" style="display: none;">
 
         <div class="col">
             <div class="card" style=" box-shadow: 10px 10px 5px grey;">
@@ -941,11 +952,11 @@
         </div>      
 
       </div>
-      <br class="mandalay2 mandalayGroup" style="display: none;">
+      <br class="unicodeMandalay2 unicodeMandalayGroup" style="display: none;">
 
 
       <!--location 2-->
-      <div class="row mandalay2 mandalayGroup" style="display: none;">
+      <div class="row unicodeMandalay2 unicodeMandalayGroup" style="display: none;">
 
         <div class="col">
             <div class="card" style=" box-shadow: 10px 10px 5px grey;">
@@ -957,11 +968,11 @@
         </div>      
 
       </div>
-      <br class="mandalay2 mandalayGroup" style="display: none;">
+      <br class="unicodeMandalay2 unicodeMandalayGroup" style="display: none;">
 
 
       <!--location 3-->
-      <div class="row mandalay2 mandalayGroup" style="display: none;">
+      <div class="row unicodeMandalay2 unicodeMandalayGroup" style="display: none;">
 
         <div class="col">
             <div class="card" style=" box-shadow: 10px 10px 5px grey;">
@@ -974,10 +985,10 @@
         </div>      
 
       </div>
-      <br class="mandalay2 mandalayGroup" style="display: none;">
+      <br class="unicodeMandalay2 unicodeMandalayGroup" style="display: none;">
       <!--2 ချမ်းအေးသာဇံမြို့နယ် end--><!--3 မဟာအောင်မြေမြို့နယ် start-->
       <!--location 1-->
-      <div class="row mandalay3 mandalayGroup" style="display: none;">
+      <div class="row unicodeMandalay3 unicodeMandalayGroup" style="display: none;">
 
         <div class="col">
             <div class="card" style=" box-shadow: 10px 10px 5px grey;">
@@ -990,10 +1001,10 @@
         </div>      
 
       </div>
-      <br class="mandalay3 mandalayGroup" style="display: none;">
+      <br class="unicodeMandalay3 unicodeMandalayGroup" style="display: none;">
 
       <!--location 2-->
-      <div class="row mandalay3 mandalayGroup" style="display: none;">
+      <div class="row unicodeMandalay3 unicodeMandalayGroup" style="display: none;">
 
         <div class="col">
             <div class="card" style=" box-shadow: 10px 10px 5px grey;">
@@ -1005,10 +1016,10 @@
         </div>      
 
       </div>
-      <br class="mandalay3 mandalayGroup" style="display: none;">
+      <br class="unicodeMandalay3 unicodeMandalayGroup" style="display: none;">
 
       <!--location 3-->
-      <div class="row mandalay3 mandalayGroup" style="display: none;">
+      <div class="row unicodeMandalay3 unicodeMandalayGroup" style="display: none;">
 
         <div class="col">
             <div class="card" style=" box-shadow: 10px 10px 5px grey;">
@@ -1021,10 +1032,10 @@
         </div>      
 
       </div>
-      <br class="mandalay3 mandalayGroup" style="display: none;">
+      <br class="unicodeMandalay3 unicodeMandalayGroup" style="display: none;">
       <!--3 မဟာအောင်မြေမြို့နယ် end--><!--4 ပြင်ဦးလွင်မြို့နယ် start-->
       <!--location 1-->
-      <div class="row mandalay4 mandalayGroup" style="display: none;">
+      <div class="row unicodeMandalay4 unicodeMandalayGroup" style="display: none;">
 
         <div class="col">
             <div class="card" style=" box-shadow: 10px 10px 5px grey;">
@@ -1037,23 +1048,23 @@
         </div>      
 
       </div>
-      <br class="mandalay4 mandalayGroup" style="display: none;">
+      <br class="unicodeMandalay4 unicodeMandalayGroup" style="display: none;">
       <!--4 ပြင်ဦးလွင်မြို့နယ် end-->
 <!-- mandalay region location end -->
-<!-- magway region location start --><!-- magway Region dropdown-->
+<!-- magway region location start --><!-- unicodeMagway Region dropdown-->
 
-<div class="row magwayRegionSection" style="display: none;">
+<div class="row unicodeMagwayRegionSection" style="display: none;">
     <div class="col">
-        <select class="form-select" id="magwayRegion">
+        <select class="form-select" id="unicodeMagwayRegion">
             <option value="townshipChoiceSelectLable" selected="">မြို့နယ်ရွေးချယ်ရန်</option>
             <option value="1">မကွေးမြို့နယ်</option>
         </select>
     </div>
 </div>
 
-<br class="magwayRegionSection" style="display: none;"><!--1 မကွေးမြို့နယ် start-->
+<br class="unicodeMagwayRegionSection" style="display: none;"><!--1 မကွေးမြို့နယ် start-->
       <!--location 1-->
-      <div class="row magway1 magwayGroup" style="display: none;">
+      <div class="row unicodeMagway1 unicodeMagwayGroup" style="display: none;">
 
         <div class="col">
             <div class="card" style=" box-shadow: 10px 10px 5px grey;">
@@ -1066,21 +1077,21 @@
         </div>      
 
       </div>
-      <br class="magway1 magwayGroup" style="display: none;">
+      <br class="unicodeMagway1 unicodeMagwayGroup" style="display: none;">
       <!--1 မကွေးမြို့နယ် end-->
 <!-- magway region location end -->
-<!-- sagaing region location start --><div class="row sagaingRegionSection" style="display: none;">
+<!-- sagaing region location start --><div class="row unicodeSagaingRegionSection" style="display: none;">
     <div class="col">
-        <select class="form-select" id="sagaingRegion">
+        <select class="form-select" id="unicodeSagaingRegion">
             <option value="townshipChoiceSelectLable" selected="">မြို့နယ်ရွေးချယ်ရန်</option>
             <option value="1">စစ်ကိုင်းမြို့နယ်</option>
         </select>
     </div>
 </div>
-<br class="sagaingRegionSection" style="display: none;"><!--1 စစ်ကိုင်းမြို့နယ် start-->
+<br class="unicodeSagaingRegionSection" style="display: none;"><!--1 စစ်ကိုင်းမြို့နယ် start-->
 
 <!--location 1-->
-<div class="row sagaing1 sagaingGroup" style="display: none;">
+<div class="row unicodeSagaing1 unicodeSagaingGroup" style="display: none;">
 
     <div class="col">
         <div class="card" style=" box-shadow: 10px 10px 5px grey;">
@@ -1093,23 +1104,23 @@
     </div>
 
 </div>
-<br class="sagaing1 sagaingGroup" style="display: none;">
+<br class="unicodeSagaing1 unicodeSagaingGroup" style="display: none;">
 <!--1 စစ်ကိုင်းမြို့နယ် end-->
 <!-- sagaing region location end -->
-<!-- ayeyarwady region location start --><!-- ayeyarwady Region dropdown-->
+<!-- ayeyarwady region location start --><!-- unicodeAyeyarwady Region dropdown-->
 
-<div class="row ayeyarwadyRegionSection" style="display: none;">
+<div class="row unicodeAyeyarwadyRegionSection" style="display: none;">
     <div class="col">
-        <select class="form-select" id="ayeyarwadyRegion">
+        <select class="form-select" id="unicodeAyeyarwadyRegion">
             <option value="townshipChoiceSelectLable" selected="">မြို့နယ်ရွေးချယ်ရန်</option>
             <option value="1">ဟင်္သာတမြို့နယ်</option>
         </select>
     </div>
 </div>
 
-<br class="ayeyarwadyRegionSection" style="display: none;"><!--1 ဟင်္သာတမြို့နယ် start-->
+<br class="unicodeAyeyarwadyRegionSection" style="display: none;"><!--1 ဟင်္သာတမြို့နယ် start-->
         <!--location 1-->
-        <div class="row ayeyarwady1 ayeyarwadyGroup" style="display: none;">
+        <div class="row unicodeAyeyarwady1 unicodeAyeyarwadyGroup" style="display: none;">
 
             <div class="col">
                 <div class="card" style=" box-shadow: 10px 10px 5px grey;">
@@ -1122,23 +1133,23 @@
             </div>
 
         </div>
-        <br class="ayeyarwady14 ayeyarwadyGroup" style="display: none;">
+        <br class="unicodeAyeyarwady1 unicodeAyeyarwadyGroup" style="display: none;">
 <!--1 ဟင်္သာတမြို့နယ် end-->
 <!-- ayeyarwady region location end -->
-<!-- bago region location start --><!-- bago Region dropdown-->
+<!-- bago region location start --><!-- unicodeBago Region dropdown-->
 
-<div class="row bagoRegionSection" style="display: none;">
+<div class="row unicodeBagoRegionSection" style="display: none;">
     <div class="col">
-        <select class="form-select" id="bagoRegion">
+        <select class="form-select" id="unicodeBagoRegion">
             <option value="townshipChoiceSelectLable" selected="">မြို့နယ်ရွေးချယ်ရန်</option>
             <option value="1">တောင်ငူမြို့နယ်</option>
         </select>
     </div>
 </div>
 
-<br class="bagoRegionSection" style="display: none;"><!--1 တောင်ငူမြို့နယ် start-->
+<br class="unicodeBagoRegionSection" style="display: none;"><!--1 တောင်ငူမြို့နယ် start-->
 <!--location 1-->
-<div class="row bago1 bagoGroup" style="display: none;">
+<div class="row unicodeBago1 unicodeBagoGroup" style="display: none;">
 
     <div class="col">
         <div class="card" style=" box-shadow: 10px 10px 5px grey;">
@@ -1151,419 +1162,2022 @@
     </div>
 
 </div>
-<br class="bago1 bagoGroup" style="display: none;">
+<br class="unicodeBago1 unicodeBagoGroup" style="display: none;">
 <!--1 တောင်ငူမြို့နယ် end-->
-<!-- ayeyarwady region location end -->    
+<!-- ayeyarwady region location end -->        </div>
+
+        <div class="zawgyi" style="">
+        <div class="row">
+        <div class="col">
+          <select class="form-select" id="zawgyiRegionChoice">
+            <option value="regionChoiceSelectedLable" selected="">တိုင္း&zwnj;&zwnj;&zwnj;&zwnj;ေဒသႀကီး/ျပည္နယ္ &zwnj;ေ႐ြးခ်ယ္ရန္</option>
+
+            
+<option value="shan">႐ွမ္းျပည္နယ္</option><option value="kayin">ကရင္ျပည္နယ္</option><option value="mon">မြန္ျပည္နယ္</option><option value="yangon">ရန္ကုန္တိုင္းေဒသႀကီး</option><option value="mandalay">မႏၲေလးတိုင္းေဒသႀကီး</option><option value="sagaing">စစ္ကိုင္းတိုင္းေဒသႀကီး</option><option value="magway">မေကြးတိုင္းေဒသႀကီး</option><option value="ayeyarwady">ဧရာဝတီတိုင္းေဒသႀကီး</option><option value="bago">ပဲခူးတိုင္းေဒသႀကီး</option>
+          </select>
+        </div>
+      </div>
+
+      <br>
+
+                
+<!-- shan state location start --><!-- zawgyiShan state dropdown-->
+
+<div class="row zawgyiShanStateSection" style="">
+    <div class="col">
+        <select class="form-select" id="zawgyiShanState">
+            <option value="townshipChoiceSelectLable" selected="">ၿမိဳ႕နယ္ေ႐ြးခ်ယ္ရန္</option>
+            <option value="1">လား႐ိႈးၿမိဳ႕နယ္</option>
+            <option value="2">မူဆယ္ၿမိဳ႕နယ္</option>
+        </select>
+    </div>
+</div>
+
+<br class="zawgyiShanStateSection" style="">        <!-- 1 လားရှိုးမြို့နယ် start -->
+
+        <!-- location 1 -->
+        <div class="row zawgyiShan1 zawgyiShanGroup" style="">
+
+            <div class="col">
+                <div class="card" style=" box-shadow: 10px 10px 5px grey;">
+                    <div class="card-body">
+                        <p class="fs-6">ကိုေက်ာ္ေဇယ်ာ</p>
+                        <p class="fs-6">တည္ေနရာ -- ရက ၁၂ တ႐ုတ္ခိုေလာင္းလမ္း (သံလြင္လမ္း)၊ ေဘာ္လုံးကြင္း တိုက္တန္း အဆုံး
+                            ေဒါင့္နား</p>
+                        <p class="fs-6">ဖုန္းနံပါတ္ -- 09797124636, 095260868, 09964371373</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <br class="zawgyiShan1 zawgyiShanGroup" style="">
+
+        <!-- location 2 -->
+        <div class="row zawgyiShan1 zawgyiShanGroup" style="">
+
+            <div class="col">
+                <div class="card" style=" box-shadow: 10px 10px 5px grey;">
+                    <div class="card-body">
+                        <p class="fs-6">စြမ္းလူေအာင္ O2 ျဖည့္ဝန္ေဆာင္မႈ</p>
+                        <p class="fs-6">တည္ေနရာ -- မန္ဆူဘုရား၊ အခန္း (၄)၊ သိႏၵီလမ္း၊ ရပ္ကြက္ (၈</p>
+                        <p class="fs-6">ဖုန္းနံပါတ္ -- 0947302091, 095263488, 09446446933</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <br class="zawgyiShan1 zawgyiShanGroup" style="">
+
+        <!-- location 3 -->
+        <div class="row zawgyiShan1 zawgyiShanGroup" style="">
+
+            <div class="col">
+                <div class="card" style=" box-shadow: 10px 10px 5px grey;">
+                    <div class="card-body">
+                        <p class="fs-6">ေအာင္ခ်မ္းသာ</p>
+                        <p class="fs-6">တည္ေနရာ -- ရပ္ကြက္(၄) ေရကန္လမ္းေပၚ</p>
+                        <p class="fs-6">ဖုန္းနံပါတ္ -- 09964371373</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <br class="zawgyiShan1 zawgyiShanGroup" style="">
+
+        <!-- location 4 -->
+        <div class="row zawgyiShan1 zawgyiShanGroup" style="">
+
+            <div class="col">
+                <div class="card" style=" box-shadow: 10px 10px 5px grey;">
+                    <div class="card-body">
+                        <p class="fs-6">Aung Hospital</p>
+                        <p class="fs-6">တည္ေနရာ -- အမွတ္(၂၁) ၾကာညိဳလမ္း၊ ရပ္ကြက္(၃)</p>
+                        <p class="fs-6">ဖုန္းနံပါတ္ -- 0822925799</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <br class="zawgyiShan1 zawgyiShanGroup" style="">
+
+        <!-- location 5 -->
+        <div class="row zawgyiShan1 zawgyiShanGroup" style="">
+
+            <div class="col">
+                <div class="card" style=" box-shadow: 10px 10px 5px grey;">
+                    <div class="card-body">
+                        <p class="fs-6">ခ်ယ္ရီႏွလုံးသားေသြးလႉ႐ွင္အသင္း</p>
+                        <p class="fs-6">တည္ေနရာ -- ရပ္ကြက္(၁၂) ျပည္ေထာင္စုအားကစားကြင္း</p>
+                        <p class="fs-6">ဖုန္းနံပါတ္ -- 09964371373</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <br class="zawgyiShan1 zawgyiShanGroup" style="">
+
+        <!-- location 6 -->
+        <div class="row zawgyiShan1 zawgyiShanGroup" style="">
+
+            <div class="col">
+                <div class="card" style=" box-shadow: 10px 10px 5px grey;">
+                    <div class="card-body">
+                        <p class="fs-6">Covid-19 Operation Team</p>
+                        <p class="fs-6">ဖုန္းနံပါတ္ -- 09259441828, 09423898891, 09445107887</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <br class="zawgyiShan1 zawgyiShanGroup" style="">
+
+         <!-- 1 လားရှိုးမြို့နယ် end -->    <!-- 2 မူဆယ်မြို့နယ် start -->
+
+    <!-- location 1 -->
+    <div class="row zawgyiShan2 zawgyiShanGroup" style="display: none;">
+
+      <div class="col">
+        <div class="card" style=" box-shadow: 10px 10px 5px grey;">
+          <div class="card-body">
+            <p class="fs-6">ခ်ယ္ရီေျမ ပရဟိတ</p>
+            <p class="fs-6">တည္ေနရာ -- ေတာင္ရပ္ကြက္  </p>
+            <p class="fs-6">ဖုန္းနံပါတ္ -- 09403712380</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <br class="zawgyiShan2 zawgyiShanGroup" style="display: none;">
+
+    <!-- 2 မူဆယ်မြို့နယ် end -->
+<!-- shan state location end -->
+<!-- kayin state location start --><!-- zawgyiKayin state dropdown-->
+
+<div class="row zawgyiKayinStateSection" style="display: none;">
+    <div class="col">
+        <select class="form-select" id="zawgyiKayinState">
+            <option value="townshipChoiceSelectLable" selected="">ၿမိဳ႕နယ္ေ႐ြးခ်ယ္ရန္</option>
+            <option value="1">ဘားအံၿမိဳ႕နယ္</option>
+        </select>
+    </div>
+</div>
+
+<br class="zawgyiKayinStateSection" style="display: none;"><!--1 ဘားအံမြို့နယ် start-->
+<div class="row zawgyiKayin1 zawgyiKayinGroup" style="display: none;">
+
+<div class="col">
+  <div class="card" style=" box-shadow: 10px 10px 5px grey;">
+    <div class="card-body">
+      <p class="fs-6">Myanmar Rescue Organizaton</p>
+      <p class="fs-6">တည္ေနရာ -- အမွတ္(၉) ေရေက်ာ္ ေဒစီ ထမင္းဆိုင္ေဘး ဗိုလ္ခ်ဳပ္လမ္းမ</p>
+      <p class="fs-6">ဖုန္းနံပါတ္ -- 09694455441</p>
+    </div>
   </div>
+</div>
 
-  <script>
-  $(document).ready(function(){
+</div>
+<br class="zawgyiKayin1 zawgyiKayinGroup" style="display: none;">
+<!-- kayin state location end -->
+<!-- mon state location start --><!-- zawgyiMon state dropdown-->
+
+<div class="row zawgyiMonStateSection" style="display: none;">
+    <div class="col">
+        <select class="form-select" id="zawgyiMonState">
+            <option value="townshipChoiceSelectLable" selected="">ၿမိဳ႕နယ္ေ႐ြးခ်ယ္ရန္</option>
+            <option value="1">ေမာ္လၿမိဳင္ၿမိဳ႕နယ္</option>
+        </select>
+    </div>
+</div>
+
+<br class="zawgyiMonStateSection" style="display: none;">
+
+<!-- 1 မော်လမြိုင်မြို့နယ် start -->
+
+<!-- location 1 -->
+<div class="row zawgyiMon1 zawgyiMonGroup" style="display: none;">
+
+<div class="col">
+<div class="card" style=" box-shadow: 10px 10px 5px grey;">
+    <div class="card-body">
+    <p class="fs-6">ေဝဆာ(၂)</p>
+    <p class="fs-6">တည္ေနရာ -- အမွတ္(13), ေအာက္လမ္းမႀကီး, ဖက္တန္းရပ္</p>
+    <p class="fs-6">ဖုန္းနံပါတ္ -- 09750775502, 09784040078, 09406991122</p>
+    </div>
+</div>
+</div>
+
+</div>
+<br class="zawgyiMon1 zawgyiMonGroup" style="display: none;">
+
+<!-- location 2 -->
+<div class="row zawgyiMon1 zawgyiMonGroup" style="display: none;">
+
+<div class="col">
+<div class="card" style=" box-shadow: 10px 10px 5px grey;">
+    <div class="card-body">
+    <p class="fs-6">ေမာ္လၿမိဳင္ လူမႈကယ္ဆယ္ေရးအဖြဲ႕</p>
+    <p class="fs-6">တည္ေနရာ -- တနသၤာရီလမ္း, ဘိုကုန္းရပ္, ဓမၼနႏၵီေက်ာင္းတိုက္</p>
+    <p class="fs-6">ဖုန္းနံပါတ္ -- 09260144199, 09784784199, 09785785199</p>
+    </div>
+</div>
+</div>
+
+</div>
+<br class="zawgyiMon1 zawgyiMonGroup" style="display: none;">
 
 
-      //hide info
-      
-	$('.shanStateSection').hide();
-	$('.shanGroup').hide();
-	$('.kayinStateSection').hide();
-	$('.kayinGroup').hide();
-	$('.monStateSection').hide();
-	$('.monGroup').hide();
-	$('.yangonRegionSection').hide();
-	$('.yangonGroup').hide();
-	$('.mandalayRegionSection').hide();
-	$('.mandalayGroup').hide();
-	$('.sagaingRegionSection').hide();
-	$('.sagaingGroup').hide();
-	$('.magwayRegionSection').hide();
-	$('.magwayGroup').hide();
-	$('.ayeyarwadyRegionSection').hide();
-	$('.ayeyarwadyGroup').hide();
-	$('.bagoRegionSection').hide();
-	$('.bagoGroup').hide();
+<!-- 1 မော်လမြိုင်မြို့နယ် end -->
+<!-- mon state location end -->
+<!-- yangon region location start --><!-- zawgyiYangon Region dropdown-->
+
+<div class="row zawgyiYangonRegionSection" style="display: none;">
+    <div class="col">
+        <select class="form-select" id="zawgyiYangonRegion">
+            <option value="townshipChoiceSelectLable" selected="">ၿမိဳ႕နယ္ေ႐ြးခ်ယ္ရန္</option>
+            <option value="1">ေက်ာက္တံတားၿမိဳ႕နယ္</option>
+            <option value="2">မဂၤလာေတာင္ၫြန္႔ၿမိဳ႕နယ္</option>
+            <option value="3">ပုဇြန္ေတာင္ၿမိဳ႕နယ္</option>
+            <option value="4">ေဒါပုံၿမိဳ႕နယ္</option>
+            <option value="5">သာေကတၿမိဳ႕နယ္   </option>
+            <option value="6">ေတာင္ဒဂုံၿမိဳ႕နယ္</option>
+            <option value="7">ရန္ကင္းၿမိဳ႕နယ္</option>
+            <option value="8">ေျမာက္ဥကၠလာပၿမိဳ႕နယ္</option>
+            <option value="9">သဃၤန္းကြၽန္းၿမိဳ႕နယ္</option>
+            <option value="10">ေတာင္ဥကၠလာပၿမိဳ႕နယ္</option>
+            <option value="11">ဗိုလ္တေထာင္ၿမိဳ႕နယ္</option>
+            <option value="12">တြံေတးၿမိဳ႕နယ္</option>
+            <option value="13">လိႈင္ၿမိဳ႕နယ္</option>
+            <option value="14">ေ႐ြျပည္သာၿမိဳ႕နယ္</option>
+        </select>
+    </div>
+</div>
+
+<br class="zawgyiYangonRegionSection" style="display: none;"><!--1 ကျောက်တံတားမြို့နယ် start-->
+<!-- location 1-->
+<div class="row zawgyiYangon1 zawgyiYangonGroup" style="display: none;">
+
+    <div class="col">
+        <div class="card" style=" box-shadow: 10px 10px 5px grey;">
+            <div class="card-body">
+                <p class="fs-6">ဝိဇယ ေအာက္ဆီဂ်င္</p>
+                <p class="fs-6">တည္ေနရာ -- 39လမ္း၊ အထက္ ေဇယ်မဂၤလာဓမၼာ႐ုံ</p>                        
+            </div>
+        </div>
+    </div>      
+
+</div>
+<br class="zawgyiYangon1 zawgyiYangonGroup" style="display: none;">
+<!--1 ကျောက်တံတားမြို့နယ် end--><!--2 မင်္ဂလာတောင်ညွန့်မြို့နယ် start-->
+<!--location 1-->
+<div class="row zawgyiYangon2 zawgyiYangonGroup" style="display: none;">
+
+    <div class="col">
+        <div class="card" style=" box-shadow: 10px 10px 5px grey;">
+            <div class="card-body">
+                <p class="fs-6">ဂ႐ုဏေရာင္ျခည္ ေအာက္ဆီဂ်င္အဖြဲ႕</p>
+                <p class="fs-6">တည္ေနရာ -- အေ႐ွ႕ပိႏၷဲကုန္းေက်ာင္းတိုက္၊ မႏၲေလးလမ္း၊ ကန္ေတာ္ကေလးေတာင္ရပ္ကြက္</p>                        
+            </div>
+        </div>
+    </div>      
+
+</div>
+<br class="zawgyiYangon2 zawgyiYangonGroup" style="display: none;">
+
+
+<!--location 2-->
+<div class="row zawgyiYangon2 zawgyiYangonGroup" style="display: none;">
+
+    <div class="col">
+        <div class="card" style=" box-shadow: 10px 10px 5px grey;">
+            <div class="card-body">
+                <p class="fs-6">ေ႐ြစင္သစၥာ ေသြးႏွင့္အသက္ကယ္ေအာက္ဆီဂ်င္ပရဟိတ လႉမႈကူညီေရးအသင္း</p>
+                <p class="fs-6">တည္ေနရာ -- အ႐ွင္အာဒိစၥဝံသေက်ာင္းတိုက္၊ စက္႐ုံလမ္း</p>                        
+            </div>
+        </div>
+    </div>      
+
+</div>
+<br class="zawgyiYangon2 zawgyiYangonGroup" style="display: none;">
+<!--2 မင်္ဂလာတောင်ညွန့်မြို့နယ် end--><!--3 ပုဇွန်တောင်မြို့နယ် start-->
+        <!--location 1-->
+        <div class="row zawgyiYangon3 zawgyiYangonGroup" style="display: none;">
+
+            <div class="col">
+                <div class="card" style=" box-shadow: 10px 10px 5px grey;">
+                    <div class="card-body">
+                        <p class="fs-6">ေပးဆပ္ျခင္း ပရဟိတႏွင့္ နာေရးကူညီမႈအသင္း</p>
+                        <p class="fs-6">တည္ေနရာ -- ျဗဟၼဝိဟာရေက်ာင္းတိုက္၊ သာယာကုန္း(၂)ရပ္ကြက္</p>                        
+                    </div>
+                </div>
+            </div>      
+
+        </div>
+        <br class="zawgyiYangon3 zawgyiYangonGroup" style="display: none;">
+
+        <!--location 2-->
+        <div class="row zawgyiYangon3 zawgyiYangonGroup" style="display: none;">
+
+            <div class="col">
+                <div class="card" style=" box-shadow: 10px 10px 5px grey;">
+                    <div class="card-body">
+                        <p class="fs-6">အောက်ဆီဂျင်အသင်း (၅၁) လမ်းအပေါ်</p>
+                        <p class="fs-6">တည်နေရာ -- (၁၇၄/၁၇၆) ၊ (၁ဝ)ရပ်ကွက်</p>                        
+                    </div>
+                </div>
+            </div>      
+
+        </div>
+        <br class="zawgyiYangon3 zawgyiYangonGroup" style="display: none;">
+
+        <!--location 3-->
+        <div class="row zawgyiYangon3 zawgyiYangonGroup" style="display: none;">
+
+            <div class="col">
+                <div class="card" style=" box-shadow: 10px 10px 5px grey;">
+                    <div class="card-body">
+                        <p class="fs-6">စေတနာ လှူမှုကူညီရေး အသင်း</p>
+                        <p class="fs-6">တည်နေရာ -- အမှတ်(၃/၄) ရပ်ကွက်</p>      
+                        <p class="fs-6">ဖုန်းနံပါတ် -- 09402591759, 09448017726, 09799884300, 095188936</p>                  
+                    </div>
+                </div>
+            </div>      
+
+        </div>
+        <br class="zawgyiYangon3 zawgyiYangonGroup" style="display: none;">
+        <!--3 ပုဇွန်တောင်မြို့နယ် end--><!--4 ဒေါပုံမြို့နယ် start-->
+        <!--location 1-->
+        <div class="row zawgyiYangon4 zawgyiYangonGroup" style="display: none;">
+
+            <div class="col">
+                <div class="card" style=" box-shadow: 10px 10px 5px grey;">
+                    <div class="card-body">
+                        <p class="fs-6">ေစတနာ႐ွင္မ်ား လူမႈကူညီေရးအသင္း</p>
+                        <p class="fs-6">တည္ေနရာ -- ဗိုလ္ထြန္းဇံ ရပ္ကြက္</p>                        
+                    </div>
+                </div>
+            </div>      
+
+        </div>
+        <br class="zawgyiYangon4 zawgyiYangonGroup" style="display: none;">
+
+        <!--location 2-->
+        <div class="row zawgyiYangon4 zawgyiYangonGroup" style="display: none;">
+
+            <div class="col">
+                <div class="card" style=" box-shadow: 10px 10px 5px grey;">
+                    <div class="card-body">
+                        <p class="fs-6">ႏြယ္ေအး ဘုရားေက်ာင္း</p>
+                        <p class="fs-6">ဖုန္းနံပါတ္ -- 09250011562, 09976544981</p>                        
+                    </div>
+                </div>
+            </div>      
+
+        </div>
+        <br class="zawgyiYangon4 zawgyiYangonGroup" style="display: none;">
+        <!--4 ဒေါပုံမြို့နယ် end--><!--5 သာကေတမြို့နယ် start-->
+        <!--location 1-->
+        <div class="row zawgyiYangon5 zawgyiYangonGroup" style="display: none;">
+
+            <div class="col">
+                <div class="card" style=" box-shadow: 10px 10px 5px grey;">
+                    <div class="card-body">
+                        <p class="fs-6">O2 ဇိီဝိတဒါန အသက္ကယ္ ေအာက္ဆီဂ်င္</p>
+                        <p class="fs-6">တည္ေနရာ -- ေအာင္သေျပလမ္းႏွင့္ဓမၼာ႐ုံလမ္းောင့္ (၇)လမ္း၊ အေ႐ွ႕ရပ္ကြက္</p>                        
+                    </div>
+                </div>
+            </div>      
+
+        </div>
+        <br class="zawgyiYangon5 zawgyiYangonGroup" style="display: none;">
+
+        <!--location 2-->
+        <div class="row zawgyiYangon5 zawgyiYangonGroup" style="display: none;">
+
+            <div class="col">
+                <div class="card" style=" box-shadow: 10px 10px 5px grey;">
+                    <div class="card-body">
+                        <p class="fs-6">ဇမၺဴေမာင္မယ္ ေအာက္ဆီဂ်င္</p>
+                        <p class="fs-6">တည္ေနရာ -- ဇမၺဴသီရိလမ္း၊ ဇမၺဴသီရိ(၆)လမ္းေဒါင့္၊ အေနာက္(၆)ရပ္ကြက္</p>                        
+                    </div>
+                </div>
+            </div>      
+
+        </div>
+        <br class="zawgyiYangon5 zawgyiYangonGroup" style="display: none;">
+
+        <!--location 3-->
+        <div class="row zawgyiYangon5 zawgyiYangonGroup" style="display: none;">
+
+            <div class="col">
+                <div class="card" style=" box-shadow: 10px 10px 5px grey;">
+                    <div class="card-body">
+                        <p class="fs-6">လူမႈေစတနာ ေအာက္ဆီဂ်င္ကူညီေရး</p>
+                        <p class="fs-6">တည္ေနရာ -- ပတၱျမား(၄)လမ္း၊ လမ္းသြယ္အိမ္ယာသစ္(၇) အေနာက္ရပ္ကြက္</p>                        
+                    </div>
+                </div>
+            </div>      
+
+        </div>
+        <br class="zawgyiYangon5 zawgyiYangonGroup" style="display: none;">
+
+        <!--location 4-->
+        <div class="row zawgyiYangon5 zawgyiYangonGroup" style="display: none;">
+
+            <div class="col">
+                <div class="card" style=" box-shadow: 10px 10px 5px grey;">
+                    <div class="card-body">
+                        <p class="fs-6">"စံ" O2 အလႉ</p>
+                        <p class="fs-6">တည္ေနရာ -- (၃၈)၊ မာန္ေျပ(၁၆)လမ္း၊ အေ႐ွ႕(၃) ရပ္ကြက္</p>                        
+                    </div>
+                </div>
+            </div>      
+
+        </div>
+        <br class="zawgyiYangon5 zawgyiYangonGroup" style="display: none;">
+
+        <!--location 5-->
+        <div class="row zawgyiYangon5 zawgyiYangonGroup" style="display: none;">
+
+            <div class="col">
+                <div class="card" style=" box-shadow: 10px 10px 5px grey;">
+                    <div class="card-body">
+                        <p class="fs-6">မေတ္တာရောင် လူမှုအကျိုးပြုအဖွဲ့</p>
+                        <p class="fs-6">တည်နေရာ -- အောင်သိဒ္ဒိကျောင်းတိုက် (ယာယီ)၊အမှတ်(၉)ရပ်ကွက်</p>                        
+                    </div>
+                </div>
+            </div>      
+
+        </div>
+        <br class="zawgyiYangon5 zawgyiYangonGroup" style="display: none;">
+
+        <!--location 6-->
+        <div class="row zawgyiYangon5 zawgyiYangonGroup" style="display: none;">
+
+            <div class="col">
+                <div class="card" style=" box-shadow: 10px 10px 5px grey;">
+                    <div class="card-body">
+                        <p class="fs-6">ကံကောင်း ပရဟိတအဖွဲ့</p>
+                        <p class="fs-6">တည်နေရာ -- အမှတ်(၂၂၇)၊ သိံဂီ(၁)လမ်း၊ (၅)ရပ်ကွက်</p>                        
+                    </div>
+                </div>
+            </div>      
+
+        </div>
+        <br class="zawgyiYangon5 zawgyiYangonGroup" style="display: none;">
+
+        <!--location 7-->
+        <div class="row zawgyiYangon5 zawgyiYangonGroup" style="display: none;">
+
+            <div class="col">
+                <div class="card" style=" box-shadow: 10px 10px 5px grey;">
+                    <div class="card-body">
+                        <p class="fs-6">ဒီဃာတု ကျန်းမာရေးကူညီစောင့်ရှောက်ရေးအဖွဲ့</p>
+                        <p class="fs-6">တည်နေရာ -- ဇောတရုံလမ်း၊ ၂/တောင် ရပ်ကွက်</p>                        
+                    </div>
+                </div>
+            </div>      
+
+        </div>
+        <br class="zawgyiYangon5 zawgyiYangonGroup" style="display: none;">
+
+        <!--location 8-->
+        <div class="row zawgyiYangon5 zawgyiYangonGroup" style="display: none;">
+
+            <div class="col">
+                <div class="card" style=" box-shadow: 10px 10px 5px grey;">
+                    <div class="card-body">
+                        <p class="fs-6">Aung O2 (Gas &amp; Oxygen Accessories)</p>
+                        <p class="fs-6">တည်နေရာ -- အမှတ်(၈/၉အေ)၊ ယမုံနာလမ်းနှင့်မာန်ပြေလမ်းထောင့်၊ မာန်ပြေမှတ်တိုင်အနီး</p>                        
+                    </div>
+                </div>
+            </div>      
+
+        </div>
+        <br class="zawgyiYangon5 zawgyiYangonGroup" style="display: none;"> 
+
+        <!--location 9-->
+        <div class="row zawgyiYangon5 zawgyiYangonGroup" style="display: none;">
+
+            <div class="col">
+                <div class="card" style=" box-shadow: 10px 10px 5px grey;">
+                    <div class="card-body">
+                        <p class="fs-6">ပီတိ လူမှုကူညီရေးအသင်း</p>
+                        <p class="fs-6">တည်နေရာ -- ဇေယျဝတီလမ်းမကြီး(၁၂/၁၃) ရပ်ကွက်</p>                        
+                    </div>
+                </div>
+            </div>      
+
+        </div>
+        <br class="zawgyiYangon5 zawgyiYangonGroup" style="display: none;">
+        <!--5 သာကေတမြို့နယ် end--><!--6 တောင်ဒဂုံမြို့နယ် start-->
+<!--location 1-->
+<div class="row zawgyiYangon6 zawgyiYangonGroup" style="display: none;">
+
+    <div class="col">
+        <div class="card" style=" box-shadow: 10px 10px 5px grey;">
+            <div class="card-body">
+                <p class="fs-6">ေတာ္ဝင္</p>
+                <p class="fs-6">တည္ေနရာ -- အမွတ္(၆၈)၊ လြိဳင္ေကာ္လမ္း၊ စက္မႈဇုန္ ၁</p>                        
+            </div>
+        </div>
+    </div>      
+
+</div>
+<br class="zawgyiYangon6 zawgyiYangonGroup" style="display: none;">
+<!--6 တောင်ဒဂုံမြို့နယ် end--><!--7 ရန်ကင်းမြို့နယ် start-->
+        <!--location 1-->
+        <div class="row zawgyiYangon7 zawgyiYangonGroup" style="display: none;">
+
+            <div class="col">
+                <div class="card" style=" box-shadow: 10px 10px 5px grey;">
+                    <div class="card-body">
+                        <p class="fs-6">ေနလေအာက္ဆီဂ်င္ အလႉေတာ္</p>
+                        <p class="fs-6">တည္ေနရာ -- ၄/၂/၆၇(ခ)၊ စိုက္ပ်ိဳးေရးပေဒသာလမ္း၊ (၁၁)ရပ္ကြက္၊ ၁၄၆ ကံဘဲ့ဘူတာ႐ုံလမ္း၊ (၁၂) ရပ္ကြက္</p>                        
+                        <p class="fs-6">ဖုန္းနံပါတ္ -- 09795816657, 09450021082, 09790209503</p>
+                    </div>
+                </div>
+            </div>      
+
+        </div>
+        <br class="zawgyiYangon7 zawgyiYangonGroup" style="display: none;">
+
+        <!--location 2-->
+        <div class="row zawgyiYangon7 zawgyiYangonGroup" style="display: none;">
+
+            <div class="col">
+                <div class="card" style=" box-shadow: 10px 10px 5px grey;">
+                    <div class="card-body">
+                        <p class="fs-6">ခေရပြင့္ လူငယ္မ်ား ပရဟိတအသင္း</p>
+                        <p class="fs-6">တည္ေနရာ -- (၄/၃/၇၄) လူငယ္ေမတၱာလမ္း၊ (၁၂) ရပ္ကြက္</p>                        
+                        <p class="fs-6">ဖုန္းနံပါတ္ -- 09730195811, 0945021878, 0942324264</p>
+                    </div>
+                </div>
+            </div>      
+
+        </div>
+        <br class="zawgyiYangon7 zawgyiYangonGroup" style="display: none;">
+
+        <!--location 3-->
+        <div class="row zawgyiYangon7 zawgyiYangonGroup" style="display: none;">
+
+            <div class="col">
+                <div class="card" style=" box-shadow: 10px 10px 5px grey;">
+                    <div class="card-body">
+                        <p class="fs-6">ေလေျပညႇင္း အဖြဲ႕</p>
+                        <p class="fs-6">တည္ေနရာ -- ျပည္သာယာ အဆင့္ျမင့္အိမ္ယာ၊ ေဘာက္ေထာ္ ရပ္ကြက္</p>                        
+                        <p class="fs-6">ဖုန္းနံပါတ္ -- 09250278923, 09252576879, 0943165950</p>
+                    </div>
+                </div>
+            </div>      
+
+        </div>
+        <br class="zawgyiYangon7 zawgyiYangonGroup" style="display: none;">
+
+        <!--location 4-->
+        <div class="row zawgyiYangon7 zawgyiYangonGroup" style="display: none;">
+
+            <div class="col">
+                <div class="card" style=" box-shadow: 10px 10px 5px grey;">
+                    <div class="card-body">
+                        <p class="fs-6">ေနလ</p>
+                        <p class="fs-6">တည္ေနရာ -- က/၁၆၄၊ ကန္ဘဲ့ဘူတာ႐ုံလမ္း၊ (၁၂) ရပ္ကြက္</p>                        
+                        <p class="fs-6">ဖုန္းနံပါတ္ -- 09450021082, 098619939, 0973016916, 09771147482</p>
+                    </div>
+                </div>
+            </div>      
+
+        </div>
+        <br class="zawgyiYangon7 zawgyiYangonGroup" style="display: none;">
+        <!--7 ရန်ကင်းမြို့နယ် end--><!--8 မြောက်ဥက္ကလာပမြို့နယ် start-->
+        <!--location 1-->
+        <div class="row zawgyiYangon8 zawgyiYangonGroup" style="display: none;">
+
+            <div class="col">
+                <div class="card" style=" box-shadow: 10px 10px 5px grey;">
+                    <div class="card-body">
+                        <p class="fs-6">ဂုဏ္ေတာ္ရိပ္သာ ေလအလႉေတာ္အဖြဲ႕</p>
+                        <p class="fs-6">တည္ေနရာ -- သႏၲာလမ္း၊ ႐ႈခင္းသာလမ္းေဒါင့္၊ ဂုဏ္ေတာ္ရိပ္သာ သႏၲာဦးေက်ာင္းတိုက္၊ င ရပ္ကြက္</p>                        
+                        <p class="fs-6">ဖုန္းနံပါတ္ -- 09250506272, 097301502, 09250673126</p>
+                    </div>
+                </div>
+            </div>      
+
+        </div>
+        <br class="zawgyiYangon8 zawgyiYangonGroup" style="display: none;">
+
+        <!--location 2-->
+        <div class="row zawgyiYangon8 zawgyiYangonGroup" style="display: none;">
+
+            <div class="col">
+                <div class="card" style=" box-shadow: 10px 10px 5px grey;">
+                    <div class="card-body">
+                        <p class="fs-6">ျမင့္ျမတ္သူတို႔ ႏွလုံးသား ပရဟိတအဖြဲ႕</p>
+                        <p class="fs-6">တည္ေနရာ -- ေအာင္သေျပလမ္းႏွင့္ေဝဟင္းလမ္းေထာင့္၊ ေဝဘာဂီ (၃)ေဝဟင္းလမ္းေထာင့္၊ ေဝဘာဂီ (၃)</p>                        
+                        <p class="fs-6">ဖုန္းနံပါတ္ -- 09761899255, 09968980443</p>
+                    </div>
+                </div>
+            </div>      
+
+        </div>
+        <br class="zawgyiYangon8 zawgyiYangonGroup" style="display: none;">
+
+        <!--location 3-->
+        <div class="row zawgyiYangon8 zawgyiYangonGroup" style="display: none;">
+
+            <div class="col">
+                <div class="card" style=" box-shadow: 10px 10px 5px grey;">
+                    <div class="card-body">
+                        <p class="fs-6">ေအးရိပ္စံ</p>
+                        <p class="fs-6">တည္ေနရာ -- ၂၊ ေမဒါဝီလမ္း၊ သိဂႌလမ္းေထာင့္၊ စစ္မႉထမ္းေဟာင္း ဆိုင္တန္း၊ စ ရပ္ကြက္</p>                        
+                        <p class="fs-6">ဖုန္းနံပါတ္ -- 095116801, 09775117790, 09965116801</p>
+                    </div>
+                </div>
+            </div>      
+
+        </div>
+        <br class="zawgyiYangon8 zawgyiYangonGroup" style="display: none;">
+        <!--8 မြောက်ဥက္ကလာပမြို့နယ် end--><!--9 သင်္ဃန်းကျွန်းမြို့နယ် start-->
+        <!--location 1-->
+        <div class="row zawgyiYangon9 zawgyiYangonGroup" style="display: none;">
+
+            <div class="col">
+                <div class="card" style=" box-shadow: 10px 10px 5px grey;">
+                    <div class="card-body">
+                        <p class="fs-6">ႀကီးပြါးေရး O2 လူမႈကူညီေရးႏွင့္ ေအာက္ဆီဂ်င္အသင္း</p>
+                        <p class="fs-6">တည္ေနရာ -- ႀကီးပြါးေရးေတာင္ပိုင္း</p>                                             
+                    </div>
+                </div>
+            </div>      
+
+        </div>
+        <br class="zawgyiYangon9 zawgyiYangonGroup" style="display: none;">
+
+        <!--location 2-->
+        <div class="row zawgyiYangon9 zawgyiYangonGroup" style="display: none;">
+
+            <div class="col">
+                <div class="card" style=" box-shadow: 10px 10px 5px grey;">
+                    <div class="card-body">
+                        <p class="fs-6">အႏိႈင္းမဲ့ေမတၱာ လူငယ္ ပရဟိတ အသင္း</p>
+                        <p class="fs-6">တည္ေနရာ -- ရန္မ်ိဳးေအာင္ ဘုရားဝင္း၊စံျပရပ္ကြက္</p>                                             
+                    </div>
+                </div>
+            </div>      
+
+        </div>
+        <br class="zawgyiYangon9 zawgyiYangonGroup" style="display: none;">
+
+        <!--location 3-->
+        <div class="row zawgyiYangon9 zawgyiYangonGroup" style="display: none;">
+
+            <div class="col">
+                <div class="card" style=" box-shadow: 10px 10px 5px grey;">
+                    <div class="card-body">
+                        <p class="fs-6">ၾကယ္ျဖဴ သာေရးနာေရး ကူညီမႈ႕ အသင္း</p>
+                        <p class="fs-6">တည္ေနရာ -- ဦးစံေဖလမ္း၊ ဦးစံေဖရပ္ကြက္</p>                                             
+                    </div>
+                </div>
+            </div>      
+
+        </div>
+        <br class="zawgyiYangon9 zawgyiYangonGroup" style="display: none;">
+        <!--9 သင်္ဃန်းကျွန်းမြို့နယ် end--><!--10 တောင်ဥက္ကလာပမြို့နယ် start-->
+        <!-- location 1 -->
+        <div class="row zawgyiYangon10 zawgyiYangonGroup" style="display: none;">
+
+                <div class="col">
+                    <div class="card" style=" box-shadow: 10px 10px 5px grey;">
+                        <div class="card-body">
+                            <p class="fs-6">ေလေသြးသစၥာပရဟိတအသင္း</p>
+                            <p class="fs-6">တည္ေနရာ -- သီရိေဇယ်ာ၊ (၉၇၉) - (၁၈) လမ္း (က)/၇ ရပ္ကြက္</p>
+                            <p class="fs-6">ဖုန္းနံပါတ္ -- 09450543929, 09799970397, 0973085976, 09421161230</p>
+                        </div>
+                    </div>
+                </div>      
+
+        </div>
+        <br class="zawgyiYangon10 zawgyiYangonGroup" style="display: none;">
+
+         <!-- location 2 -->
+        <div class="row zawgyiYangon10 zawgyiYangonGroup" style="display: none;">
+
+            <div class="col">
+                <div class="card" style=" box-shadow: 10px 10px 5px grey;">
+                    <div class="card-body">
+                        <p class="fs-6">“ေလ" အလႉေတာ္အဖြဲ႕</p>
+                        <p class="fs-6">တည္ေနရာ -- ၈/၁၊ ဓမၼရာဇာ လမ္း၊ (၁၀) ရပ္ကြက္</p>
+                        <p class="fs-6">ဖုန္းနံပါတ္ -- 09420000564, 095072781, 09254120751, 09979613961</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <br class="zawgyiYangon10 zawgyiYangonGroup" style="display: none;">
+
+        <!-- location 3 -->
+        <div class="row zawgyiYangon10 zawgyiYangonGroup" style="display: none;">
+
+            <div class="col">
+                <div class="card" style=" box-shadow: 10px 10px 5px grey;">
+                    <div class="card-body">
+                        <p class="fs-6">မွ်ေဝခံစား တြဲလက္မ်ား ပရဟိတ အသင္း</p>
+                        <p class="fs-6">တည္ေနရာ -- အမွတ္ (၄၉၄)၊ ယႆဝတီ လမ္း၊ (၁၃) ရပ္ကြက္</p>
+                        <p class="fs-6">ဖုန္းနံပါတ္ -- 09484442770, 09484442770</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <br class="zawgyiYangon10 zawgyiYangonGroup" style="display: none;">
+
+        <!-- location 4 -->
+        <div class="row zawgyiYangon10 zawgyiYangonGroup" style="display: none;">
+
+            <div class="col">
+                <div class="card" style=" box-shadow: 10px 10px 5px grey;">
+                    <div class="card-body">
+                        <p class="fs-6">တေကာင္း ေအာက္ဆီဂ်င္</p>
+                        <p class="fs-6">တည္ေနရာ -- တေကာင္းလမ္း၊၅ရပ္ကြက္</p>
+                        <p class="fs-6">ဖုန္းနံပါတ္ -- 09790966994, 09450015272, 09791259814, 09421069667</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <br class="zawgyiYangon10 zawgyiYangonGroup" style="display: none;">
+
+        <!-- location 5-->
+        <div class="row zawgyiYangon10 zawgyiYangonGroup" style="display: none;">
+
+            <div class="col">
+                <div class="card" style=" box-shadow: 10px 10px 5px grey;">
+                    <div class="card-body">
+                        <p class="fs-6">မာဃေအာက္ဆီဂ်င္ - အေရာင္</p>
+                        <p class="fs-6">တည္ေနရာ -- ၉၁၃/က၊ မာဃ ၁၂ လမ္း၊ ၁၂ ရပ္ကြက္</p>
+                        <p class="fs-6">ဖုန္းနံပါတ္ -- 09402591759, 09448017726, 09799884300, 095188936</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <br class="zawgyiYangon10 zawgyiYangonGroup" style="display: none;">
+        <!--10 တောင်ဥက္ကလာပမြို့နယ် end--><!--11 ဗိုလ်တထောင်မြို့နယ် start-->
+<!--location 1-->
+<div class="row zawgyiYangon11 zawgyiYangonGroup" style="display: none;">
+
+    <div class="col">
+        <div class="card" style=" box-shadow: 10px 10px 5px grey;">
+            <div class="card-body">
+                <p class="fs-6">BEST NAING OXYGEN PLANT COMPANY LIMITED</p>
+                <p class="fs-6">တည္ေနရာ -- 53RD STREET, NO.(14/16),2ND FLOOR, WARD NO.(4)</p>
+                <p class="fs-6">ဖုန္းနံပါတ္ -- 095138815</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+<br class="zawgyiYangon11 zawgyiYangonGroup" style="display: none;">
+<!--11 ဗိုလ်တထောင်မြို့နယ် end--><!--12 တွံတေးမြို့နယ် start-->
+<div class="row zawgyiYangon12 zawgyiYangonGroup" style="display: none;">
+
+<div class="col">
+    <div class="card" style=" box-shadow: 10px 10px 5px grey;">
+        <div class="card-body">
+            <p class="fs-6">စိတၱသုခ လူမႈကယ္ဆယ္&zwnj;ေရးအဖြဲ႕</p>
+            <p class="fs-6">တည္ေနရာ -- တြံေတးေဆး႐ုံေဘး၊ ပုံျပေစတီအနီး၊ ေ႐ြဆံေတာ္ဘုရားလမ္း၊ &zwnj;&zwnj;ေ႐ြဆံေတာ္ရပ္ကြက္</p>
+            <p class="fs-6">ဖုန္းနံပါတ္ -- 0931119537, 09448023533, 095056976, 0943024027, 09420194508, 09427438889, 09799313779, 09799285107</p>
+        </div>
+    </div>
+</div>
+
+</div>
+<br class="zawgyiYangon12 zawgyiYangonGroup" style="display: none;"> 
+<!--12 တွံတေးမြို့နယ် end--><!--13 လှိုင်မြို့နယ် start-->
+        <!--location 1-->
+        <div class="row zawgyiYangon13 zawgyiYangonGroup" style="display: none;">
+
+            <div class="col">
+                <div class="card" style=" box-shadow: 10px 10px 5px grey;">
+                    <div class="card-body">
+                        <p class="fs-6">မယ္ဇလီ ပရဟိအသင္း</p>
+                        <p class="fs-6">တည္ေနရာ -- အမွတ္(၈)ရပ္ကြက္၊ ဦးခ်ိဴလမ္း</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <br class="zawgyiYangon13 zawgyiYangonGroup" style="display: none;">
+
+        <!--location 2-->
+        <div class="row zawgyiYangon13 zawgyiYangonGroup" style="display: none;">
+
+            <div class="col">
+                <div class="card" style=" box-shadow: 10px 10px 5px grey;">
+                    <div class="card-body">
+                        <p class="fs-6">ေအာက္ဆီဂ်င္အေရာင္းဆိုင္</p>
+                        <p class="fs-6">တည္ေနရာ -- Silver Moon Hotel ေ႐ွ႕၊ လိႈင္႐ြာမေကြ႕</p>
+                        <p class="fs-6">ဖုန္းနံပါတ္ -- 095069391, 0943112304</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <br class="zawgyiYangon13 zawgyiYangonGroup" style="display: none;">
+
+        <!--location 3-->
+        <div class="row zawgyiYangon13 zawgyiYangonGroup" style="display: none;">
+
+            <div class="col">
+                <div class="card" style=" box-shadow: 10px 10px 5px grey;">
+                    <div class="card-body">
+                        <p class="fs-6">June Group(I)</p>
+                        <p class="fs-6">တည္ေနရာ -- ၂၅၂၊ အင္းစိန္လမ္းႏွင့္ ပါရမီလမ္းေထာင့္၊ ၁၆ ရပ္ကြက္</p>
+                        <p class="fs-6">ဖုန္းနံပါတ္ -- 01098619957</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <br class="zawgyiYangon13 zawgyiYangonGroup" style="display: none;">
+        <!--13 လှိုင်မြို့နယ် end--><!--14 ရွေပြည်သာမြို့နယ် start-->
+        <!--location 1-->
+        <div class="row zawgyiYangon14 zawgyiYangonGroup" style="display: none;">
+
+            <div class="col">
+                <div class="card" style=" box-shadow: 10px 10px 5px grey;">
+                    <div class="card-body">
+                        <p class="fs-6">Unity Oxygen</p>
+                        <p class="fs-6">တည္ေနရာ -- အမွတ္ ၂၈၆, စက္မႈလမ္းသြယ္ (၆)လမ္း, ဇုံ(၁)</p>                        
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <br class="zawgyiYangon14 zawgyiYangonGroup" style="display: none;">
+        <!--14 ရွေပြည်သာမြို့နယ် end-->
+<!-- yangon region location end -->
+<!-- mandalay region location start --><div class="row zawgyiMandalayRegionSection" style="display: none;">
+        <div class="col">
+          <select class="form-select" id="zawgyiMandalayRegion">
+            <option value="townshipChoiceSelectLable" selected="">ၿမိဳ႕နယ္ေ႐ြးခ်ယ္ရန္</option>
+            <option value="1">ျပည္ႀကီးတံခြန္႔ၿမိဳ႕နယ္</option>
+            <option value="2">ခ်မ္းေအးသာဇံၿမိဳ႕နယ္</option>
+            <option value="3">မဟာေအာင္ေျမၿမိဳ႕နယ္</option>
+            <option value="4">ျပင္ဦးလြင္ၿမိဳ႕နယ္</option>
+          </select>
+        </div>
+      </div>
+      <br class="zawgyiMandalayRegionSection" style="display: none;"><!--1 ပြည်ကြီးတံခွန့်မြို့နယ် start-->
+
+      <!--location 1-->
+      <div class="row zawgyiMandalay1 zawgyiMandalayGroup" style="display: none;">
+
+        <div class="col">
+            <div class="card" style=" box-shadow: 10px 10px 5px grey;">
+                <div class="card-body">
+                    <p class="fs-6">စိန္စိန္ညိဳ</p>
+                    <p class="fs-6">တည္ေနရာ -- အမွတ္(H)၊ ၂၁၁/၆၊ (၁၃၈)လမ္း(ဧဝရက္လမ္း)၊ ၅၃လမ္းႏွင့္ ၅၄လမ္းၾကား၊စက္မႈဇုန္(၁)၊ စ် ရပ္ကြက္</p>                                
+                </div>
+            </div>
+        </div>      
+
+      </div>
+      <br class="zawgyiMandalay1 zawgyiMandalayGroup" style="display: none;">
+
+      <!--location 2-->
+      <div class="row zawgyiMandalay1 zawgyiMandalayGroup" style="display: none;">
+
+        <div class="col">
+            <div class="card" style=" box-shadow: 10px 10px 5px grey;">
+                <div class="card-body">
+                    <p class="fs-6">ဟိန္းသစ္</p>
+                    <p class="fs-6">တည္ေနရာ -- အမွတ္ (၀၀-၄၈/၅၂)၊ ၁၃၁လမ္း (ရတနာလမ္း)၊ ၅၄x၅၅ လမ္းၾကား</p>   
+                    <p class="fs-6">ဖုန္းနံပါတ္ -- 09426977794, 09797365938, 09444331946, 09666100325</p>                     
+                </div>
+            </div>
+        </div>      
+
+      </div>
+      <br class="zawgyiMandalay1 zawgyiMandalayGroup" style="display: none;">
+
+      <!--location 3-->
+      <div class="row zawgyiMandalay1 zawgyiMandalayGroup" style="display: none;">
+
+        <div class="col">
+            <div class="card" style=" box-shadow: 10px 10px 5px grey;">
+                <div class="card-body">
+                    <p class="fs-6">ရတနာပုံ - ေအာက္စီဂ်င္စက္႐ုံ</p>
+                    <p class="fs-6">တည္ေနရာ -- တံခြန္တိုင္ရပ္ကြက္၊ ကမၸဝါတန္</p>   
+                    <p class="fs-6">ဖုန္းနံပါတ္ -- 09782013118, 092013118, 09426808796, 09402714079, 09977186034</p>                     
+                </div>
+            </div>
+        </div>      
+
+      </div>
+      <br class="zawgyiMandalay1 zawgyiMandalayGroup" style="display: none;">
+      <!--1 ပြည်ကြီးတံခွန့်မြို့နယ် end--><!--2 ချမ်းအေးသာဇံမြို့နယ် start-->
+      <!--location 1-->
+      <div class="row zawgyiMandalay2 zawgyiMandalayGroup" style="display: none;">
+
+        <div class="col">
+            <div class="card" style=" box-shadow: 10px 10px 5px grey;">
+                <div class="card-body">
+                    <p class="fs-6">ျမတ္သဒၵါ လူမႈနာမူ ကူညီ&ZeroWidthSpace;ေရးအသင္း</p>
+                    <p class="fs-6">တည္ေနရာ -- ၆၂ x၂၇လမ္း&ZeroWidthSpace;ေထာင့္</p>    
+                    <p class="fs-6">ဖုန္းနံပါတ္ -- 09252599299, 09777199299</p>                    
+                </div>
+            </div>
+        </div>      
+
+      </div>
+      <br class="zawgyiMandalay2 zawgyiMandalayGroup" style="display: none;">
+
+
+      <!--location 2-->
+      <div class="row zawgyiMandalay2 zawgyiMandalayGroup" style="display: none;">
+
+        <div class="col">
+            <div class="card" style=" box-shadow: 10px 10px 5px grey;">
+                <div class="card-body">
+                    <p class="fs-6">Five Oceans Co.,LTD</p>
+                    <p class="fs-6">တည္ေနရာ -- ၂၆၊ ၈၅လမ္းေထာင့္၊ ေစ်းခ်ိဳပလာဇာ (ပထမထပ္)</p>                    
+                </div>
+            </div>
+        </div>      
+
+      </div>
+      <br class="zawgyiMandalay2 zawgyiMandalayGroup" style="display: none;">
+
+
+      <!--location 3-->
+      <div class="row zawgyiMandalay2 zawgyiMandalayGroup" style="display: none;">
+
+        <div class="col">
+            <div class="card" style=" box-shadow: 10px 10px 5px grey;">
+                <div class="card-body">
+                    <p class="fs-6">ကိုဇာနည္ - အ&ZeroWidthSpace;ေရာင္း/အငွား</p>
+                    <p class="fs-6">တည္ေနရာ -- ၈၇လမ္း၊ ၃၄×၃၅လမ္းၾကား၊ စမြန္းရပ္</p>    
+                    <p class="fs-6">ဖုန္းနံပါတ္ -- 09797776721</p>                    
+                </div>
+            </div>
+        </div>      
+
+      </div>
+      <br class="zawgyiMandalay2 zawgyiMandalayGroup" style="display: none;">
+      <!--2 ချမ်းအေးသာဇံမြို့နယ် end--><!--3 မဟာအောင်မြေမြို့နယ် start-->
+      <!--location 1-->
+      <div class="row zawgyiMandalay3 zawgyiMandalayGroup" style="display: none;">
+
+        <div class="col">
+            <div class="card" style=" box-shadow: 10px 10px 5px grey;">
+                <div class="card-body">
+                    <p class="fs-6">ဦး&ZeroWidthSpace;ေက်ာ္လွႏွင့္သားမ်ား - အ&ZeroWidthSpace;ေရာင္း/အငွား</p>
+                    <p class="fs-6">တည္ေနရာ -- ၇၇လမ္းႏွင့္ ၃၈လမ္း&ZeroWidthSpace;ေထာင့္</p>         
+                    <p class="fs-6">ဖုန္းနံပါတ္ -- 092056298, 09962056298</p>           
+                </div>
+            </div>
+        </div>      
+
+      </div>
+      <br class="zawgyiMandalay3 zawgyiMandalayGroup" style="display: none;">
+
+      <!--location 2-->
+      <div class="row zawgyiMandalay3 zawgyiMandalayGroup" style="display: none;">
+
+        <div class="col">
+            <div class="card" style=" box-shadow: 10px 10px 5px grey;">
+                <div class="card-body">
+                    <p class="fs-6">မင္းသိန္း ေလအိုးေရာင္းဝယ္ေရး</p>
+                    <p class="fs-6">တည္ေနရာ -- ၄၁လမ္း၊ ၉၀×၉၁ၾကား၊ စိန္ပန္း</p>                  
+                </div>
+            </div>
+        </div>      
+
+      </div>
+      <br class="zawgyiMandalay3 zawgyiMandalayGroup" style="display: none;">
+
+      <!--location 3-->
+      <div class="row zawgyiMandalay3 zawgyiMandalayGroup" style="display: none;">
+
+        <div class="col">
+            <div class="card" style=" box-shadow: 10px 10px 5px grey;">
+                <div class="card-body">
+                    <p class="fs-6">ပုလဲ&ZeroWidthSpace; ပရဟိတေဖာင္&ZeroWidthSpace;ေဒး႐ွင္း</p>
+                    <p class="fs-6">တည္ေနရာ -- ၇၈လမ္း ႏွင့္ သိပၸံလမ္း&ZeroWidthSpace;ေထာင့္၊ သီတာ&ZeroWidthSpace;ေအး ၉၀၁ ရပ္၊ ခ်မ္း/&ZeroWidthSpace;ေျမာက္</p>        
+                    <p class="fs-6">ဖုန္းနံပါတ္ -- 09889900345</p>          
+                </div>
+            </div>
+        </div>      
+
+      </div>
+      <br class="zawgyiMandalay3 zawgyiMandalayGroup" style="display: none;">
+      <!--3 မဟာအောင်မြေမြို့နယ် end--><!--4 ပြင်ဦးလွင်မြို့နယ် start-->
+      <!--location 1-->
+      <div class="row zawgyiMandalay4 zawgyiMandalayGroup" style="display: none;">
+
+        <div class="col">
+            <div class="card" style=" box-shadow: 10px 10px 5px grey;">
+                <div class="card-body">
+                    <p class="fs-6">ျပင္ဦးလြင္ (အခမဲ့) နာေရးကူညီမႈအသင္း</p>
+                    <p class="fs-6">တည္ေနရာ -- မဟာေသာဘိတာရာမေက်ာင္းတိုက္၊ ေစ်းေတာင္ေက်ာင္းႀကီး၊ ေ႐ြဘိုလမ္း ၁-ရပ္ကြက္၊ ရပ္ကြက္ႀကီး(၅)</p>        
+                    <p class="fs-6">ဖုန္း -- 0852028046, 0852028446, 09256268474</p>          
+                </div>
+            </div>
+        </div>      
+
+      </div>
+      <br class="zawgyiMandalay4 zawgyiMandalayGroup" style="display: none;">
+      <!--4 ပြင်ဦးလွင်မြို့နယ် end-->
+<!-- mandalay region location end -->
+<!-- magway region location start --><!-- zawgyiMagway Region dropdown-->
+
+<div class="row zawgyiMagwayRegionSection" style="display: none;">
+    <div class="col">
+        <select class="form-select" id="zawgyiMagwayRegion">
+            <option value="townshipChoiceSelectLable" selected="">ၿမိဳ႕နယ္ေ႐ြးခ်ယ္ရန္</option>
+            <option value="1">မေကြးၿမိဳ႕နယ္</option>
+        </select>
+    </div>
+</div>
+
+<br class="zawgyiMagwayRegionSection" style="display: none;"><!--1 မကွေးမြို့နယ် start-->
+      <!--location 1-->
+      <div class="row zawgyiMagway1 zawgyiMagwayGroup" style="display: none;">
+
+        <div class="col">
+            <div class="card" style=" box-shadow: 10px 10px 5px grey;">
+                <div class="card-body">
+                    <p class="fs-6">ဂ႐ုဏ႐ွင္မ်ား နာ&zwnj;ေရးကူညီမႈအသင္း</p>
+                    <p class="fs-6">ဂုဏ္ေတာ္ေက်ာင္းတိုက္</p>        
+                    <p class="fs-6">ဖုန္း -- 0632023500, 0632025500, 095341900</p>          
+                </div>
+            </div>
+        </div>      
+
+      </div>
+      <br class="zawgyiMagway1 zawgyiMagwayGroup" style="display: none;">
+      <!--1 မကွေးမြို့နယ် end-->
+<!-- magway region location end -->
+<!-- sagaing region location start --><div class="row zawgyiSagaingRegionSection" style="display: none;">
+    <div class="col">
+        <select class="form-select" id="zawgyiSagaingRegion">
+            <option value="townshipChoiceSelectLable" selected="">ၿမိဳ႕နယ္ေ႐ြးခ်ယ္ရန္</option>
+            <option value="1">စစ္ကိုင္းၿမိဳ႕နယ္</option>
+        </select>
+    </div>
+</div>
+<br class="zawgyiSagaingRegionSection" style="display: none;"><!--1 စစ်ကိုင်းမြို့နယ် start-->
+
+<!--location 1-->
+<div class="row zawgyiSagaing1 zawgyiSagaingGroup" style="display: none;">
+
+    <div class="col">
+        <div class="card" style=" box-shadow: 10px 10px 5px grey;">
+            <div class="card-body">
+                <p class="fs-6">အေရးေပၚကယ္ဆယ္ေရးအဖြဲ႕စစ္ကိုင္း(SERT)</p>
+                <p class="fs-6">တည္ေနရာ -- နႏၵဝန္ရပ္ကြက္ ဓမၼာ႐ုံအနီး</p>
+                <p class="fs-6">ဖုန္းနံပါတ္ -- 09779900100, 09792119119</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+<br class="zawgyiSagaing1 zawgyiSagaingGroup" style="display: none;">
+<!--1 စစ်ကိုင်းမြို့နယ် end-->
+<!-- sagaing region location end -->
+<!-- ayeyarwady region location start --><!-- zawgyiAyeyarwady Region dropdown-->
+
+<div class="row zawgyiAyeyarwadyRegionSection" style="display: none;">
+    <div class="col">
+        <select class="form-select" id="zawgyiAyeyarwadyRegion">
+            <option value="townshipChoiceSelectLable" selected="">ၿမိဳ႕နယ္ေ႐ြးခ်ယ္ရန္</option>
+            <option value="1">ဟသၤာတၿမိဳ႕နယ္</option>
+        </select>
+    </div>
+</div>
+
+<br class="zawgyiAyeyarwadyRegionSection" style="display: none;"><!--1 ဟင်္သာတမြို့နယ် start-->
+        <!--location 1-->
+        <div class="row zawgyiAyeyarwady1 zawgyiAyeyarwadyGroup" style="display: none;">
+
+            <div class="col">
+                <div class="card" style=" box-shadow: 10px 10px 5px grey;">
+                    <div class="card-body">
+                        <p class="fs-6">ေနမင္း ေအာက္ဆီဂ်င္ အက်ိဳးေဆာင္လုပ္ငန္း</p>
+                        <p class="fs-6">တည္ေနရာ -- ျပည္သူ႕ေဆး႐ုံႀကီးလမ္း</p>         
+                        <p class="fs-6">ဖုန္းနံပါတ္ -- 09422475532, 09250418454</p>               
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <br class="zawgyiAyeyarwady1 zawgyiAyeyarwadyGroup" style="display: none;">
+<!--1 ဟင်္သာတမြို့နယ် end-->
+<!-- ayeyarwady region location end -->
+<!-- bago region location start --><!-- zawgyiBago Region dropdown-->
+
+<div class="row zawgyiBagoRegionSection" style="display: none;">
+    <div class="col">
+        <select class="form-select" id="zawgyiBagoRegion">
+            <option value="townshipChoiceSelectLable" selected="">ၿမိဳ႕နယ္ေ႐ြးခ်ယ္ရန္</option>
+            <option value="1">ေတာင္ငူၿမိဳ႕နယ္</option>
+        </select>
+    </div>
+</div>
+
+<br class="zawgyiBagoRegionSection" style="display: none;"><!--1 တောင်ငူမြို့နယ် start-->
+<!--location 1-->
+<div class="row zawgyiBago1 zawgyiBagoGroup" style="display: none;">
+
+    <div class="col">
+        <div class="card" style=" box-shadow: 10px 10px 5px grey;">
+            <div class="card-body">
+                <p class="fs-6">စစ္တပ္ဗလီ ေအာက္စီဂ်င္ ရ႐ွိေရးအက်ိဳးေဆာင္အဖြဲ႕</p>
+                <p class="fs-6">တည္ေနရာ -- မိုးေလဝသ႐ုံးလမ္း(ခ) ေဇယ်ာခင္ဦး (1) လမ္း</p>
+                <p class="fs-6">ဖုန္းနံပါတ္ -- 095197922, 0943033786, 09420715888</p>                        
+            </div>
+        </div>
+    </div>
+
+</div>
+<br class="zawgyiBago1 zawgyiBagoGroup" style="display: none;">
+<!--1 တောင်ငူမြို့နယ် end-->
+<!-- ayeyarwady region location end -->        </div>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+
+            $('.unicode').hide();$('.zawgyi').hide();
+    $('#unicodeZawgyiChoice').change(function () {
+        var str = '';
+        $('#unicodeZawgyiChoice option:selected').each(function () {
+            str = $(this).val();
+            if (str == 'unicodeZawgyi') {
+
+                    $('.unicode').hide();
+                    $('.zawgyi').hide();
+            }
+            else if(str == 'zawgyi')
+            {
+                var make = 'regionChoiceSelectedLable';
+                $("#zawgyiRegionChoice option[value='" + make + "']").prop("selected", "selected");
+                $('.zawgyi').show();
+                $('.zawgyiShanStateSection').hide();
+                $('.zawgyiShanGroup').hide();
+                $('.zawgyiKayinStateSection').hide();
+                $('.zawgyiKayinGroup').hide();
+                $('.zawgyiMonStateSection').hide();
+                $('.zawgyiMonGroup').hide();
+                $('.zawgyiYangonRegionSection').hide();
+                $('.zawgyiYangonGroup').hide();
+                $('.zawgyiMandalayRegionSection').hide();
+                $('.zawgyiMandalayGroup').hide();
+                $('.zawgyiSagaingRegionSection').hide();
+                $('.zawgyiSagaingGroup').hide();
+                $('.zawgyiMagwayRegionSection').hide();
+                $('.zawgyiMagwayGroup').hide();
+                $('.zawgyiAyeyarwadyRegionSection').hide();
+                $('.zawgyiAyeyarwadyGroup').hide();
+                $('.zawgyiBagoRegionSection').hide();
+                $('.zawgyiBagoGroup').hide();
+
+            
+          
+       $('.unicode').hide();
+            }
+            else if(str == 'unicode')
+            {
+                var make = 'regionChoiceSelectedLable';
+                $("#unicodeRegionChoice option[value='" + make + "']").prop("selected", "selected");
+                $('.zawgyi').hide();
+                $('.unicode').show();
+                $('.unicodeShanStateSection').hide();
+                $('.unicodeShanGroup').hide();
+                $('.unicodeKayinStateSection').hide();
+                $('.unicodeKayinGroup').hide();
+                $('.unicodeMonStateSection').hide();
+                $('.unicodeMonGroup').hide();
+                $('.unicodeYangonRegionSection').hide();
+                $('.unicodeYangonGroup').hide();
+                $('.unicodeMandalayRegionSection').hide();
+                $('.unicodeMandalayGroup').hide();
+                $('.unicodeSagaingRegionSection').hide();
+                $('.unicodeSagaingGroup').hide();
+                $('.unicodeMagwayRegionSection').hide();
+                $('.unicodeMagwayGroup').hide();
+                $('.unicodeAyeyarwadyRegionSection').hide();
+                $('.unicodeAyeyarwadyGroup').hide();
+                $('.unicodeBagoRegionSection').hide();
+                $('.unicodeBagoGroup').hide();
+            }
+                   
+        });
+    }).trigger('change');
+    
+            //hide info
+            
+	$('.unicodeShanStateSection').hide();
+	$('.unicodeShanGroup').hide();
+	$('.unicodeKayinStateSection').hide();
+	$('.unicodeKayinGroup').hide();
+	$('.unicodeMonStateSection').hide();
+	$('.unicodeMonGroup').hide();
+	$('.unicodeYangonRegionSection').hide();
+	$('.unicodeYangonGroup').hide();
+	$('.unicodeMandalayRegionSection').hide();
+	$('.unicodeMandalayGroup').hide();
+	$('.unicodeSagaingRegionSection').hide();
+	$('.unicodeSagaingGroup').hide();
+	$('.unicodeMagwayRegionSection').hide();
+	$('.unicodeMagwayGroup').hide();
+	$('.unicodeAyeyarwadyRegionSection').hide();
+	$('.unicodeAyeyarwadyGroup').hide();
+	$('.unicodeBagoRegionSection').hide();
+	$('.unicodeBagoGroup').hide();
       //region state choice dropdown
-       $('#regionChoice').change(function () { 
+       $('#unicodeRegionChoice').change(function () { 
 var str = "";
- $('#regionChoice option:selected').each(function () {
+ $('#unicodeRegionChoice option:selected').each(function () {
 str = $(this).val()
 if (str == 'regionChoiceSelectedLable') {
 
-	$('.shanStateSection').hide();
-	$('.shanGroup').hide();
-	$('.kayinStateSection').hide();
-	$('.kayinGroup').hide();
-	$('.monStateSection').hide();
-	$('.monGroup').hide();
-	$('.yangonRegionSection').hide();
-	$('.yangonGroup').hide();
-	$('.mandalayRegionSection').hide();
-	$('.mandalayGroup').hide();
-	$('.sagaingRegionSection').hide();
-	$('.sagaingGroup').hide();
-	$('.magwayRegionSection').hide();
-	$('.magwayGroup').hide();
-	$('.ayeyarwadyRegionSection').hide();
-	$('.ayeyarwadyGroup').hide();
-	$('.bagoRegionSection').hide();
-	$('.bagoGroup').hide();
-}else if (str == 'bago') {var make = 'townshipChoiceSelectLable';$("#bagoRegion option[value='" + make + "']").prop("selected", "selected");$('.bagoRegionSection').show();$('.bagoGroup').hide();$('.shanStateSection').hide();$('.shanGroup').hide();$('.kayinStateSection').hide();$('.kayinGroup').hide();$('.monStateSection').hide();$('.monGroup').hide();$('.yangonRegionSection').hide();$('.yangonGroup').hide();$('.mandalayRegionSection').hide();$('.mandalayGroup').hide();$('.sagaingRegionSection').hide();$('.sagaingGroup').hide();$('.magwayRegionSection').hide();$('.magwayGroup').hide();$('.ayeyarwadyRegionSection').hide();$('.ayeyarwadyGroup').hide();}else if (str == 'ayeyarwady') {var make = 'townshipChoiceSelectLable';$("#ayeyarwadyRegion option[value='" + make + "']").prop("selected", "selected");$('.ayeyarwadyRegionSection').show();$('.ayeyarwadyGroup').hide();$('.shanStateSection').hide();$('.shanGroup').hide();$('.kayinStateSection').hide();$('.kayinGroup').hide();$('.monStateSection').hide();$('.monGroup').hide();$('.yangonRegionSection').hide();$('.yangonGroup').hide();$('.mandalayRegionSection').hide();$('.mandalayGroup').hide();$('.sagaingRegionSection').hide();$('.sagaingGroup').hide();$('.magwayRegionSection').hide();$('.magwayGroup').hide();$('.bagoRegionSection').hide();$('.bagoGroup').hide();}else if (str == 'magway') {var make = 'townshipChoiceSelectLable';$("#magwayRegion option[value='" + make + "']").prop("selected", "selected");$('.magwayRegionSection').show();$('.magwayGroup').hide();$('.shanStateSection').hide();$('.shanGroup').hide();$('.kayinStateSection').hide();$('.kayinGroup').hide();$('.monStateSection').hide();$('.monGroup').hide();$('.yangonRegionSection').hide();$('.yangonGroup').hide();$('.mandalayRegionSection').hide();$('.mandalayGroup').hide();$('.sagaingRegionSection').hide();$('.sagaingGroup').hide();$('.ayeyarwadyRegionSection').hide();$('.ayeyarwadyGroup').hide();$('.bagoRegionSection').hide();$('.bagoGroup').hide();}else if (str == 'sagaing') {var make = 'townshipChoiceSelectLable';$("#sagaingRegion option[value='" + make + "']").prop("selected", "selected");$('.sagaingRegionSection').show();$('.sagaingGroup').hide();$('.shanStateSection').hide();$('.shanGroup').hide();$('.kayinStateSection').hide();$('.kayinGroup').hide();$('.monStateSection').hide();$('.monGroup').hide();$('.yangonRegionSection').hide();$('.yangonGroup').hide();$('.mandalayRegionSection').hide();$('.mandalayGroup').hide();$('.magwayRegionSection').hide();$('.magwayGroup').hide();$('.ayeyarwadyRegionSection').hide();$('.ayeyarwadyGroup').hide();$('.bagoRegionSection').hide();$('.bagoGroup').hide();}else if (str == 'mandalay') {var make = 'townshipChoiceSelectLable';$("#mandalayRegion option[value='" + make + "']").prop("selected", "selected");$('.mandalayRegionSection').show();$('.mandalayGroup').hide();$('.shanStateSection').hide();$('.shanGroup').hide();$('.kayinStateSection').hide();$('.kayinGroup').hide();$('.monStateSection').hide();$('.monGroup').hide();$('.yangonRegionSection').hide();$('.yangonGroup').hide();$('.sagaingRegionSection').hide();$('.sagaingGroup').hide();$('.magwayRegionSection').hide();$('.magwayGroup').hide();$('.ayeyarwadyRegionSection').hide();$('.ayeyarwadyGroup').hide();$('.bagoRegionSection').hide();$('.bagoGroup').hide();}else if (str == 'yangon') {var make = 'townshipChoiceSelectLable';$("#yangonRegion option[value='" + make + "']").prop("selected", "selected");$('.yangonRegionSection').show();$('.yangonGroup').hide();$('.shanStateSection').hide();$('.shanGroup').hide();$('.kayinStateSection').hide();$('.kayinGroup').hide();$('.monStateSection').hide();$('.monGroup').hide();$('.mandalayRegionSection').hide();$('.mandalayGroup').hide();$('.sagaingRegionSection').hide();$('.sagaingGroup').hide();$('.magwayRegionSection').hide();$('.magwayGroup').hide();$('.ayeyarwadyRegionSection').hide();$('.ayeyarwadyGroup').hide();$('.bagoRegionSection').hide();$('.bagoGroup').hide();}else if (str == 'mon') {var make = 'townshipChoiceSelectLable';$("#monState option[value='" + make + "']").prop("selected", "selected");$('.monStateSection').show();$('.monGroup').hide();$('.shanStateSection').hide();$('.shanGroup').hide();$('.kayinStateSection').hide();$('.kayinGroup').hide();$('.yangonRegionSection').hide();$('.yangonGroup').hide();$('.mandalayRegionSection').hide();$('.mandalayGroup').hide();$('.sagaingRegionSection').hide();$('.sagaingGroup').hide();$('.magwayRegionSection').hide();$('.magwayGroup').hide();$('.ayeyarwadyRegionSection').hide();$('.ayeyarwadyGroup').hide();$('.bagoRegionSection').hide();$('.bagoGroup').hide();}else if (str == 'kayin') {var make = 'townshipChoiceSelectLable';$("#kayinState option[value='" + make + "']").prop("selected", "selected");$('.kayinStateSection').show();$('.kayinGroup').hide();$('.shanStateSection').hide();$('.shanGroup').hide();$('.monStateSection').hide();$('.monGroup').hide();$('.yangonRegionSection').hide();$('.yangonGroup').hide();$('.mandalayRegionSection').hide();$('.mandalayGroup').hide();$('.sagaingRegionSection').hide();$('.sagaingGroup').hide();$('.magwayRegionSection').hide();$('.magwayGroup').hide();$('.ayeyarwadyRegionSection').hide();$('.ayeyarwadyGroup').hide();$('.bagoRegionSection').hide();$('.bagoGroup').hide();}else if (str == 'shan') {var make = 'townshipChoiceSelectLable';$("#shanState option[value='" + make + "']").prop("selected", "selected");$('.shanStateSection').show();$('.shanGroup').hide();$('.kayinStateSection').hide();$('.kayinGroup').hide();$('.monStateSection').hide();$('.monGroup').hide();$('.yangonRegionSection').hide();$('.yangonGroup').hide();$('.mandalayRegionSection').hide();$('.mandalayGroup').hide();$('.sagaingRegionSection').hide();$('.sagaingGroup').hide();$('.magwayRegionSection').hide();$('.magwayGroup').hide();$('.ayeyarwadyRegionSection').hide();$('.ayeyarwadyGroup').hide();$('.bagoRegionSection').hide();$('.bagoGroup').hide();}});}).trigger('change');      //shan
-      $('#shanState').change(function () {
+	$('.unicodeShanStateSection').hide();
+	$('.unicodeShanGroup').hide();
+	$('.unicodeKayinStateSection').hide();
+	$('.unicodeKayinGroup').hide();
+	$('.unicodeMonStateSection').hide();
+	$('.unicodeMonGroup').hide();
+	$('.unicodeYangonRegionSection').hide();
+	$('.unicodeYangonGroup').hide();
+	$('.unicodeMandalayRegionSection').hide();
+	$('.unicodeMandalayGroup').hide();
+	$('.unicodeSagaingRegionSection').hide();
+	$('.unicodeSagaingGroup').hide();
+	$('.unicodeMagwayRegionSection').hide();
+	$('.unicodeMagwayGroup').hide();
+	$('.unicodeAyeyarwadyRegionSection').hide();
+	$('.unicodeAyeyarwadyGroup').hide();
+	$('.unicodeBagoRegionSection').hide();
+	$('.unicodeBagoGroup').hide();
+}else if (str == 'bago') {var make = 'townshipChoiceSelectLable';$("#unicodeBagoRegion option[value='" + make + "']").prop("selected", "selected");$('.unicodeBagoRegionSection').show();$('.unicodeBagoGroup').hide();$('.unicodeShanStateSection').hide();$('.unicodeShanGroup').hide();$('.unicodeKayinStateSection').hide();$('.unicodeKayinGroup').hide();$('.unicodeMonStateSection').hide();$('.unicodeMonGroup').hide();$('.unicodeYangonRegionSection').hide();$('.unicodeYangonGroup').hide();$('.unicodeMandalayRegionSection').hide();$('.unicodeMandalayGroup').hide();$('.unicodeSagaingRegionSection').hide();$('.unicodeSagaingGroup').hide();$('.unicodeMagwayRegionSection').hide();$('.unicodeMagwayGroup').hide();$('.unicodeAyeyarwadyRegionSection').hide();$('.unicodeAyeyarwadyGroup').hide();}else if (str == 'ayeyarwady') {var make = 'townshipChoiceSelectLable';$("#unicodeAyeyarwadyRegion option[value='" + make + "']").prop("selected", "selected");$('.unicodeAyeyarwadyRegionSection').show();$('.unicodeAyeyarwadyGroup').hide();$('.unicodeShanStateSection').hide();$('.unicodeShanGroup').hide();$('.unicodeKayinStateSection').hide();$('.unicodeKayinGroup').hide();$('.unicodeMonStateSection').hide();$('.unicodeMonGroup').hide();$('.unicodeYangonRegionSection').hide();$('.unicodeYangonGroup').hide();$('.unicodeMandalayRegionSection').hide();$('.unicodeMandalayGroup').hide();$('.unicodeSagaingRegionSection').hide();$('.unicodeSagaingGroup').hide();$('.unicodeMagwayRegionSection').hide();$('.unicodeMagwayGroup').hide();$('.unicodeBagoRegionSection').hide();$('.unicodeBagoGroup').hide();}else if (str == 'magway') {var make = 'townshipChoiceSelectLable';$("#unicodeMagwayRegion option[value='" + make + "']").prop("selected", "selected");$('.unicodeMagwayRegionSection').show();$('.unicodeMagwayGroup').hide();$('.unicodeShanStateSection').hide();$('.unicodeShanGroup').hide();$('.unicodeKayinStateSection').hide();$('.unicodeKayinGroup').hide();$('.unicodeMonStateSection').hide();$('.unicodeMonGroup').hide();$('.unicodeYangonRegionSection').hide();$('.unicodeYangonGroup').hide();$('.unicodeMandalayRegionSection').hide();$('.unicodeMandalayGroup').hide();$('.unicodeSagaingRegionSection').hide();$('.unicodeSagaingGroup').hide();$('.unicodeAyeyarwadyRegionSection').hide();$('.unicodeAyeyarwadyGroup').hide();$('.unicodeBagoRegionSection').hide();$('.unicodeBagoGroup').hide();}else if (str == 'sagaing') {var make = 'townshipChoiceSelectLable';$("#unicodeSagaingRegion option[value='" + make + "']").prop("selected", "selected");$('.unicodeSagaingRegionSection').show();$('.unicodeSagaingGroup').hide();$('.unicodeShanStateSection').hide();$('.unicodeShanGroup').hide();$('.unicodeKayinStateSection').hide();$('.unicodeKayinGroup').hide();$('.unicodeMonStateSection').hide();$('.unicodeMonGroup').hide();$('.unicodeYangonRegionSection').hide();$('.unicodeYangonGroup').hide();$('.unicodeMandalayRegionSection').hide();$('.unicodeMandalayGroup').hide();$('.unicodeMagwayRegionSection').hide();$('.unicodeMagwayGroup').hide();$('.unicodeAyeyarwadyRegionSection').hide();$('.unicodeAyeyarwadyGroup').hide();$('.unicodeBagoRegionSection').hide();$('.unicodeBagoGroup').hide();}else if (str == 'mandalay') {var make = 'townshipChoiceSelectLable';$("#unicodeMandalayRegion option[value='" + make + "']").prop("selected", "selected");$('.unicodeMandalayRegionSection').show();$('.unicodeMandalayGroup').hide();$('.unicodeShanStateSection').hide();$('.unicodeShanGroup').hide();$('.unicodeKayinStateSection').hide();$('.unicodeKayinGroup').hide();$('.unicodeMonStateSection').hide();$('.unicodeMonGroup').hide();$('.unicodeYangonRegionSection').hide();$('.unicodeYangonGroup').hide();$('.unicodeSagaingRegionSection').hide();$('.unicodeSagaingGroup').hide();$('.unicodeMagwayRegionSection').hide();$('.unicodeMagwayGroup').hide();$('.unicodeAyeyarwadyRegionSection').hide();$('.unicodeAyeyarwadyGroup').hide();$('.unicodeBagoRegionSection').hide();$('.unicodeBagoGroup').hide();}else if (str == 'yangon') {var make = 'townshipChoiceSelectLable';$("#unicodeYangonRegion option[value='" + make + "']").prop("selected", "selected");$('.unicodeYangonRegionSection').show();$('.unicodeYangonGroup').hide();$('.unicodeShanStateSection').hide();$('.unicodeShanGroup').hide();$('.unicodeKayinStateSection').hide();$('.unicodeKayinGroup').hide();$('.unicodeMonStateSection').hide();$('.unicodeMonGroup').hide();$('.unicodeMandalayRegionSection').hide();$('.unicodeMandalayGroup').hide();$('.unicodeSagaingRegionSection').hide();$('.unicodeSagaingGroup').hide();$('.unicodeMagwayRegionSection').hide();$('.unicodeMagwayGroup').hide();$('.unicodeAyeyarwadyRegionSection').hide();$('.unicodeAyeyarwadyGroup').hide();$('.unicodeBagoRegionSection').hide();$('.unicodeBagoGroup').hide();}else if (str == 'mon') {var make = 'townshipChoiceSelectLable';$("#unicodeMonState option[value='" + make + "']").prop("selected", "selected");$('.unicodeMonStateSection').show();$('.unicodeMonGroup').hide();$('.unicodeShanStateSection').hide();$('.unicodeShanGroup').hide();$('.unicodeKayinStateSection').hide();$('.unicodeKayinGroup').hide();$('.unicodeYangonRegionSection').hide();$('.unicodeYangonGroup').hide();$('.unicodeMandalayRegionSection').hide();$('.unicodeMandalayGroup').hide();$('.unicodeSagaingRegionSection').hide();$('.unicodeSagaingGroup').hide();$('.unicodeMagwayRegionSection').hide();$('.unicodeMagwayGroup').hide();$('.unicodeAyeyarwadyRegionSection').hide();$('.unicodeAyeyarwadyGroup').hide();$('.unicodeBagoRegionSection').hide();$('.unicodeBagoGroup').hide();}else if (str == 'kayin') {var make = 'townshipChoiceSelectLable';$("#unicodeKayinState option[value='" + make + "']").prop("selected", "selected");$('.unicodeKayinStateSection').show();$('.unicodeKayinGroup').hide();$('.unicodeShanStateSection').hide();$('.unicodeShanGroup').hide();$('.unicodeMonStateSection').hide();$('.unicodeMonGroup').hide();$('.unicodeYangonRegionSection').hide();$('.unicodeYangonGroup').hide();$('.unicodeMandalayRegionSection').hide();$('.unicodeMandalayGroup').hide();$('.unicodeSagaingRegionSection').hide();$('.unicodeSagaingGroup').hide();$('.unicodeMagwayRegionSection').hide();$('.unicodeMagwayGroup').hide();$('.unicodeAyeyarwadyRegionSection').hide();$('.unicodeAyeyarwadyGroup').hide();$('.unicodeBagoRegionSection').hide();$('.unicodeBagoGroup').hide();}else if (str == 'shan') {var make = 'townshipChoiceSelectLable';$("#unicodeShanState option[value='" + make + "']").prop("selected", "selected");$('.unicodeShanStateSection').show();$('.unicodeShanGroup').hide();$('.unicodeKayinStateSection').hide();$('.unicodeKayinGroup').hide();$('.unicodeMonStateSection').hide();$('.unicodeMonGroup').hide();$('.unicodeYangonRegionSection').hide();$('.unicodeYangonGroup').hide();$('.unicodeMandalayRegionSection').hide();$('.unicodeMandalayGroup').hide();$('.unicodeSagaingRegionSection').hide();$('.unicodeSagaingGroup').hide();$('.unicodeMagwayRegionSection').hide();$('.unicodeMagwayGroup').hide();$('.unicodeAyeyarwadyRegionSection').hide();$('.unicodeAyeyarwadyGroup').hide();$('.unicodeBagoRegionSection').hide();$('.unicodeBagoGroup').hide();}});}).trigger('change');      //shan
+      $('#unicodeShanState').change(function () {
 		var str = '';
-		$('#shanState option:selected').each(function () {
+		$('#unicodeShanState option:selected').each(function () {
 			str = $(this).val();
 				if (str == 'townshipChoiceSelectLable') {
-					$('.shanGroup').hide();
+					$('.unicodeShanGroup').hide();
 				}
 				else if (str == '1') {
-					$('.shan1').show();
-					$('.shan2').hide();
+					$('.unicodeShan1').show();
+					$('.unicodeShan2').hide();
 				}
 				else if (str == '2') {
-					$('.shan1').hide();
-					$('.shan2').show();
+					$('.unicodeShan1').hide();
+					$('.unicodeShan2').show();
 				}
 				});
 				}).trigger('change');      //kayin
-      $('#kayinState').change(function () {
+      $('#unicodeKayinState').change(function () {
 		var str = '';
-		$('#kayinState option:selected').each(function () {
+		$('#unicodeKayinState option:selected').each(function () {
 			str = $(this).val();
 				if (str == 'townshipChoiceSelectLable') {
-					$('.kayinGroup').hide();
+					$('.unicodeKayinGroup').hide();
 				}
 				else if (str == '1') {
-					$('.kayin1').show();
+					$('.unicodeKayin1').show();
 				}
 				});
 				}).trigger('change');      //mon
-      $('#monState').change(function () {
+      $('#unicodeMonState').change(function () {
 		var str = '';
-		$('#monState option:selected').each(function () {
+		$('#unicodeMonState option:selected').each(function () {
 			str = $(this).val();
 				if (str == 'townshipChoiceSelectLable') {
-					$('.monGroup').hide();
+					$('.unicodeMonGroup').hide();
 				}
 				else if (str == '1') {
-					$('.mon1').show();
+					$('.unicodeMon1').show();
 				}
 				});
 				}).trigger('change');      //yangon
-      $('#yangonRegion').change(function () {
+      $('#unicodeYangonRegion').change(function () {
 		var str = '';
-		$('#yangonRegion option:selected').each(function () {
+		$('#unicodeYangonRegion option:selected').each(function () {
 			str = $(this).val();
 				if (str == 'townshipChoiceSelectLable') {
-					$('.yangonGroup').hide();
+					$('.unicodeYangonGroup').hide();
 				}
 				else if (str == '1') {
-					$('.yangon1').show();
-					$('.yangon2').hide();
-					$('.yangon3').hide();
-					$('.yangon4').hide();
-					$('.yangon5').hide();
-					$('.yangon6').hide();
-					$('.yangon7').hide();
-					$('.yangon8').hide();
-					$('.yangon9').hide();
-					$('.yangon10').hide();
-					$('.yangon11').hide();
-					$('.yangon12').hide();
-					$('.yangon13').hide();
-					$('.yangon14').hide();
+					$('.unicodeYangon1').show();
+					$('.unicodeYangon2').hide();
+					$('.unicodeYangon3').hide();
+					$('.unicodeYangon4').hide();
+					$('.unicodeYangon5').hide();
+					$('.unicodeYangon6').hide();
+					$('.unicodeYangon7').hide();
+					$('.unicodeYangon8').hide();
+					$('.unicodeYangon9').hide();
+					$('.unicodeYangon10').hide();
+					$('.unicodeYangon11').hide();
+					$('.unicodeYangon12').hide();
+					$('.unicodeYangon13').hide();
+					$('.unicodeYangon14').hide();
 				}
 				else if (str == '2') {
-					$('.yangon1').hide();
-					$('.yangon2').show();
-					$('.yangon3').hide();
-					$('.yangon4').hide();
-					$('.yangon5').hide();
-					$('.yangon6').hide();
-					$('.yangon7').hide();
-					$('.yangon8').hide();
-					$('.yangon9').hide();
-					$('.yangon10').hide();
-					$('.yangon11').hide();
-					$('.yangon12').hide();
-					$('.yangon13').hide();
-					$('.yangon14').hide();
+					$('.unicodeYangon1').hide();
+					$('.unicodeYangon2').show();
+					$('.unicodeYangon3').hide();
+					$('.unicodeYangon4').hide();
+					$('.unicodeYangon5').hide();
+					$('.unicodeYangon6').hide();
+					$('.unicodeYangon7').hide();
+					$('.unicodeYangon8').hide();
+					$('.unicodeYangon9').hide();
+					$('.unicodeYangon10').hide();
+					$('.unicodeYangon11').hide();
+					$('.unicodeYangon12').hide();
+					$('.unicodeYangon13').hide();
+					$('.unicodeYangon14').hide();
 				}
 				else if (str == '3') {
-					$('.yangon1').hide();
-					$('.yangon2').hide();
-					$('.yangon3').show();
-					$('.yangon4').hide();
-					$('.yangon5').hide();
-					$('.yangon6').hide();
-					$('.yangon7').hide();
-					$('.yangon8').hide();
-					$('.yangon9').hide();
-					$('.yangon10').hide();
-					$('.yangon11').hide();
-					$('.yangon12').hide();
-					$('.yangon13').hide();
-					$('.yangon14').hide();
+					$('.unicodeYangon1').hide();
+					$('.unicodeYangon2').hide();
+					$('.unicodeYangon3').show();
+					$('.unicodeYangon4').hide();
+					$('.unicodeYangon5').hide();
+					$('.unicodeYangon6').hide();
+					$('.unicodeYangon7').hide();
+					$('.unicodeYangon8').hide();
+					$('.unicodeYangon9').hide();
+					$('.unicodeYangon10').hide();
+					$('.unicodeYangon11').hide();
+					$('.unicodeYangon12').hide();
+					$('.unicodeYangon13').hide();
+					$('.unicodeYangon14').hide();
 				}
 				else if (str == '4') {
-					$('.yangon1').hide();
-					$('.yangon2').hide();
-					$('.yangon3').hide();
-					$('.yangon4').show();
-					$('.yangon5').hide();
-					$('.yangon6').hide();
-					$('.yangon7').hide();
-					$('.yangon8').hide();
-					$('.yangon9').hide();
-					$('.yangon10').hide();
-					$('.yangon11').hide();
-					$('.yangon12').hide();
-					$('.yangon13').hide();
-					$('.yangon14').hide();
+					$('.unicodeYangon1').hide();
+					$('.unicodeYangon2').hide();
+					$('.unicodeYangon3').hide();
+					$('.unicodeYangon4').show();
+					$('.unicodeYangon5').hide();
+					$('.unicodeYangon6').hide();
+					$('.unicodeYangon7').hide();
+					$('.unicodeYangon8').hide();
+					$('.unicodeYangon9').hide();
+					$('.unicodeYangon10').hide();
+					$('.unicodeYangon11').hide();
+					$('.unicodeYangon12').hide();
+					$('.unicodeYangon13').hide();
+					$('.unicodeYangon14').hide();
 				}
 				else if (str == '5') {
-					$('.yangon1').hide();
-					$('.yangon2').hide();
-					$('.yangon3').hide();
-					$('.yangon4').hide();
-					$('.yangon5').show();
-					$('.yangon6').hide();
-					$('.yangon7').hide();
-					$('.yangon8').hide();
-					$('.yangon9').hide();
-					$('.yangon10').hide();
-					$('.yangon11').hide();
-					$('.yangon12').hide();
-					$('.yangon13').hide();
-					$('.yangon14').hide();
+					$('.unicodeYangon1').hide();
+					$('.unicodeYangon2').hide();
+					$('.unicodeYangon3').hide();
+					$('.unicodeYangon4').hide();
+					$('.unicodeYangon5').show();
+					$('.unicodeYangon6').hide();
+					$('.unicodeYangon7').hide();
+					$('.unicodeYangon8').hide();
+					$('.unicodeYangon9').hide();
+					$('.unicodeYangon10').hide();
+					$('.unicodeYangon11').hide();
+					$('.unicodeYangon12').hide();
+					$('.unicodeYangon13').hide();
+					$('.unicodeYangon14').hide();
 				}
 				else if (str == '6') {
-					$('.yangon1').hide();
-					$('.yangon2').hide();
-					$('.yangon3').hide();
-					$('.yangon4').hide();
-					$('.yangon5').hide();
-					$('.yangon6').show();
-					$('.yangon7').hide();
-					$('.yangon8').hide();
-					$('.yangon9').hide();
-					$('.yangon10').hide();
-					$('.yangon11').hide();
-					$('.yangon12').hide();
-					$('.yangon13').hide();
-					$('.yangon14').hide();
+					$('.unicodeYangon1').hide();
+					$('.unicodeYangon2').hide();
+					$('.unicodeYangon3').hide();
+					$('.unicodeYangon4').hide();
+					$('.unicodeYangon5').hide();
+					$('.unicodeYangon6').show();
+					$('.unicodeYangon7').hide();
+					$('.unicodeYangon8').hide();
+					$('.unicodeYangon9').hide();
+					$('.unicodeYangon10').hide();
+					$('.unicodeYangon11').hide();
+					$('.unicodeYangon12').hide();
+					$('.unicodeYangon13').hide();
+					$('.unicodeYangon14').hide();
 				}
 				else if (str == '7') {
-					$('.yangon1').hide();
-					$('.yangon2').hide();
-					$('.yangon3').hide();
-					$('.yangon4').hide();
-					$('.yangon5').hide();
-					$('.yangon6').hide();
-					$('.yangon7').show();
-					$('.yangon8').hide();
-					$('.yangon9').hide();
-					$('.yangon10').hide();
-					$('.yangon11').hide();
-					$('.yangon12').hide();
-					$('.yangon13').hide();
-					$('.yangon14').hide();
+					$('.unicodeYangon1').hide();
+					$('.unicodeYangon2').hide();
+					$('.unicodeYangon3').hide();
+					$('.unicodeYangon4').hide();
+					$('.unicodeYangon5').hide();
+					$('.unicodeYangon6').hide();
+					$('.unicodeYangon7').show();
+					$('.unicodeYangon8').hide();
+					$('.unicodeYangon9').hide();
+					$('.unicodeYangon10').hide();
+					$('.unicodeYangon11').hide();
+					$('.unicodeYangon12').hide();
+					$('.unicodeYangon13').hide();
+					$('.unicodeYangon14').hide();
 				}
 				else if (str == '8') {
-					$('.yangon1').hide();
-					$('.yangon2').hide();
-					$('.yangon3').hide();
-					$('.yangon4').hide();
-					$('.yangon5').hide();
-					$('.yangon6').hide();
-					$('.yangon7').hide();
-					$('.yangon8').show();
-					$('.yangon9').hide();
-					$('.yangon10').hide();
-					$('.yangon11').hide();
-					$('.yangon12').hide();
-					$('.yangon13').hide();
-					$('.yangon14').hide();
+					$('.unicodeYangon1').hide();
+					$('.unicodeYangon2').hide();
+					$('.unicodeYangon3').hide();
+					$('.unicodeYangon4').hide();
+					$('.unicodeYangon5').hide();
+					$('.unicodeYangon6').hide();
+					$('.unicodeYangon7').hide();
+					$('.unicodeYangon8').show();
+					$('.unicodeYangon9').hide();
+					$('.unicodeYangon10').hide();
+					$('.unicodeYangon11').hide();
+					$('.unicodeYangon12').hide();
+					$('.unicodeYangon13').hide();
+					$('.unicodeYangon14').hide();
 				}
 				else if (str == '9') {
-					$('.yangon1').hide();
-					$('.yangon2').hide();
-					$('.yangon3').hide();
-					$('.yangon4').hide();
-					$('.yangon5').hide();
-					$('.yangon6').hide();
-					$('.yangon7').hide();
-					$('.yangon8').hide();
-					$('.yangon9').show();
-					$('.yangon10').hide();
-					$('.yangon11').hide();
-					$('.yangon12').hide();
-					$('.yangon13').hide();
-					$('.yangon14').hide();
+					$('.unicodeYangon1').hide();
+					$('.unicodeYangon2').hide();
+					$('.unicodeYangon3').hide();
+					$('.unicodeYangon4').hide();
+					$('.unicodeYangon5').hide();
+					$('.unicodeYangon6').hide();
+					$('.unicodeYangon7').hide();
+					$('.unicodeYangon8').hide();
+					$('.unicodeYangon9').show();
+					$('.unicodeYangon10').hide();
+					$('.unicodeYangon11').hide();
+					$('.unicodeYangon12').hide();
+					$('.unicodeYangon13').hide();
+					$('.unicodeYangon14').hide();
 				}
 				else if (str == '10') {
-					$('.yangon1').hide();
-					$('.yangon2').hide();
-					$('.yangon3').hide();
-					$('.yangon4').hide();
-					$('.yangon5').hide();
-					$('.yangon6').hide();
-					$('.yangon7').hide();
-					$('.yangon8').hide();
-					$('.yangon9').hide();
-					$('.yangon10').show();
-					$('.yangon11').hide();
-					$('.yangon12').hide();
-					$('.yangon13').hide();
-					$('.yangon14').hide();
+					$('.unicodeYangon1').hide();
+					$('.unicodeYangon2').hide();
+					$('.unicodeYangon3').hide();
+					$('.unicodeYangon4').hide();
+					$('.unicodeYangon5').hide();
+					$('.unicodeYangon6').hide();
+					$('.unicodeYangon7').hide();
+					$('.unicodeYangon8').hide();
+					$('.unicodeYangon9').hide();
+					$('.unicodeYangon10').show();
+					$('.unicodeYangon11').hide();
+					$('.unicodeYangon12').hide();
+					$('.unicodeYangon13').hide();
+					$('.unicodeYangon14').hide();
 				}
 				else if (str == '11') {
-					$('.yangon1').hide();
-					$('.yangon2').hide();
-					$('.yangon3').hide();
-					$('.yangon4').hide();
-					$('.yangon5').hide();
-					$('.yangon6').hide();
-					$('.yangon7').hide();
-					$('.yangon8').hide();
-					$('.yangon9').hide();
-					$('.yangon10').hide();
-					$('.yangon11').show();
-					$('.yangon12').hide();
-					$('.yangon13').hide();
-					$('.yangon14').hide();
+					$('.unicodeYangon1').hide();
+					$('.unicodeYangon2').hide();
+					$('.unicodeYangon3').hide();
+					$('.unicodeYangon4').hide();
+					$('.unicodeYangon5').hide();
+					$('.unicodeYangon6').hide();
+					$('.unicodeYangon7').hide();
+					$('.unicodeYangon8').hide();
+					$('.unicodeYangon9').hide();
+					$('.unicodeYangon10').hide();
+					$('.unicodeYangon11').show();
+					$('.unicodeYangon12').hide();
+					$('.unicodeYangon13').hide();
+					$('.unicodeYangon14').hide();
 				}
 				else if (str == '12') {
-					$('.yangon1').hide();
-					$('.yangon2').hide();
-					$('.yangon3').hide();
-					$('.yangon4').hide();
-					$('.yangon5').hide();
-					$('.yangon6').hide();
-					$('.yangon7').hide();
-					$('.yangon8').hide();
-					$('.yangon9').hide();
-					$('.yangon10').hide();
-					$('.yangon11').hide();
-					$('.yangon12').show();
-					$('.yangon13').hide();
-					$('.yangon14').hide();
+					$('.unicodeYangon1').hide();
+					$('.unicodeYangon2').hide();
+					$('.unicodeYangon3').hide();
+					$('.unicodeYangon4').hide();
+					$('.unicodeYangon5').hide();
+					$('.unicodeYangon6').hide();
+					$('.unicodeYangon7').hide();
+					$('.unicodeYangon8').hide();
+					$('.unicodeYangon9').hide();
+					$('.unicodeYangon10').hide();
+					$('.unicodeYangon11').hide();
+					$('.unicodeYangon12').show();
+					$('.unicodeYangon13').hide();
+					$('.unicodeYangon14').hide();
 				}
 				else if (str == '13') {
-					$('.yangon1').hide();
-					$('.yangon2').hide();
-					$('.yangon3').hide();
-					$('.yangon4').hide();
-					$('.yangon5').hide();
-					$('.yangon6').hide();
-					$('.yangon7').hide();
-					$('.yangon8').hide();
-					$('.yangon9').hide();
-					$('.yangon10').hide();
-					$('.yangon11').hide();
-					$('.yangon12').hide();
-					$('.yangon13').show();
-					$('.yangon14').hide();
+					$('.unicodeYangon1').hide();
+					$('.unicodeYangon2').hide();
+					$('.unicodeYangon3').hide();
+					$('.unicodeYangon4').hide();
+					$('.unicodeYangon5').hide();
+					$('.unicodeYangon6').hide();
+					$('.unicodeYangon7').hide();
+					$('.unicodeYangon8').hide();
+					$('.unicodeYangon9').hide();
+					$('.unicodeYangon10').hide();
+					$('.unicodeYangon11').hide();
+					$('.unicodeYangon12').hide();
+					$('.unicodeYangon13').show();
+					$('.unicodeYangon14').hide();
 				}
 				else if (str == '14') {
-					$('.yangon1').hide();
-					$('.yangon2').hide();
-					$('.yangon3').hide();
-					$('.yangon4').hide();
-					$('.yangon5').hide();
-					$('.yangon6').hide();
-					$('.yangon7').hide();
-					$('.yangon8').hide();
-					$('.yangon9').hide();
-					$('.yangon10').hide();
-					$('.yangon11').hide();
-					$('.yangon12').hide();
-					$('.yangon13').hide();
-					$('.yangon14').show();
+					$('.unicodeYangon1').hide();
+					$('.unicodeYangon2').hide();
+					$('.unicodeYangon3').hide();
+					$('.unicodeYangon4').hide();
+					$('.unicodeYangon5').hide();
+					$('.unicodeYangon6').hide();
+					$('.unicodeYangon7').hide();
+					$('.unicodeYangon8').hide();
+					$('.unicodeYangon9').hide();
+					$('.unicodeYangon10').hide();
+					$('.unicodeYangon11').hide();
+					$('.unicodeYangon12').hide();
+					$('.unicodeYangon13').hide();
+					$('.unicodeYangon14').show();
 				}
 				});
 				}).trigger('change');      //mandalay
-      $('#mandalayRegion').change(function () {
+      $('#unicodeMandalayRegion').change(function () {
 		var str = '';
-		$('#mandalayRegion option:selected').each(function () {
+		$('#unicodeMandalayRegion option:selected').each(function () {
 			str = $(this).val();
 				if (str == 'townshipChoiceSelectLable') {
-					$('.mandalayGroup').hide();
+					$('.unicodeMandalayGroup').hide();
 				}
 				else if (str == '1') {
-					$('.mandalay1').show();
-					$('.mandalay2').hide();
-					$('.mandalay3').hide();
-					$('.mandalay4').hide();
+					$('.unicodeMandalay1').show();
+					$('.unicodeMandalay2').hide();
+					$('.unicodeMandalay3').hide();
+					$('.unicodeMandalay4').hide();
 				}
 				else if (str == '2') {
-					$('.mandalay1').hide();
-					$('.mandalay2').show();
-					$('.mandalay3').hide();
-					$('.mandalay4').hide();
+					$('.unicodeMandalay1').hide();
+					$('.unicodeMandalay2').show();
+					$('.unicodeMandalay3').hide();
+					$('.unicodeMandalay4').hide();
 				}
 				else if (str == '3') {
-					$('.mandalay1').hide();
-					$('.mandalay2').hide();
-					$('.mandalay3').show();
-					$('.mandalay4').hide();
+					$('.unicodeMandalay1').hide();
+					$('.unicodeMandalay2').hide();
+					$('.unicodeMandalay3').show();
+					$('.unicodeMandalay4').hide();
 				}
 				else if (str == '4') {
-					$('.mandalay1').hide();
-					$('.mandalay2').hide();
-					$('.mandalay3').hide();
-					$('.mandalay4').show();
+					$('.unicodeMandalay1').hide();
+					$('.unicodeMandalay2').hide();
+					$('.unicodeMandalay3').hide();
+					$('.unicodeMandalay4').show();
 				}
 				});
-				}).trigger('change');      $('#magwayRegion').change(function () {
+				}).trigger('change');      $('#unicodeMagwayRegion').change(function () {
 		var str = '';
-		$('#magwayRegion option:selected').each(function () {
+		$('#unicodeMagwayRegion option:selected').each(function () {
 			str = $(this).val();
 				if (str == 'townshipChoiceSelectLable') {
-					$('.magwayGroup').hide();
+					$('.unicodeMagwayGroup').hide();
 				}
 				else if (str == '1') {
-					$('.magway1').show();
+					$('.unicodeMagway1').show();
 				}
 				});
 				}).trigger('change');      //sagaing
-      $('#sagaingRegion').change(function () {
+      $('#unicodeSagaingRegion').change(function () {
 		var str = '';
-		$('#sagaingRegion option:selected').each(function () {
+		$('#unicodeSagaingRegion option:selected').each(function () {
 			str = $(this).val();
 				if (str == 'townshipChoiceSelectLable') {
-					$('.sagaingGroup').hide();
+					$('.unicodeSagaingGroup').hide();
 				}
 				else if (str == '1') {
-					$('.sagaing1').show();
+					$('.unicodeSagaing1').show();
 				}
 				});
-				}).trigger('change');      //ayeyarwady
-      $('#ayeyarwadyRegion').change(function () {
+				}).trigger('change');            //ayeyarwady
+            $('#unicodeAyeyarwadyRegion').change(function () {
 		var str = '';
-		$('#ayeyarwadyRegion option:selected').each(function () {
+		$('#unicodeAyeyarwadyRegion option:selected').each(function () {
 			str = $(this).val();
 				if (str == 'townshipChoiceSelectLable') {
-					$('.ayeyarwadyGroup').hide();
+					$('.unicodeAyeyarwadyGroup').hide();
 				}
 				else if (str == '1') {
-					$('.ayeyarwady1').show();
+					$('.unicodeAyeyarwady1').show();
 				}
 				});
 				}).trigger('change');      //bago
-      $('#bagoRegion').change(function () {
+      $('#unicodeBagoRegion').change(function () {
 		var str = '';
-		$('#bagoRegion option:selected').each(function () {
+		$('#unicodeBagoRegion option:selected').each(function () {
 			str = $(this).val();
 				if (str == 'townshipChoiceSelectLable') {
-					$('.bagoGroup').hide();
+					$('.unicodeBagoGroup').hide();
 				}
 				else if (str == '1') {
-					$('.bago1').show();
+					$('.unicodeBago1').show();
 				}
 				});
 				}).trigger('change');
-  });
-  </script>
+      //hide info
+      
+	$('.zawgyiShanStateSection').hide();
+	$('.zawgyiShanGroup').hide();
+	$('.zawgyiKayinStateSection').hide();
+	$('.zawgyiKayinGroup').hide();
+	$('.zawgyiMonStateSection').hide();
+	$('.zawgyiMonGroup').hide();
+	$('.zawgyiYangonRegionSection').hide();
+	$('.zawgyiYangonGroup').hide();
+	$('.zawgyiMandalayRegionSection').hide();
+	$('.zawgyiMandalayGroup').hide();
+	$('.zawgyiSagaingRegionSection').hide();
+	$('.zawgyiSagaingGroup').hide();
+	$('.zawgyiMagwayRegionSection').hide();
+	$('.zawgyiMagwayGroup').hide();
+	$('.zawgyiAyeyarwadyRegionSection').hide();
+	$('.zawgyiAyeyarwadyGroup').hide();
+	$('.zawgyiBagoRegionSection').hide();
+	$('.zawgyiBagoGroup').hide();
+      //region state choice dropdown
+       $('#zawgyiRegionChoice').change(function () { 
+var str = "";
+ $('#zawgyiRegionChoice option:selected').each(function () {
+str = $(this).val()
+if (str == 'regionChoiceSelectedLable') {
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+	$('.zawgyiShanStateSection').hide();
+	$('.zawgyiShanGroup').hide();
+	$('.zawgyiKayinStateSection').hide();
+	$('.zawgyiKayinGroup').hide();
+	$('.zawgyiMonStateSection').hide();
+	$('.zawgyiMonGroup').hide();
+	$('.zawgyiYangonRegionSection').hide();
+	$('.zawgyiYangonGroup').hide();
+	$('.zawgyiMandalayRegionSection').hide();
+	$('.zawgyiMandalayGroup').hide();
+	$('.zawgyiSagaingRegionSection').hide();
+	$('.zawgyiSagaingGroup').hide();
+	$('.zawgyiMagwayRegionSection').hide();
+	$('.zawgyiMagwayGroup').hide();
+	$('.zawgyiAyeyarwadyRegionSection').hide();
+	$('.zawgyiAyeyarwadyGroup').hide();
+	$('.zawgyiBagoRegionSection').hide();
+	$('.zawgyiBagoGroup').hide();
+}else if (str == 'bago') {var make = 'townshipChoiceSelectLable';$("#zawgyiBagoRegion option[value='" + make + "']").prop("selected", "selected");$('.zawgyiBagoRegionSection').show();$('.zawgyiBagoGroup').hide();$('.zawgyiShanStateSection').hide();$('.zawgyiShanGroup').hide();$('.zawgyiKayinStateSection').hide();$('.zawgyiKayinGroup').hide();$('.zawgyiMonStateSection').hide();$('.zawgyiMonGroup').hide();$('.zawgyiYangonRegionSection').hide();$('.zawgyiYangonGroup').hide();$('.zawgyiMandalayRegionSection').hide();$('.zawgyiMandalayGroup').hide();$('.zawgyiSagaingRegionSection').hide();$('.zawgyiSagaingGroup').hide();$('.zawgyiMagwayRegionSection').hide();$('.zawgyiMagwayGroup').hide();$('.zawgyiAyeyarwadyRegionSection').hide();$('.zawgyiAyeyarwadyGroup').hide();}else if (str == 'ayeyarwady') {var make = 'townshipChoiceSelectLable';$("#zawgyiAyeyarwadyRegion option[value='" + make + "']").prop("selected", "selected");$('.zawgyiAyeyarwadyRegionSection').show();$('.zawgyiAyeyarwadyGroup').hide();$('.zawgyiShanStateSection').hide();$('.zawgyiShanGroup').hide();$('.zawgyiKayinStateSection').hide();$('.zawgyiKayinGroup').hide();$('.zawgyiMonStateSection').hide();$('.zawgyiMonGroup').hide();$('.zawgyiYangonRegionSection').hide();$('.zawgyiYangonGroup').hide();$('.zawgyiMandalayRegionSection').hide();$('.zawgyiMandalayGroup').hide();$('.zawgyiSagaingRegionSection').hide();$('.zawgyiSagaingGroup').hide();$('.zawgyiMagwayRegionSection').hide();$('.zawgyiMagwayGroup').hide();$('.zawgyiBagoRegionSection').hide();$('.zawgyiBagoGroup').hide();}else if (str == 'magway') {var make = 'townshipChoiceSelectLable';$("#zawgyiMagwayRegion option[value='" + make + "']").prop("selected", "selected");$('.zawgyiMagwayRegionSection').show();$('.zawgyiMagwayGroup').hide();$('.zawgyiShanStateSection').hide();$('.zawgyiShanGroup').hide();$('.zawgyiKayinStateSection').hide();$('.zawgyiKayinGroup').hide();$('.zawgyiMonStateSection').hide();$('.zawgyiMonGroup').hide();$('.zawgyiYangonRegionSection').hide();$('.zawgyiYangonGroup').hide();$('.zawgyiMandalayRegionSection').hide();$('.zawgyiMandalayGroup').hide();$('.zawgyiSagaingRegionSection').hide();$('.zawgyiSagaingGroup').hide();$('.zawgyiAyeyarwadyRegionSection').hide();$('.zawgyiAyeyarwadyGroup').hide();$('.zawgyiBagoRegionSection').hide();$('.zawgyiBagoGroup').hide();}else if (str == 'sagaing') {var make = 'townshipChoiceSelectLable';$("#zawgyiSagaingRegion option[value='" + make + "']").prop("selected", "selected");$('.zawgyiSagaingRegionSection').show();$('.zawgyiSagaingGroup').hide();$('.zawgyiShanStateSection').hide();$('.zawgyiShanGroup').hide();$('.zawgyiKayinStateSection').hide();$('.zawgyiKayinGroup').hide();$('.zawgyiMonStateSection').hide();$('.zawgyiMonGroup').hide();$('.zawgyiYangonRegionSection').hide();$('.zawgyiYangonGroup').hide();$('.zawgyiMandalayRegionSection').hide();$('.zawgyiMandalayGroup').hide();$('.zawgyiMagwayRegionSection').hide();$('.zawgyiMagwayGroup').hide();$('.zawgyiAyeyarwadyRegionSection').hide();$('.zawgyiAyeyarwadyGroup').hide();$('.zawgyiBagoRegionSection').hide();$('.zawgyiBagoGroup').hide();}else if (str == 'mandalay') {var make = 'townshipChoiceSelectLable';$("#zawgyiMandalayRegion option[value='" + make + "']").prop("selected", "selected");$('.zawgyiMandalayRegionSection').show();$('.zawgyiMandalayGroup').hide();$('.zawgyiShanStateSection').hide();$('.zawgyiShanGroup').hide();$('.zawgyiKayinStateSection').hide();$('.zawgyiKayinGroup').hide();$('.zawgyiMonStateSection').hide();$('.zawgyiMonGroup').hide();$('.zawgyiYangonRegionSection').hide();$('.zawgyiYangonGroup').hide();$('.zawgyiSagaingRegionSection').hide();$('.zawgyiSagaingGroup').hide();$('.zawgyiMagwayRegionSection').hide();$('.zawgyiMagwayGroup').hide();$('.zawgyiAyeyarwadyRegionSection').hide();$('.zawgyiAyeyarwadyGroup').hide();$('.zawgyiBagoRegionSection').hide();$('.zawgyiBagoGroup').hide();}else if (str == 'yangon') {var make = 'townshipChoiceSelectLable';$("#zawgyiYangonRegion option[value='" + make + "']").prop("selected", "selected");$('.zawgyiYangonRegionSection').show();$('.zawgyiYangonGroup').hide();$('.zawgyiShanStateSection').hide();$('.zawgyiShanGroup').hide();$('.zawgyiKayinStateSection').hide();$('.zawgyiKayinGroup').hide();$('.zawgyiMonStateSection').hide();$('.zawgyiMonGroup').hide();$('.zawgyiMandalayRegionSection').hide();$('.zawgyiMandalayGroup').hide();$('.zawgyiSagaingRegionSection').hide();$('.zawgyiSagaingGroup').hide();$('.zawgyiMagwayRegionSection').hide();$('.zawgyiMagwayGroup').hide();$('.zawgyiAyeyarwadyRegionSection').hide();$('.zawgyiAyeyarwadyGroup').hide();$('.zawgyiBagoRegionSection').hide();$('.zawgyiBagoGroup').hide();}else if (str == 'mon') {var make = 'townshipChoiceSelectLable';$("#zawgyiMonState option[value='" + make + "']").prop("selected", "selected");$('.zawgyiMonStateSection').show();$('.zawgyiMonGroup').hide();$('.zawgyiShanStateSection').hide();$('.zawgyiShanGroup').hide();$('.zawgyiKayinStateSection').hide();$('.zawgyiKayinGroup').hide();$('.zawgyiYangonRegionSection').hide();$('.zawgyiYangonGroup').hide();$('.zawgyiMandalayRegionSection').hide();$('.zawgyiMandalayGroup').hide();$('.zawgyiSagaingRegionSection').hide();$('.zawgyiSagaingGroup').hide();$('.zawgyiMagwayRegionSection').hide();$('.zawgyiMagwayGroup').hide();$('.zawgyiAyeyarwadyRegionSection').hide();$('.zawgyiAyeyarwadyGroup').hide();$('.zawgyiBagoRegionSection').hide();$('.zawgyiBagoGroup').hide();}else if (str == 'kayin') {var make = 'townshipChoiceSelectLable';$("#zawgyiKayinState option[value='" + make + "']").prop("selected", "selected");$('.zawgyiKayinStateSection').show();$('.zawgyiKayinGroup').hide();$('.zawgyiShanStateSection').hide();$('.zawgyiShanGroup').hide();$('.zawgyiMonStateSection').hide();$('.zawgyiMonGroup').hide();$('.zawgyiYangonRegionSection').hide();$('.zawgyiYangonGroup').hide();$('.zawgyiMandalayRegionSection').hide();$('.zawgyiMandalayGroup').hide();$('.zawgyiSagaingRegionSection').hide();$('.zawgyiSagaingGroup').hide();$('.zawgyiMagwayRegionSection').hide();$('.zawgyiMagwayGroup').hide();$('.zawgyiAyeyarwadyRegionSection').hide();$('.zawgyiAyeyarwadyGroup').hide();$('.zawgyiBagoRegionSection').hide();$('.zawgyiBagoGroup').hide();}else if (str == 'shan') {var make = 'townshipChoiceSelectLable';$("#zawgyiShanState option[value='" + make + "']").prop("selected", "selected");$('.zawgyiShanStateSection').show();$('.zawgyiShanGroup').hide();$('.zawgyiKayinStateSection').hide();$('.zawgyiKayinGroup').hide();$('.zawgyiMonStateSection').hide();$('.zawgyiMonGroup').hide();$('.zawgyiYangonRegionSection').hide();$('.zawgyiYangonGroup').hide();$('.zawgyiMandalayRegionSection').hide();$('.zawgyiMandalayGroup').hide();$('.zawgyiSagaingRegionSection').hide();$('.zawgyiSagaingGroup').hide();$('.zawgyiMagwayRegionSection').hide();$('.zawgyiMagwayGroup').hide();$('.zawgyiAyeyarwadyRegionSection').hide();$('.zawgyiAyeyarwadyGroup').hide();$('.zawgyiBagoRegionSection').hide();$('.zawgyiBagoGroup').hide();}});}).trigger('change');      //shan
+      $('#zawgyiShanState').change(function () {
+		var str = '';
+		$('#zawgyiShanState option:selected').each(function () {
+			str = $(this).val();
+				if (str == 'townshipChoiceSelectLable') {
+					$('.zawgyiShanGroup').hide();
+				}
+				else if (str == '1') {
+					$('.zawgyiShan1').show();
+					$('.zawgyiShan2').hide();
+				}
+				else if (str == '2') {
+					$('.zawgyiShan1').hide();
+					$('.zawgyiShan2').show();
+				}
+				});
+				}).trigger('change');      //kayin
+      $('#zawgyiKayinState').change(function () {
+		var str = '';
+		$('#zawgyiKayinState option:selected').each(function () {
+			str = $(this).val();
+				if (str == 'townshipChoiceSelectLable') {
+					$('.zawgyiKayinGroup').hide();
+				}
+				else if (str == '1') {
+					$('.zawgyiKayin1').show();
+				}
+				});
+				}).trigger('change');      //mon
+      $('#zawgyiMonState').change(function () {
+		var str = '';
+		$('#zawgyiMonState option:selected').each(function () {
+			str = $(this).val();
+				if (str == 'townshipChoiceSelectLable') {
+					$('.zawgyiMonGroup').hide();
+				}
+				else if (str == '1') {
+					$('.zawgyiMon1').show();
+				}
+				});
+				}).trigger('change');      //yangon
+      $('#zawgyiYangonRegion').change(function () {
+		var str = '';
+		$('#zawgyiYangonRegion option:selected').each(function () {
+			str = $(this).val();
+				if (str == 'townshipChoiceSelectLable') {
+					$('.zawgyiYangonGroup').hide();
+				}
+				else if (str == '1') {
+					$('.zawgyiYangon1').show();
+					$('.zawgyiYangon2').hide();
+					$('.zawgyiYangon3').hide();
+					$('.zawgyiYangon4').hide();
+					$('.zawgyiYangon5').hide();
+					$('.zawgyiYangon6').hide();
+					$('.zawgyiYangon7').hide();
+					$('.zawgyiYangon8').hide();
+					$('.zawgyiYangon9').hide();
+					$('.zawgyiYangon10').hide();
+					$('.zawgyiYangon11').hide();
+					$('.zawgyiYangon12').hide();
+					$('.zawgyiYangon13').hide();
+					$('.zawgyiYangon14').hide();
+				}
+				else if (str == '2') {
+					$('.zawgyiYangon1').hide();
+					$('.zawgyiYangon2').show();
+					$('.zawgyiYangon3').hide();
+					$('.zawgyiYangon4').hide();
+					$('.zawgyiYangon5').hide();
+					$('.zawgyiYangon6').hide();
+					$('.zawgyiYangon7').hide();
+					$('.zawgyiYangon8').hide();
+					$('.zawgyiYangon9').hide();
+					$('.zawgyiYangon10').hide();
+					$('.zawgyiYangon11').hide();
+					$('.zawgyiYangon12').hide();
+					$('.zawgyiYangon13').hide();
+					$('.zawgyiYangon14').hide();
+				}
+				else if (str == '3') {
+					$('.zawgyiYangon1').hide();
+					$('.zawgyiYangon2').hide();
+					$('.zawgyiYangon3').show();
+					$('.zawgyiYangon4').hide();
+					$('.zawgyiYangon5').hide();
+					$('.zawgyiYangon6').hide();
+					$('.zawgyiYangon7').hide();
+					$('.zawgyiYangon8').hide();
+					$('.zawgyiYangon9').hide();
+					$('.zawgyiYangon10').hide();
+					$('.zawgyiYangon11').hide();
+					$('.zawgyiYangon12').hide();
+					$('.zawgyiYangon13').hide();
+					$('.zawgyiYangon14').hide();
+				}
+				else if (str == '4') {
+					$('.zawgyiYangon1').hide();
+					$('.zawgyiYangon2').hide();
+					$('.zawgyiYangon3').hide();
+					$('.zawgyiYangon4').show();
+					$('.zawgyiYangon5').hide();
+					$('.zawgyiYangon6').hide();
+					$('.zawgyiYangon7').hide();
+					$('.zawgyiYangon8').hide();
+					$('.zawgyiYangon9').hide();
+					$('.zawgyiYangon10').hide();
+					$('.zawgyiYangon11').hide();
+					$('.zawgyiYangon12').hide();
+					$('.zawgyiYangon13').hide();
+					$('.zawgyiYangon14').hide();
+				}
+				else if (str == '5') {
+					$('.zawgyiYangon1').hide();
+					$('.zawgyiYangon2').hide();
+					$('.zawgyiYangon3').hide();
+					$('.zawgyiYangon4').hide();
+					$('.zawgyiYangon5').show();
+					$('.zawgyiYangon6').hide();
+					$('.zawgyiYangon7').hide();
+					$('.zawgyiYangon8').hide();
+					$('.zawgyiYangon9').hide();
+					$('.zawgyiYangon10').hide();
+					$('.zawgyiYangon11').hide();
+					$('.zawgyiYangon12').hide();
+					$('.zawgyiYangon13').hide();
+					$('.zawgyiYangon14').hide();
+				}
+				else if (str == '6') {
+					$('.zawgyiYangon1').hide();
+					$('.zawgyiYangon2').hide();
+					$('.zawgyiYangon3').hide();
+					$('.zawgyiYangon4').hide();
+					$('.zawgyiYangon5').hide();
+					$('.zawgyiYangon6').show();
+					$('.zawgyiYangon7').hide();
+					$('.zawgyiYangon8').hide();
+					$('.zawgyiYangon9').hide();
+					$('.zawgyiYangon10').hide();
+					$('.zawgyiYangon11').hide();
+					$('.zawgyiYangon12').hide();
+					$('.zawgyiYangon13').hide();
+					$('.zawgyiYangon14').hide();
+				}
+				else if (str == '7') {
+					$('.zawgyiYangon1').hide();
+					$('.zawgyiYangon2').hide();
+					$('.zawgyiYangon3').hide();
+					$('.zawgyiYangon4').hide();
+					$('.zawgyiYangon5').hide();
+					$('.zawgyiYangon6').hide();
+					$('.zawgyiYangon7').show();
+					$('.zawgyiYangon8').hide();
+					$('.zawgyiYangon9').hide();
+					$('.zawgyiYangon10').hide();
+					$('.zawgyiYangon11').hide();
+					$('.zawgyiYangon12').hide();
+					$('.zawgyiYangon13').hide();
+					$('.zawgyiYangon14').hide();
+				}
+				else if (str == '8') {
+					$('.zawgyiYangon1').hide();
+					$('.zawgyiYangon2').hide();
+					$('.zawgyiYangon3').hide();
+					$('.zawgyiYangon4').hide();
+					$('.zawgyiYangon5').hide();
+					$('.zawgyiYangon6').hide();
+					$('.zawgyiYangon7').hide();
+					$('.zawgyiYangon8').show();
+					$('.zawgyiYangon9').hide();
+					$('.zawgyiYangon10').hide();
+					$('.zawgyiYangon11').hide();
+					$('.zawgyiYangon12').hide();
+					$('.zawgyiYangon13').hide();
+					$('.zawgyiYangon14').hide();
+				}
+				else if (str == '9') {
+					$('.zawgyiYangon1').hide();
+					$('.zawgyiYangon2').hide();
+					$('.zawgyiYangon3').hide();
+					$('.zawgyiYangon4').hide();
+					$('.zawgyiYangon5').hide();
+					$('.zawgyiYangon6').hide();
+					$('.zawgyiYangon7').hide();
+					$('.zawgyiYangon8').hide();
+					$('.zawgyiYangon9').show();
+					$('.zawgyiYangon10').hide();
+					$('.zawgyiYangon11').hide();
+					$('.zawgyiYangon12').hide();
+					$('.zawgyiYangon13').hide();
+					$('.zawgyiYangon14').hide();
+				}
+				else if (str == '10') {
+					$('.zawgyiYangon1').hide();
+					$('.zawgyiYangon2').hide();
+					$('.zawgyiYangon3').hide();
+					$('.zawgyiYangon4').hide();
+					$('.zawgyiYangon5').hide();
+					$('.zawgyiYangon6').hide();
+					$('.zawgyiYangon7').hide();
+					$('.zawgyiYangon8').hide();
+					$('.zawgyiYangon9').hide();
+					$('.zawgyiYangon10').show();
+					$('.zawgyiYangon11').hide();
+					$('.zawgyiYangon12').hide();
+					$('.zawgyiYangon13').hide();
+					$('.zawgyiYangon14').hide();
+				}
+				else if (str == '11') {
+					$('.zawgyiYangon1').hide();
+					$('.zawgyiYangon2').hide();
+					$('.zawgyiYangon3').hide();
+					$('.zawgyiYangon4').hide();
+					$('.zawgyiYangon5').hide();
+					$('.zawgyiYangon6').hide();
+					$('.zawgyiYangon7').hide();
+					$('.zawgyiYangon8').hide();
+					$('.zawgyiYangon9').hide();
+					$('.zawgyiYangon10').hide();
+					$('.zawgyiYangon11').show();
+					$('.zawgyiYangon12').hide();
+					$('.zawgyiYangon13').hide();
+					$('.zawgyiYangon14').hide();
+				}
+				else if (str == '12') {
+					$('.zawgyiYangon1').hide();
+					$('.zawgyiYangon2').hide();
+					$('.zawgyiYangon3').hide();
+					$('.zawgyiYangon4').hide();
+					$('.zawgyiYangon5').hide();
+					$('.zawgyiYangon6').hide();
+					$('.zawgyiYangon7').hide();
+					$('.zawgyiYangon8').hide();
+					$('.zawgyiYangon9').hide();
+					$('.zawgyiYangon10').hide();
+					$('.zawgyiYangon11').hide();
+					$('.zawgyiYangon12').show();
+					$('.zawgyiYangon13').hide();
+					$('.zawgyiYangon14').hide();
+				}
+				else if (str == '13') {
+					$('.zawgyiYangon1').hide();
+					$('.zawgyiYangon2').hide();
+					$('.zawgyiYangon3').hide();
+					$('.zawgyiYangon4').hide();
+					$('.zawgyiYangon5').hide();
+					$('.zawgyiYangon6').hide();
+					$('.zawgyiYangon7').hide();
+					$('.zawgyiYangon8').hide();
+					$('.zawgyiYangon9').hide();
+					$('.zawgyiYangon10').hide();
+					$('.zawgyiYangon11').hide();
+					$('.zawgyiYangon12').hide();
+					$('.zawgyiYangon13').show();
+					$('.zawgyiYangon14').hide();
+				}
+				else if (str == '14') {
+					$('.zawgyiYangon1').hide();
+					$('.zawgyiYangon2').hide();
+					$('.zawgyiYangon3').hide();
+					$('.zawgyiYangon4').hide();
+					$('.zawgyiYangon5').hide();
+					$('.zawgyiYangon6').hide();
+					$('.zawgyiYangon7').hide();
+					$('.zawgyiYangon8').hide();
+					$('.zawgyiYangon9').hide();
+					$('.zawgyiYangon10').hide();
+					$('.zawgyiYangon11').hide();
+					$('.zawgyiYangon12').hide();
+					$('.zawgyiYangon13').hide();
+					$('.zawgyiYangon14').show();
+				}
+				});
+				}).trigger('change');      //mandalay
+      $('#zawgyiMandalayRegion').change(function () {
+		var str = '';
+		$('#zawgyiMandalayRegion option:selected').each(function () {
+			str = $(this).val();
+				if (str == 'townshipChoiceSelectLable') {
+					$('.zawgyiMandalayGroup').hide();
+				}
+				else if (str == '1') {
+					$('.zawgyiMandalay1').show();
+					$('.zawgyiMandalay2').hide();
+					$('.zawgyiMandalay3').hide();
+					$('.zawgyiMandalay4').hide();
+				}
+				else if (str == '2') {
+					$('.zawgyiMandalay1').hide();
+					$('.zawgyiMandalay2').show();
+					$('.zawgyiMandalay3').hide();
+					$('.zawgyiMandalay4').hide();
+				}
+				else if (str == '3') {
+					$('.zawgyiMandalay1').hide();
+					$('.zawgyiMandalay2').hide();
+					$('.zawgyiMandalay3').show();
+					$('.zawgyiMandalay4').hide();
+				}
+				else if (str == '4') {
+					$('.zawgyiMandalay1').hide();
+					$('.zawgyiMandalay2').hide();
+					$('.zawgyiMandalay3').hide();
+					$('.zawgyiMandalay4').show();
+				}
+				});
+				}).trigger('change');      $('#zawgyiMagwayRegion').change(function () {
+		var str = '';
+		$('#zawgyiMagwayRegion option:selected').each(function () {
+			str = $(this).val();
+				if (str == 'townshipChoiceSelectLable') {
+					$('.zawgyiMagwayGroup').hide();
+				}
+				else if (str == '1') {
+					$('.zawgyiMagway1').show();
+				}
+				});
+				}).trigger('change');      //sagaing
+      $('#zawgyiSagaingRegion').change(function () {
+		var str = '';
+		$('#zawgyiSagaingRegion option:selected').each(function () {
+			str = $(this).val();
+				if (str == 'townshipChoiceSelectLable') {
+					$('.zawgyiSagaingGroup').hide();
+				}
+				else if (str == '1') {
+					$('.zawgyiSagaing1').show();
+				}
+				});
+				}).trigger('change');            //ayeyarwady
+            $('#zawgyiAyeyarwadyRegion').change(function () {
+		var str = '';
+		$('#zawgyiAyeyarwadyRegion option:selected').each(function () {
+			str = $(this).val();
+				if (str == 'townshipChoiceSelectLable') {
+					$('.zawgyiAyeyarwadyGroup').hide();
+				}
+				else if (str == '1') {
+					$('.zawgyiAyeyarwady1').show();
+				}
+				});
+				}).trigger('change');      //bago
+      $('#zawgyiBagoRegion').change(function () {
+		var str = '';
+		$('#zawgyiBagoRegion option:selected').each(function () {
+			str = $(this).val();
+				if (str == 'townshipChoiceSelectLable') {
+					$('.zawgyiBagoGroup').hide();
+				}
+				else if (str == '1') {
+					$('.zawgyiBago1').show();
+				}
+				});
+				}).trigger('change');        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 
 </body></html>
